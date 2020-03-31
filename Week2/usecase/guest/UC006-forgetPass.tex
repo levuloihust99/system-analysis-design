@@ -1,0 +1,150 @@
+\documentclass[3p]{elsarticle}
+\usepackage{enumitem}
+\usepackage{amsmath, amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{arev}
+\usepackage[main=vietnamese, english]{babel}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=Sepia,
+}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{array, calc}
+\usepackage[table, dvipsnames]{xcolor}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+\renewcommand{\arraystretch}{1.7}
+%
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
+\newenvironment{arev}{\fontfamily{fav}\selectfont}{\par}
+\begin{document}
+\begin{table}[htbp]
+\begin{arev}
+\begin{longtable}{|
+		M{0.19\linewidth-2\tabcolsep-.6pt}|
+		M{0.09\linewidth-2\tabcolsep-.6pt}|
+		M{0.114\linewidth-2\tabcolsep-.6pt}|
+		M{0.038\linewidth-2\tabcolsep-.6pt}|
+		M{0.057\linewidth-2\tabcolsep-.6pt}|
+		M{0.095\linewidth-2\tabcolsep-.6pt}|
+		M{0.043\linewidth-2\tabcolsep-.6pt}|
+		M{0.128\linewidth-2\tabcolsep-.6pt}|
+		M{0.256\linewidth-2\tabcolsep-.6pt}|
+	}
+	%Row 1
+	\hline
+	\cellcolor{blue!20}\textbf{Mã Use case} &
+	\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC006} &
+	\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
+	\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Quên mật khẩu}\\\hline
+	%Row 2
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
+	\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+	\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
+	Trung bình\\\hline
+	%Row 3
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
+	\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Người chơi cần khôi phục lại mật khẩu vì quên mật khẩu hiện tại}\\\hline
+	%Row 4
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
+	\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Khách chọn chức năng \textit{quên mật khẩu}}\\\hline
+	%Row relationship
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Association}} &
+	\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{Khách} \\ \cline{3-9}
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Include}} &
+	\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{} \\ \cline{3-9}
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Extend}} &
+	\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{} \\ \cline{3-9}
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-4}{*}{\textbf{Các mỗi quan hệ}}} &
+	\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Generalization}} &
+	\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{} \\ \hline
+	%Normal flow
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	\cellcolor{orange!40}\textbf{STT} &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+	\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	1 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn chức năng \textit{Quên mật khẩu}} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	2 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Yêu cầu khách nhập số điện thoại} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	3 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập số điện thoại} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	4 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Gửi mã xác minh đến số điện thoại do khách nhập, yêu cầu khách nhập mã} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	5 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập mã xác minh} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	6 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Yêu cầu khách nhập mật khẩu mới} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	7 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập mật khẩu mới} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	8 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Yêu cầu khách xác nhận mật khẩu} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	9 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập lại mật khẩu} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-11}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+	10 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện người chơi} \\ \hline
+	%
+	%Subflow
+	%Alter flow
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	\cellcolor{orange!40}\textbf{STT} &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+	\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	5a &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Yêu cầu gửi lại mã xác minh} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	7a &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: mật khẩu không hợp lệ} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-4}{*}[0em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
+	9a &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: mật khẩu xác nhận không khớp} \\ \hline
+	%
+\end{longtable}
+
+\end{arev}
+\end{table}
+\end{document}
