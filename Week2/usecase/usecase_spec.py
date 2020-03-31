@@ -36,8 +36,8 @@ normal_flow = [
     ("Admin", "Từ giao diện quản lý sự kiện, chọn \\textit{tạo mới sự kiện}"),
     ("Hệ thống", "Hiển thị giao diện tạo mới sự kiện"),
     ("Admin", "Cung cấp các thông tin cần thiết để tạo mới sự kiện"),
-    ("Hệ thống", "Kiểm tra các trường thông tin bắt buộc đã được điền hay chưa")
-    ("Hệ thống", "Thông báo sự kiện đã được tạo mới thành công")
+    ("Hệ thống", "Kiểm tra các trường thông tin bắt buộc đã được điền hay chưa"),
+    ("Hệ thống", "Thông báo sự kiện đã được tạo mới thành công"),
 ]
 sub_flow = None
 alter_flow = [
@@ -253,7 +253,7 @@ else:
         count += 1
         title = (
             "%Child title\n"
-            "\\multicolumn{{9}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\cellcolor{{yellow!35}}\\textbf{{Use case con \\#{2}: {1}}}}} \\\\ \\hline\n"
+            "\\multicolumn{{9}}{{|L{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\cellcolor{{yellow!35}}\\textbf{{\\#{2}: {1}}}}} \\\\ \\hline\n"
         ).format(portion.sum(), child[0], count)
 
         result = "{0}{1}{2}".format(result, title, child_flow(child))

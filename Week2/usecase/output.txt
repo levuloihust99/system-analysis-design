@@ -12,20 +12,20 @@
 %Row 1
 \hline
 \cellcolor{blue!20}\textbf{Mã Use case} &
-\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC006} &
+\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC008} &
 \multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
-\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Quản lý người dùng}\\\hline
+\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Quản lý sự kiện}\\\hline
 %Row 2
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
 \multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Admin} &
 \multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
-Quan trọng\\\hline
+Trung bình\\\hline
 %Row 3
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
-\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Mô tả các chức năng quản lý người dùng dành cho Admin}\\\hline
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Mô tả các chức năng quản lý người sự kiện dành cho Admin}\\\hline
 %Row 4
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
-\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Admin chọn chức năng \textit{quản lý người dùng} trong giao diện trang quản lý}\\\hline
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Admin chọn chức năng \textit{quản lý sự kiện} trong giao diện trang quản lý}\\\hline
 %Row relationship
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 \multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Association}} &
@@ -40,7 +40,7 @@ Quan trọng\\\hline
 \multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Generalization}} &
 \multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{} \\ \hline
 %Child title
-\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#1: Xem thông tin người dùng trong game}} \\ \hline
+\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#1: Xem danh sách sự kiện}} \\ \hline
 %Normal flow
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 \cellcolor{orange!40}\textbf{STT} &
@@ -49,80 +49,60 @@ Quan trọng\\\hline
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 1 &
 \multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ giao diện quản lý người dùng, chọn \textit{danh sách người dùng}} \\ \cline{3-9}
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ giao diện quản lý sự kiện, chọn \textit{xem các danh sách sự kiện}} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+2 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện các danh sách sự kiện} \\ \hline
+%
+%Subflow
+%Alter flow
+%Child title
+\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#2: Tạo sự kiện}} \\ \hline
+%Normal flow
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+\cellcolor{orange!40}\textbf{STT} &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+1 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ giao diện quản lý sự kiện, chọn \textit{tạo mới sự kiện}} \\ \cline{3-9}
 %
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 2 &
 \multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị tùy chọn xem danh sách người dùng theo Server hoặc liên Server} \\ \cline{3-9}
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện tạo mới sự kiện} \\ \cline{3-9}
 %
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 3 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn một trong hai tùy chọn} \\ \cline{3-9}
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Cung cấp các thông tin cần thiết để tạo mới sự kiện} \\ \cline{3-9}
 %
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 4 &
 \multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị danh sách người dùng} \\ \cline{3-9}
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra các trường thông tin bắt buộc đã được điền hay chưa} \\ \cline{3-9}
 %
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-6}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
 5 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn người dùng muốn xem thông tin} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-6 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn xem thông tin nhân vật Game} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-8}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
-7 &
 \multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Mở cửa sổ hiển thị thông tin nhân vật game của người dùng} \\ \hline
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo sự kiện đã được tạo mới thành công} \\ \hline
 %
 %Subflow
+%Alter flow
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 \cellcolor{orange!40}\textbf{STT} &
 \multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
 \multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-4.1 &
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-2}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
+4a &
 \multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị danh sách người dùng của Server nếu Admin chọn xem danh sách người dùng của một Server} \\ \cline{3-9}
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: cần nhập đầy đủ các trường còn thiếu} \\ \hline
 %
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện con}}}} &
-4.2 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị danh sách người dùng liên Server nếu Admin chọn xem danh sách người dùng liên Server} \\ \hline
-%
-%Alter flow
 %Child title
-\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#2: Xem profile người dùng}} \\ \hline
-%Normal flow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-1 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn người dùng muốn xem thông tin profile} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-2 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn xem profile người dùng} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-4}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
-3 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị profile người dùng} \\ \hline
-%
-%Subflow
-%Alter flow
-%Child title
-\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#3: Xem lịch sử giao dịch người dùng}} \\ \hline
+\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#3: Xem lịch sử giao dịch người dùng}} \\ \hline
 %Normal flow
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 \cellcolor{orange!40}\textbf{STT} &
@@ -146,7 +126,7 @@ Quan trọng\\\hline
 %Subflow
 %Alter flow
 %Child title
-\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#4: Xóa tài khoản người dùng}} \\ \hline
+\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#4: Xóa tài khoản người dùng}} \\ \hline
 %Normal flow
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 \cellcolor{orange!40}\textbf{STT} &
@@ -194,7 +174,7 @@ Quan trọng\\\hline
 %
 %Alter flow
 %Child title
-\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#5: Tìm kiếm người dùng}} \\ \hline
+\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#5: Tìm kiếm người dùng}} \\ \hline
 %Normal flow
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 \cellcolor{orange!40}\textbf{STT} &

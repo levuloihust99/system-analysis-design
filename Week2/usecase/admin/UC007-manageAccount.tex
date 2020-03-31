@@ -29,7 +29,7 @@
 \newenvironment{arev}{\fontfamily{fav}\selectfont}{\par}
 \begin{document}
 \section{Đặc tả Use case UC007 - Quản lý người dùng}
-Chức năng \textit{\textbf{Quản lý người dùng}} bao hàm một số chức năng khác như: Xem danh sách người dùng, xem thông tin người dùng trong game, xem profile người dùng, xem lịch sử giao dịch người dùng, tìm kiếm và xóa người dùng. Các chức năng hay các use case con này có chung luồng sự kiện là xem và hiển thị danh sách người dùng. Do đó, trong phần đặc tả phía dưới, luồng sự kiện này chỉ được ghi rõ ở use case con đầu tiên.
+Chức năng \textit{\textbf{Quản lý người dùng}} bao hàm một số chức năng khác như: Xem danh sách người dùng, xem thông tin người dùng trong game, xem profile người dùng, xem lịch sử giao dịch người dùng, tìm kiếm và xóa người dùng.
 \begin{arev}
 \begin{longtable}{|
 		M{0.19\linewidth-2\tabcolsep-.6pt}|
@@ -45,7 +45,7 @@ Chức năng \textit{\textbf{Quản lý người dùng}} bao hàm một số ch�
 	%Row 1
 	\hline
 	\cellcolor{blue!20}\textbf{Mã Use case} &
-	\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC006} &
+	\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC007} &
 	\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
 	\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Quản lý người dùng}\\\hline
 	%Row 2
@@ -68,12 +68,12 @@ Chức năng \textit{\textbf{Quản lý người dùng}} bao hàm một số ch�
 	\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{} \\ \cline{3-9}
 	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 	\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Extend}} &
-	\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{Các use case con mô tả phía dưới} \\ \cline{3-9}
+	\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{Các use cases mô tả phía dưới} \\ \cline{3-9}
 	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-4}{*}{\textbf{Các mỗi quan hệ}}} &
 	\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Generalization}} &
 	\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{} \\ \hline
 	%Child title
-	\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#1: Xem thông tin người dùng trong game}} \\ \hline
+	\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#1: Xem danh sách người dùng}} \\ \hline
 	%Normal flow
 	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 	\cellcolor{orange!40}\textbf{STT} &
@@ -89,49 +89,77 @@ Chức năng \textit{\textbf{Quản lý người dùng}} bao hàm một số ch�
 	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
 	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị tùy chọn xem danh sách người dùng theo Server hoặc liên Server} \\ \cline{3-9}
 	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-6}{*}{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+	3 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn một trong hai tùy chọn} \\ \hline
+	%Subflow
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	\cellcolor{orange!40}\textbf{STT} &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+	\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	3.1-1 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn xem danh sách người dùng theo Server} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	3.1-2 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị danh sách Server nếu Admin chọn xem danh sách người dùng của theo Server} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	3.1-3 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn một Server trong danh sách server} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	3.1-4 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị danh sách người dùng của Server} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện con}}}} &
+	3.2-1 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn xem danh sách người dùng liên Server} \\ \hline
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	3.2-2 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị danh sách người dùng liên Server} \\ \hline
+	%
+	%Alter flow
+	%Child title
+	\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#2: Xem thông tin người dùng trong game}} \\ \hline
+	%Normal flow
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	\cellcolor{orange!40}\textbf{STT} &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+	\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	1 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ danh sách người dùng, chọn người dùng muốn xem thông tin} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	2 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị các tùy chọn quản lý người dùng} \\ \cline{3-9}
+	%
 	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 	3 &
-	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
-	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn một trong hai tùy chọn} \\ \cline{3-9}
-	%
-	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-	4 &
-	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị danh sách người dùng} \\ \cline{3-9}
-	%
-	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-	5 &
-	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
-	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn người dùng muốn xem thông tin} \\ \cline{3-9}
-	%
-	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-	6 &
-	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
-	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn xem thông tin nhân vật Game} \\ \cline{3-9}
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn chức năng \textit{xem thông tin nhân vật game}} \\ \cline{3-9}
 	%
 	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-8}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
-	7 &
+	4 &
 	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
 	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Mở cửa sổ hiển thị thông tin nhân vật game của người dùng} \\ \hline
 	%
-	%Subflow
-	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-	\cellcolor{orange!40}\textbf{STT} &
-	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-	\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-	4.1 &
-	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị danh sách người dùng của Server nếu Admin chọn xem danh sách người dùng của một Server} \\ \cline{3-9}
-	%
-	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện con}}}} &
-	4.2 &
-	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị danh sách người dùng liên Server nếu Admin chọn xem danh sách người dùng liên Server} \\ \hline
-	%
 	%Alter flow
 	%Child title
-	\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#2: Xem profile người dùng}} \\ \hline
+	\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#3: Xem profile người dùng}} \\ \hline
 	%Normal flow
 	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 	\cellcolor{orange!40}\textbf{STT} &
@@ -140,22 +168,22 @@ Chức năng \textit{\textbf{Quản lý người dùng}} bao hàm một số ch�
 	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 	1 &
 	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn người dùng muốn xem thông tin profile} \\ \cline{3-9}
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ danh sách người dùng, chọn người dùng muốn xem profile} \\ \cline{3-9}
 	%
 	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 	2 &
-	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn xem profile người dùng} \\ \cline{3-9}
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị các tùy chọn quản lý người dùng} \\ \cline{3-9}
 	%
 	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-4}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
 	3 &
-	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị profile người dùng} \\ \hline
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn chức năng \textit{Xem profile người dùng}} \\ \hline
 	%
 	%Subflow
 	%Alter flow
 	%Child title
-	\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#3: Xem lịch sử giao dịch người dùng}} \\ \hline
+	\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#4: Xem lịch sử giao dịch người dùng}} \\ \hline
 	%Normal flow
 	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 	\cellcolor{orange!40}\textbf{STT} &
@@ -164,22 +192,27 @@ Chức năng \textit{\textbf{Quản lý người dùng}} bao hàm một số ch�
 	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 	1 &
 	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn người dùng muốn xem lịch sử giao dịch} \\ \cline{3-9}
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ danh sách người dùng, chọn người dùng muốn xem lịch sử giao dịch} \\ \cline{3-9}
 	%
 	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 	2 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị các tùy chọn quản lý người dùng} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	3 &
 	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
 	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn xem lịch sử giao dịch người dùng} \\ \cline{3-9}
 	%
-	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-4}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
-	3 &
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-5}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+	4 &
 	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
 	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị danh sách các giao dịch trong quá khứ mà người dùng đã thực hiện} \\ \hline
 	%
 	%Subflow
 	%Alter flow
 	%Child title
-	\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#4: Xóa tài khoản người dùng}} \\ \hline
+	\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#5: Xóa tài khoản người dùng}} \\ \hline
 	%Normal flow
 	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 	\cellcolor{orange!40}\textbf{STT} &
@@ -188,46 +221,43 @@ Chức năng \textit{\textbf{Quản lý người dùng}} bao hàm một số ch�
 	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 	1 &
 	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn người dùng} \\ \cline{3-9}
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ danh sách người dùng, chọn người dùng muốn xóa tài khoản} \\ \cline{3-9}
 	%
 	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 	2 &
-	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn xem thời gian tài khoản không được sử dụng} \\ \cline{3-9}
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị các tùy chọn quản lý người dùng} \\ \cline{3-9}
 	%
 	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 	3 &
-	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Gọi tới Use case \textit{Xác định khoảng thời gian liên tục tài khoản không được sử dụng}} \\ \cline{3-9}
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn chọn xem lần truy cập cuối} \\ \cline{3-9}
 	%
-	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-5}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 	4 &
 	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{[\textit{Xem luồng sự kiện con}]} \\ \hline
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn xóa tài khoản người dùng} \\ \cline{3-9}
 	%
-	%Subflow
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-5}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+	5 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo xóa thành công} \\ \hline
+	%Alter flow
 	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 	\cellcolor{orange!40}\textbf{STT} &
 	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
 	\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
 	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-	4.1-1 &
-	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Xóa tài khoản người dùng nếu thời gian không sử dụng lớn hơn 1 năm} \\ \cline{3-9}
-	%
-	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-	4.1-2 &
+	5a-1 &
 	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo xóa thành công} \\ \cline{3-9}
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: chỉ được phép xóa tài khoản nếu lần truy cập cuối cách đây hơn 1 năm} \\ \cline{3-9}
 	%
-	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-4}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện con}}}} &
-	4.2 &
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-4}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
+	5a-2 &
 	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy bỏ thao tác xóa người dùng} \\ \hline
-	%
-	%Alter flow
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy bỏ thao tác xóa người dùng} \\ \cline{3-9}
 	%Child title
-	\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#5: Tìm kiếm người dùng}} \\ \hline
+	\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#6: Tìm kiếm người dùng}} \\ \hline
 	%Normal flow
 	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 	\cellcolor{orange!40}\textbf{STT} &
