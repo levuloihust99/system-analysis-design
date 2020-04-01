@@ -12,9 +12,9 @@
 %Row 1
 \hline
 \cellcolor{blue!20}\textbf{Mã Use case} &
-\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC008} &
+\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC013} &
 \multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
-\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Quản lý sự kiện}\\\hline
+\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Quản lý shop}\\\hline
 %Row 2
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
 \multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Admin} &
@@ -22,10 +22,10 @@
 Trung bình\\\hline
 %Row 3
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
-\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Mô tả các chức năng quản lý người sự kiện dành cho Admin}\\\hline
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Mô tả chức năng quản lý shop cho admin}\\\hline
 %Row 4
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
-\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Admin chọn chức năng \textit{quản lý sự kiện} trong giao diện trang quản lý}\\\hline
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Admin chọn chức năng \textit{quản lý shop} từ giao diện trang quản lý}\\\hline
 %Row relationship
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 \multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Association}} &
@@ -35,31 +35,27 @@ Trung bình\\\hline
 \multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{} \\ \cline{3-9}
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 \multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Extend}} &
-\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{Các use case con mô tả phía dưới} \\ \cline{3-9}
+\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{Các use case mô tả phía dưới} \\ \cline{3-9}
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-4}{*}{\textbf{Các mỗi quan hệ}}} &
 \multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Generalization}} &
 \multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{} \\ \hline
 %Child title
-\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#1: Xem danh sách sự kiện}} \\ \hline
+\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#1: Thêm vật phẩm}} \\ \hline
 %Normal flow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-1 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ giao diện quản lý sự kiện, chọn \textit{xem các danh sách sự kiện}} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
-2 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện các danh sách sự kiện} \\ \hline
-%
 %Subflow
 %Alter flow
 %Child title
-\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#2: Tạo sự kiện}} \\ \hline
+\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#2: Xem danh sách vật phẩm}} \\ \hline
+%Normal flow
+%Subflow
+%Alter flow
+%Child title
+\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#3: Xóa vật phẩm}} \\ \hline
+%Normal flow
+%Subflow
+%Alter flow
+%Child title
+\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#4: Cập nhật giá vật phẩm}} \\ \hline
 %Normal flow
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 \cellcolor{orange!40}\textbf{STT} &
@@ -68,27 +64,37 @@ Trung bình\\\hline
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 1 &
 \multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ giao diện quản lý sự kiện, chọn \textit{tạo mới sự kiện}} \\ \cline{3-9}
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn vật phẩm từ danh sách vật phẩm} \\ \cline{3-9}
 %
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 2 &
 \multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện tạo mới sự kiện} \\ \cline{3-9}
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị thông tin vật phẩm} \\ \cline{3-9}
 %
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 3 &
 \multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Cung cấp các thông tin cần thiết để tạo mới sự kiện} \\ \cline{3-9}
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn cập nhật giá vật phẩm} \\ \cline{3-9}
 %
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 4 &
 \multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra các trường thông tin bắt buộc đã được điền hay chưa} \\ \cline{3-9}
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị cửa sổ cập nhật giá vật phẩm} \\ \cline{3-9}
 %
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-6}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 5 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập giá mới cho vật phẩm} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+6 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Xác nhận thực hiện cập nhật} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-8}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+7 &
 \multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo sự kiện đã được tạo mới thành công} \\ \hline
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo cập nhật giá thành công cho vật phẩm} \\ \hline
 %
 %Subflow
 %Alter flow
@@ -97,12 +103,12 @@ Trung bình\\\hline
 \multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
 \multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-2}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
-4a &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: cần nhập đầy đủ các trường còn thiếu} \\ \hline
+6a &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy bỏ thao tác cập nhật giá vật phẩm} \\ \hline
 %
 %Child title
-\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#3: Xem lịch sử giao dịch người dùng}} \\ \hline
+\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#5: Xem thống kê lịch sử giao dịch}} \\ \hline
 %Normal flow
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 \cellcolor{orange!40}\textbf{STT} &
@@ -111,84 +117,12 @@ Trung bình\\\hline
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 1 &
 \multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn người dùng muốn xem lịch sử giao dịch} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-2 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn xem lịch sử giao dịch người dùng} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-4}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
-3 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị danh sách các giao dịch trong quá khứ mà người dùng đã thực hiện} \\ \hline
-%
-%Subflow
-%Alter flow
-%Child title
-\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#4: Xóa tài khoản người dùng}} \\ \hline
-%Normal flow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-1 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn người dùng} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-2 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn xem thời gian tài khoản không được sử dụng} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-3 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Gọi tới Use case \textit{Xác định khoảng thời gian liên tục tài khoản không được sử dụng}} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-5}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
-4 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{[\textit{Xem luồng sự kiện con}]} \\ \hline
-%
-%Subflow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-4.1-1 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Xóa tài khoản người dùng nếu thời gian không sử dụng lớn hơn 1 năm} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-4.1-2 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo xóa thành công} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-4}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện con}}}} &
-4.2 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy bỏ thao tác xóa người dùng} \\ \hline
-%
-%Alter flow
-%Child title
-\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#5: Tìm kiếm người dùng}} \\ \hline
-%Normal flow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-1 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập tên người dùng muốn tìm kiếm vào thanh tìm kiếm} \\ \cline{3-9}
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ giao diện \textit{quản lý shop}, chọn chức năng \textit{xem thống kê lịch sử giao dịch}} \\ \cline{3-9}
 %
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
 2 &
 \multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị danh sách người chơi (tối đa 100, có thể hiển thị thêm) có tên giống nhất} \\ \hline
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị thống kê lịch sử giao dịch} \\ \hline
 %
 %Subflow
 %Alter flow

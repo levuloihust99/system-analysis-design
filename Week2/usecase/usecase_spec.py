@@ -7,76 +7,62 @@ portion = [0.19, 0.09, 0.114, 0.038, 0.057, 0.095, 0.043, 0.128, 0.256]
 portion = np.array(portion)
 
 # input
-ID = "UC008"
-name = "Quản lý sự kiện"
+ID = "UC013"
+name = "Quản lý shop"
 actor = "Admin"
 important_level = "Trung bình"
-description = "Mô tả các chức năng quản lý người sự kiện dành cho Admin"
-trigger = "Admin chọn chức năng \\textit{quản lý sự kiện} trong giao diện trang quản lý"
+description = "Mô tả chức năng quản lý shop cho admin"
+trigger = "Admin chọn chức năng \\textit{quản lý shop} từ giao diện trang quản lý"
 association = "Admin"
 include = None
-extend = "Các use case con mô tả phía dưới"
+extend = "Các use case mô tả phía dưới"
 generalization = None
 
 children = [] # list of sub-usecase
 
 # first sub-usecase
-name_child = "Xem danh sách sự kiện"
-normal_flow = [
-    ("Admin", "Từ giao diện quản lý sự kiện, chọn \\textit{xem các danh sách sự kiện}"),
-    ("Hệ thống", "Hiển thị giao diện các danh sách sự kiện"),
-]
+name_child = "Thêm vật phẩm"
+normal_flow = None
 sub_flow = None
 alter_flow = None
 children.append((name_child, normal_flow, sub_flow, alter_flow))
 
 # second sub-usecase
-name_child = "Tạo sự kiện"
-normal_flow = [
-    ("Admin", "Từ giao diện quản lý sự kiện, chọn \\textit{tạo mới sự kiện}"),
-    ("Hệ thống", "Hiển thị giao diện tạo mới sự kiện"),
-    ("Admin", "Cung cấp các thông tin cần thiết để tạo mới sự kiện"),
-    ("Hệ thống", "Kiểm tra các trường thông tin bắt buộc đã được điền hay chưa"),
-    ("Hệ thống", "Thông báo sự kiện đã được tạo mới thành công"),
-]
+name_child = "Xem danh sách vật phẩm"
+normal_flow = None
 sub_flow = None
-alter_flow = [
-    ("4a", "Hệ thống", "Thông báo lỗi: cần nhập đầy đủ các trường còn thiếu")
-]
+alter_flow = None
 children.append((name_child, normal_flow, sub_flow, alter_flow))
 
 # third sub-usecase
-name_child = "Xem lịch sử giao dịch người dùng"
-normal_flow = [
-    ("Admin", "Chọn người dùng muốn xem lịch sử giao dịch"),
-    ("Admin", "Chọn xem lịch sử giao dịch người dùng"),
-    ("Hệ thống", "Hiển thị danh sách các giao dịch trong quá khứ mà người dùng đã thực hiện")
-]
+name_child = "Xóa vật phẩm"
+normal_flow = None
 sub_flow = None
 alter_flow = None
 children.append((name_child, normal_flow, sub_flow, alter_flow))
 
 # fourth child
-name_child = "Xóa tài khoản người dùng"
+name_child = "Cập nhật giá vật phẩm"
 normal_flow = (
-    ("Admin", "Chọn người dùng"),
-    ("Admin", "Chọn xem thời gian tài khoản không được sử dụng"),
-    ("Hệ thống", "Gọi tới Use case \\textit{Xác định khoảng thời gian liên tục tài khoản không được sử dụng}"),
-    ("Admin", "[\\textit{Xem luồng sự kiện con}]")
+    ("Admin", "Chọn vật phẩm từ danh sách vật phẩm"),
+    ("Hệ thống", "Hiển thị thông tin vật phẩm"),
+    ("Admin", "Chọn cập nhật giá vật phẩm"),
+    ("Hệ thống", "Hiển thị cửa sổ cập nhật giá vật phẩm"),
+    ("Admin", "Nhập giá mới cho vật phẩm"),
+    ("Admin", "Xác nhận thực hiện cập nhật"),
+    ("Hệ thống", "Thông báo cập nhật giá thành công cho vật phẩm"),
 )
-sub_flow = (
-    ("4.1-1", "Admin", "Xóa tài khoản người dùng nếu thời gian không sử dụng lớn hơn 1 năm"),
-    ("4.1-2", "Hệ thống", "Thông báo xóa thành công"),
-    ("4.2", "Admin", "Hủy bỏ thao tác xóa người dùng"),
-)
-alter_flow = None
+sub_flow = None
+alter_flow = [
+    ("6a", "Admin", "Hủy bỏ thao tác cập nhật giá vật phẩm"),
+]
 children.append((name_child, normal_flow, sub_flow, alter_flow))
 
 # fifth child 
-name_child = "Tìm kiếm người dùng"
+name_child = "Xem thống kê lịch sử giao dịch"
 normal_flow = (
-    ("Admin", "Nhập tên người dùng muốn tìm kiếm vào thanh tìm kiếm"),
-    ("Hệ thống", "Hiển thị danh sách người chơi (tối đa 100, có thể hiển thị thêm) có tên giống nhất"),
+    ("Admin", "Từ giao diện \\textit{quản lý shop}, chọn chức năng \\textit{xem thống kê lịch sử giao dịch}"),
+    ("Hệ thống", "Hiển thị thống kê lịch sử giao dịch"),
 )
 sub_flow = None
 alter_flow = None
@@ -173,30 +159,30 @@ def child_flow(child):
         "\\multicolumn{{3}}{{M{{{1:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\cellcolor{{orange!40}}\\textbf{{Thực hiện bởi}}}} &\n"
         "\\multicolumn{{3}}{{M{{{2:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\cellcolor{{orange!40}}\\textbf{{Hành động}}}} \\\\ \\cline{{3-9}}\n"
     ).format(portion[0:2].sum(), portion[3:6].sum(), portion[6:].sum())
+    if normal_flow is not None:
+        normal_string = "{0}{1}".format(first_line, "")
+        line_number = 1
+        while line_number <= len(normal_flow) - 1:
+            idx = line_number - 1
+            line = (
+                "\\multicolumn{{2}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\cellcolor{{blue!20}}}} &\n"
+                "{1} &\n"
+                "\\multicolumn{{3}}{{M{{{2:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{3}}} &\n"
+                "\\multicolumn{{3}}{{L{{{4:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{5}}} \\\\ \\cline{{3-9}}\n%\n"
+            ).format(portion[0:2].sum(), line_number, portion[3:6].sum(), normal_flow[idx][0], portion[6:].sum(), normal_flow[idx][1])
 
-    normal_string = "{0}{1}".format(first_line, "")
-    line_number = 1
-    while line_number <= len(normal_flow) - 1:
-        idx = line_number - 1
-        line = (
-            "\\multicolumn{{2}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\cellcolor{{blue!20}}}} &\n"
+            normal_string = "{0}{1}".format(normal_string, line)
+            line_number += 1
+        
+        idx = len(normal_flow) - 1
+        last_line = (
+            "\\multicolumn{{2}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\cellcolor{{blue!20}}\\multirow{{-{6}}}{{*}}[1em]{{\\parbox{{{0:.3f}\\textwidth-2\\tabcolsep-.6pt}}{{\\centering\\textbf{{Luồng sự kiện chính}}}}}}}} &\n"
             "{1} &\n"
             "\\multicolumn{{3}}{{M{{{2:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{3}}} &\n"
-            "\\multicolumn{{3}}{{L{{{4:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{5}}} \\\\ \\cline{{3-9}}\n%\n"
-        ).format(portion[0:2].sum(), line_number, portion[3:6].sum(), normal_flow[idx][0], portion[6:].sum(), normal_flow[idx][1])
+            "\\multicolumn{{3}}{{L{{{4:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{5}}} \\\\ \\hline\n%\n"
+        ).format(portion[0:2].sum(), line_number, portion[3:6].sum(), normal_flow[idx][0], portion[6:].sum(), normal_flow[idx][1], len(normal_flow) + 1)
 
-        normal_string = "{0}{1}".format(normal_string, line)
-        line_number += 1
-    
-    idx = len(normal_flow) - 1
-    last_line = (
-        "\\multicolumn{{2}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\cellcolor{{blue!20}}\\multirow{{-{6}}}{{*}}[1em]{{\\parbox{{{0:.3f}\\textwidth-2\\tabcolsep-.6pt}}{{\\centering\\textbf{{Luồng sự kiện chính}}}}}}}} &\n"
-        "{1} &\n"
-        "\\multicolumn{{3}}{{M{{{2:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{3}}} &\n"
-        "\\multicolumn{{3}}{{L{{{4:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{5}}} \\\\ \\hline\n%\n"
-    ).format(portion[0:2].sum(), line_number, portion[3:6].sum(), normal_flow[idx][0], portion[6:].sum(), normal_flow[idx][1], len(normal_flow) + 1)
-
-    normal_string = "{0}{1}".format(normal_string, last_line)
+        normal_string = "{0}{1}".format(normal_string, last_line)
 
     # sub_flow
     if sub_flow is not None:
@@ -243,7 +229,7 @@ def child_flow(child):
 
         alter_string = "{0}{1}".format(alter_string, last_line)
 
-    return "%Normal flow\n{0}%Subflow\n{1}%Alter flow\n{2}".format(normal_string, subflow_string if sub_flow is not None else "", alter_string if alter_flow is not None else "")
+    return "%Normal flow\n{0}%Subflow\n{1}%Alter flow\n{2}".format(normal_string if normal_flow is not None else "", subflow_string if sub_flow is not None else "", alter_string if alter_flow is not None else "")
 
 if len(children) == 1:
     result = "{0}{1}".format(result, child_flow(children[0]))
