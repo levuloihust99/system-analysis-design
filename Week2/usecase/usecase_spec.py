@@ -8,7 +8,7 @@ portion = np.array(portion)
 
 # input
 ID = "UC013"
-name = "Quản lý shop"
+name = "Tạo Server"
 actor = "Admin"
 important_level = "Trung bình"
 description = "Mô tả chức năng quản lý shop cho admin"
@@ -22,51 +22,64 @@ children = [] # list of sub-usecase
 
 # first sub-usecase
 name_child = "Thêm vật phẩm"
-normal_flow = None
+normal_flow = [
+    ("Admin", "Từ giao diện quản lý Server, chọn \\textit{thêm server}"),
+    ("Hệ thống", "Hiển thị form yêu cầu nhập tên của server mới"),
+    ("Admin", "Nhập tên cho server mới"),
+    ("Hệ thống", "Hiển thị form yêu cầu nhập thông báo đến người dùng"),
+    ("Admin", "Nhập thông báo vào form"),
+    ("Hệ thống", "Hiển thị yêu cầu lựa chọn thời điểm tạo mới server trên hệ thống game"),
+    ("Admin", "Lựa chọn thời điểm tạo server"),
+    ("Hệ thống", "Hiển thị yêu cầu xác nhận tạo server mới"),
+    ("Admin", "Xác nhận tạo server mới"),
+    ("Hệ thống", "Thông báo tạo mới hoàn tất"),
+    ("Hệ thống", "Thêm thông báo về server mới lên website của hệ thống"),
+    ("Hệ thống", "Hiển thị thông báo của về server mới trong giao diện chơi game của toàn bộ người dùng"),
+]
 sub_flow = None
 alter_flow = None
 children.append((name_child, normal_flow, sub_flow, alter_flow))
 
 # second sub-usecase
-name_child = "Xem danh sách vật phẩm"
-normal_flow = None
-sub_flow = None
-alter_flow = None
-children.append((name_child, normal_flow, sub_flow, alter_flow))
+# name_child = "Xem danh sách vật phẩm"
+# normal_flow = None
+# sub_flow = None
+# alter_flow = None
+# children.append((name_child, normal_flow, sub_flow, alter_flow))
 
 # third sub-usecase
-name_child = "Xóa vật phẩm"
-normal_flow = None
-sub_flow = None
-alter_flow = None
-children.append((name_child, normal_flow, sub_flow, alter_flow))
+# name_child = "Xóa vật phẩm"
+# normal_flow = None
+# sub_flow = None
+# alter_flow = None
+# children.append((name_child, normal_flow, sub_flow, alter_flow))
 
 # fourth child
-name_child = "Cập nhật giá vật phẩm"
-normal_flow = (
-    ("Admin", "Chọn vật phẩm từ danh sách vật phẩm"),
-    ("Hệ thống", "Hiển thị thông tin vật phẩm"),
-    ("Admin", "Chọn cập nhật giá vật phẩm"),
-    ("Hệ thống", "Hiển thị cửa sổ cập nhật giá vật phẩm"),
-    ("Admin", "Nhập giá mới cho vật phẩm"),
-    ("Admin", "Xác nhận thực hiện cập nhật"),
-    ("Hệ thống", "Thông báo cập nhật giá thành công cho vật phẩm"),
-)
-sub_flow = None
-alter_flow = [
-    ("6a", "Admin", "Hủy bỏ thao tác cập nhật giá vật phẩm"),
-]
-children.append((name_child, normal_flow, sub_flow, alter_flow))
+# name_child = "Cập nhật giá vật phẩm"
+# normal_flow = (
+#     ("Admin", "Chọn vật phẩm từ danh sách vật phẩm"),
+#     ("Hệ thống", "Hiển thị thông tin vật phẩm"),
+#     ("Admin", "Chọn cập nhật giá vật phẩm"),
+#     ("Hệ thống", "Hiển thị cửa sổ cập nhật giá vật phẩm"),
+#     ("Admin", "Nhập giá mới cho vật phẩm"),
+#     ("Admin", "Xác nhận thực hiện cập nhật"),
+#     ("Hệ thống", "Thông báo cập nhật giá thành công cho vật phẩm"),
+# )
+# sub_flow = None
+# alter_flow = [
+#     ("6a", "Admin", "Hủy bỏ thao tác cập nhật giá vật phẩm"),
+# ]
+# children.append((name_child, normal_flow, sub_flow, alter_flow))
 
 # fifth child 
-name_child = "Xem thống kê lịch sử giao dịch"
-normal_flow = (
-    ("Admin", "Từ giao diện \\textit{quản lý shop}, chọn chức năng \\textit{xem thống kê lịch sử giao dịch}"),
-    ("Hệ thống", "Hiển thị thống kê lịch sử giao dịch"),
-)
-sub_flow = None
-alter_flow = None
-children.append((name_child, normal_flow, sub_flow, alter_flow))
+# name_child = "Xem thống kê lịch sử giao dịch"
+# normal_flow = (
+#     ("Admin", "Từ giao diện \\textit{quản lý shop}, chọn chức năng \\textit{xem thống kê lịch sử giao dịch}"),
+#     ("Hệ thống", "Hiển thị thống kê lịch sử giao dịch"),
+# )
+# sub_flow = None
+# alter_flow = None
+# children.append((name_child, normal_flow, sub_flow, alter_flow))
 
 # output file name
 out_file = "output.txt"
