@@ -12,25 +12,23 @@
 %Row 1
 \hline
 \cellcolor{blue!20}\textbf{Mã Use case} &
-\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC009} &
+\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC006} &
 \multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
-\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Chơi game}\\\hline
+\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Xem sự kiện đang diễn ra}\\\hline
 %Row 2
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
-\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Khách, người dùng} &
 \multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
 Quan trọng\\\hline
 %Row 3
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
-\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Sau khi người dùng ấn nút chơi game, giao diện hiện thị danh sách các phòng game, đây là một chức năng với luồng sử dụng phức tạp, để hiểu rõ hãy xem biểu đồ hoạt động tương ứng, dưới đây chỉ mô tả usecase con mà không nói trình tự diễn ra của tác vụ}\\\hline
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Mô tả chức năng xem sự kiện đang diễn ra dành cho khách và người dùng}\\\hline
 %Row 4
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
-\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Người dùng chọn chức năng chơi game}\\\hline
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Khách/người dùng ấn chọn xem sự kiện đang diễn ra}\\\hline
 %Row 4
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Điều kiện tiên quyết}} &
 \multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Đăng nhập với vai trò người dùng}\\\hline
-%Child title
-\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#1: Vào phòng}} \\ \hline
 %Normal flow
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 \cellcolor{orange!40}\textbf{STT} &
@@ -38,352 +36,14 @@ Quan trọng\\\hline
 \multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 1 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn tham gia một phòng trong danh sách các phòng hiển thị} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-2 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra trạng thái của phòng} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-3 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra level của người dùng có đủ điều kiện tham gia} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-5}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
-4 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Cập nhật thông tin của phòng và hiển thị giao diện phòng game mới vào} \\ \hline
-%
-%Subflow
-%Alter flow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-3a &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo phòng đã bắt đầu trận} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
-4a &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo không đủ level để tham gia} \\ \hline
-%
-%Child title
-\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#2: Tạo phòng}} \\ \hline
-%Normal flow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-1 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn nút tạo phòng trên giao diện} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-2 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiện thì giao diện tạo phòng gồm các trường: map, level tối thiểu} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-3 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn map và level tối thiểu} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-4 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn tạo phòng} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-6}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
-5 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện phòng game mới tạo} \\ \hline
-%
-%Subflow
-%Alter flow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-3a &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy bỏ tạo phòng} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
-4a &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy bỏ tạo phòng} \\ \hline
-%
-%Child title
-\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#3: Rời phòng}} \\ \hline
-%Normal flow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-1 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn nút rời phòng trên giao diện phòng game} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-2 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiện thị thông báo xác nhận rời phòng} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-3 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Xác nhận} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-5}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
-4 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện sau khi ấn chơi game và cập nhật lại thông tin phòng game} \\ \hline
-%
-%Subflow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-4.1 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nếu người chơi không là chủ  phòng, hiển thị giao diện sau khi ấn chơi game, cập nhật lại thông tin phòng game} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện con}}}} &
-4.2 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nếu người chơi là chủ  phòng, hiển thị giao diện sau khi ấn chơi game, cập nhật lại thông tin phòng game và chuyển chức chủ phòng cho người vào sớm nhất} \\ \hline
-%
-%Alter flow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-2}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
-3a &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy rời phòng} \\ \hline
-%
-%Child title
-\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#4: Bắt đầu game}} \\ \hline
-%Normal flow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-1 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn nút bắt đầu game trên giao diện phòng game (người chơi phải là chủ phòng)} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-2 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra số lượng người chơi có hợp lệ} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-3 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện đếm ngược từ 5 -> 1} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-5}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
-4 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện chọn nhân vật} \\ \hline
-%
-%Subflow
-%Alter flow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-2}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
-3a &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo số người chơi không hợp lệ} \\ \hline
-%
-%Child title
-\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#5: Chọn tướng}} \\ \hline
-%Normal flow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-1 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn một tướng trên giao diện chọn tướng} \\ \cline{3-9}
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách/người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn chọn xem sự kiện đang diễn ra} \\ \cline{3-9}
 %
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
 2 &
 \multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị thông tin chi tiết của nhân vật được chọn} \\ \hline
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Điều hướng đến trang sự kiện} \\ \hline
 %
 %Subflow
 %Alter flow
-%Child title
-\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#6: Mời}} \\ \hline
-%Normal flow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-1 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn nút mời trên giao diện phòng game (người dùng phải là chủ phòng)} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-2 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thị danh sách các người dùng khác đang ở trạng thái có thể tham gia} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-3 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn chọn một số người chơi trong danh sách} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-4 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn gửi} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-6}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
-5 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Gửi thông báo đến các người chơi được mời} \\ \hline
-%
-%Subflow
-%Alter flow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-2}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
-4a &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy gửi lời mời} \\ \hline
-%
-%Child title
-\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#7: Nhận lời mời}} \\ \hline
-%Normal flow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-1 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn nút chấp nhận lời mời trên giao diện} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
-2 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Cập nhật thông tin phòng game và hiển thị giao diện phòng game mới vào} \\ \hline
-%
-%Subflow
-%Alter flow
-%Child title
-\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#8: Trục xuất}} \\ \hline
-%Normal flow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-1 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Click chuột phải vào một người chơi trong phòng từ giao diện phòng game (người dùng phải là chủ phòng)} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-2 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị các thao tác có thể thực hiện với vai trò chủ phòng: Trục xuất, nhường} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-3 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn trục xuất} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-5}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
-4 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Cập nhật lại thông tin phòng, hiển thị giao diện sau khi đã cập nhật sau khi trục xuất} \\ \hline
-%
-%Subflow
-%Alter flow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-2}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
-3a &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy trục xuất} \\ \hline
-%
-%Child title
-\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#9: Thay đổi level và map}} \\ \hline
-%Normal flow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-1 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Thực hiện bởi} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hành động} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-2 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn chức năng thay đổi map và level trong giao diện phòng game (người chơi phải  là chủ phòng)} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-3 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện thay đổi map và level} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-4 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn lại map và level} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-5 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn thay đổi} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-6 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị thông báo xác nhận thay đổi map và level} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-7 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Xác nhận} \\ \cline{3-9}
-%
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-9}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
-8 &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Cập nhật thông tin phòng game và hiển thị lại giao diện phòng sau khi thay đổi} \\ \hline
-%
-%Subflow
-%Alter flow
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-\cellcolor{orange!40}\textbf{STT} &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
-\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
-4a &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy thay đổi} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
-7a &
-\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo level mới quá cao so với một số người chơi trong phòng} \\ \hline
-%
 \end{longtable}
