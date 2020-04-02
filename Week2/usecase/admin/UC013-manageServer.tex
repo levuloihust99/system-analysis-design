@@ -1,0 +1,211 @@
+\documentclass[3p]{elsarticle}
+\usepackage{enumitem}
+\usepackage{amsmath, amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{arev}
+\usepackage[main=vietnamese, english]{babel}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=Sepia,
+}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{array, calc}
+\usepackage[table, dvipsnames]{xcolor}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+\renewcommand{\arraystretch}{1.7}
+%
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
+\newenvironment{arev}{\fontfamily{fav}\selectfont}{\par}
+\begin{document}
+\begin{arev}
+\begin{longtable}{|
+		M{0.19\linewidth-2\tabcolsep-.6pt}|
+		M{0.09\linewidth-2\tabcolsep-.6pt}|
+		M{0.114\linewidth-2\tabcolsep-.6pt}|
+		M{0.038\linewidth-2\tabcolsep-.6pt}|
+		M{0.057\linewidth-2\tabcolsep-.6pt}|
+		M{0.095\linewidth-2\tabcolsep-.6pt}|
+		M{0.043\linewidth-2\tabcolsep-.6pt}|
+		M{0.128\linewidth-2\tabcolsep-.6pt}|
+		M{0.256\linewidth-2\tabcolsep-.6pt}|
+	}
+	%Row 1
+	\hline
+	\cellcolor{blue!20}\textbf{Mã Use case} &
+	\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC013} &
+	\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
+	\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Quản lý Server}\\\hline
+	%Row 2
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
+	\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+	\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
+	Trung bình\\\hline
+	%Row 3
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
+	\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Mô tả chức năng quản lý Server cho admin}\\\hline
+	%Row 4
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
+	\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Admin chọn chức năng \textit{quản lý Server} từ giao diện trang quản lý}\\\hline
+	%Row relationship
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Association}} &
+	\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{Admin} \\ \cline{3-9}
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Include}} &
+	\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{} \\ \cline{3-9}
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Extend}} &
+	\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{Các use case mô tả phía dưới} \\ \cline{3-9}
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-4}{*}{\textbf{Các mỗi quan hệ}}} &
+	\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Generalization}} &
+	\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{} \\ \hline
+	%Child title
+	\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#1: Xem danh sách Server}} \\ \hline
+	%Normal flow
+	%Subflow
+	%Alter flow
+	%Child title
+	\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#2: Thêm server}} \\ \hline
+	%Normal flow
+	%Normal flow
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	\cellcolor{orange!40}\textbf{STT} &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+	\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	1 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ giao diện quản lý Server, chọn \textit{thêm server}} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	2 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị form yêu cầu nhập tên của server mới} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	3 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập tên cho server mới} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	4 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị form yêu cầu nhập thông báo đến người dùng} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	5 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập thông báo vào form} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	6 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị yêu cầu lựa chọn thời điểm tạo mới server trên hệ thống game} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	7 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Lựa chọn thời điểm tạo server} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	8 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị yêu cầu xác nhận tạo server mới} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	9 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Xác nhận tạo server mới} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	10 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo tạo mới hoàn tất} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	11 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thêm thông báo về server mới lên website của hệ thống} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-13}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+	12 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị thông báo về server mới trong giao diện chơi game của toàn bộ người dùng} \\ \hline
+		%
+		%Subflow
+		%Alter flow
+	
+	%Subflow
+	%Alter flow
+	%Child title
+	\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#3: Xem bảng xếp hạng Server và liên Server}} \\ \hline
+	%Normal flow
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	\cellcolor{orange!40}\textbf{STT} &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+	\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	1 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ giao diện quản lý Server, chọn xem bảng xếp hạng} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	2 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị tùy chọn xem bảng xếp theo Server hoặc liên Server} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-4}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+	3 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn một trong hai tùy chọn} \\ \hline
+	%
+	%Subflow
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	\cellcolor{orange!40}\textbf{STT} &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+	\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	3.1-1 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn xem bảng xếp hạng theo Server} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	3.1-2 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị danh sách Server} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	3.1-3 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn Server muốn xem bảng xếp hạng} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	3.1-4 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị cửa sổ bảng xếp hạng của Server} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	3.2-1 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn xem bảng xếp hạng theo liên Server} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-7}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện con}}}} &
+	3.2-2 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị cửa sổ bảng xếp hạng liên Server} \\ \hline
+	%
+	%Alter flow
+\end{longtable}
+\end{arev}
+\end{document}

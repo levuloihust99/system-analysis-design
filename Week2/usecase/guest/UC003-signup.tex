@@ -1,0 +1,161 @@
+\documentclass[3p]{elsarticle}
+\usepackage{enumitem}
+\usepackage{amsmath, amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{arev}
+\usepackage[main=vietnamese, english]{babel}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=Sepia,
+}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{array, calc}
+\usepackage[table, dvipsnames]{xcolor}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+\renewcommand{\arraystretch}{1.7}
+%
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
+\newenvironment{arev}{\fontfamily{fav}\selectfont}{\par}
+\begin{document}
+\begin{arev}
+\begin{longtable}{|
+		M{0.19\linewidth-2\tabcolsep-.6pt}|
+		M{0.09\linewidth-2\tabcolsep-.6pt}|
+		M{0.114\linewidth-2\tabcolsep-.6pt}|
+		M{0.038\linewidth-2\tabcolsep-.6pt}|
+		M{0.057\linewidth-2\tabcolsep-.6pt}|
+		M{0.095\linewidth-2\tabcolsep-.6pt}|
+		M{0.043\linewidth-2\tabcolsep-.6pt}|
+		M{0.128\linewidth-2\tabcolsep-.6pt}|
+		M{0.256\linewidth-2\tabcolsep-.6pt}|
+	}
+	%Row 1
+	\hline
+	\cellcolor{blue!20}\textbf{Mã Use case} &
+	\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC003} &
+	\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
+	\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Tạo tài khoản}\\\hline
+	%Row 2
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
+	\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+	\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
+	Quan trọng\\\hline
+	%Row 3
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
+	\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Mô tả quá trình tạo tài khoản người chơi}\\\hline
+	%Row 4
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
+	\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Khách truy cập vào hệ thống và chọn chức năng tạo tài khoản}\\\hline
+	%Row relationship
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Association}} &
+	\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{Khách} \\ \cline{3-9}
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Include}} &
+	\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{Chọn Server (UC005)} \\ \cline{3-9}
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Extend}} &
+	\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{Trợ giúp (UC004)} \\ \cline{3-9}
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-4}{*}{\textbf{Các mỗi quan hệ}}} &
+	\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Generalization}} &
+	\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{} \\ \hline
+	%Normal flow
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	\cellcolor{orange!40}\textbf{STT} &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+	\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	1 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn chức năng tạo tài khoản} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	2 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện tạo tài khoản} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	3 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Điền các trường thông tin cần thiết} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	4 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn đăng ký tài khoản} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	5 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra xem khách đã nhập các trường bắt buộc chưa} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	6 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra tên đăng nhập đã tồn tại hay chưa} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	7 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra xem mật khẩu đã hợp lệ hay chưa} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	8 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra xem trường \textit{xác nhận mật khẩu} có khớp với trường \textit{mật khẩu}} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	9 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra mã xác thực đã chính xác hay chưa} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	10 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Lưu thông tin tài khoản và thông báo đã đăng ký thành công} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-12}{*}[3em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+	11 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Gọi Use case \textit{Chọn Server}} \\ \hline
+	%
+	%
+	%Alter flow
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	\cellcolor{orange!40}\textbf{STT} &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+	\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	4a &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn chức năng \textit{Trợ giúp}} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	5a &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: Cần nhập đầy đủ các trường bắt buộc} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	6a &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: Tên đăng nhập đã tồn tại} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	7a &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: Mật khẩu chứa kí tự không hợp lệ} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	8a &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: Mật khẩu xác nhận không đúng} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-7}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
+	9a &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: Mã xác thực không đúng} \\ \hline
+	%
+\end{longtable}
+\end{arev}
+\end{document}
