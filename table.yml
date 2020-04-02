@@ -1,0 +1,34 @@
+header:
+    ID: UC009
+    name: Đăng xuất
+    actor: Người dùng
+    important_level: Quan trọng
+    description: Mô tả các chức năng đăng xuất giành cho người dùng
+    trigger: người dùng chọn chức năng \textit{Đăng xuất} trong giao diện chính
+    association: Admin
+    include:
+    extend: Các use case con mô tả phía dưới
+    generalization:
+
+sub_uc1:
+    uc_name: Xem danh sách sự kiện
+    normal_flow: [
+        ['Admin', 'Từ giao diện quản lý sự kiện, chọn \textit{xem các danh sách sự kiện}'],
+        ['Hệ thống', 'Hiển thị giao diện các danh sách sự kiện']
+    ]
+    child_flow:
+    alter_flow:
+
+sub_uc2:
+        uc_name: Tạo sự kiện
+        normal_flow: [
+        ["Admin", "Từ giao diện quản lý sự kiện, chọn \textit{tạo mới sự kiện}"],
+        ["Hệ thống", "Hiển thị giao diện tạo mới sự kiện"],
+        ["Admin", "Cung cấp các thông tin cần thiết để tạo mới sự kiện"],
+        ["Hệ thống", "Kiểm tra các trường thông tin bắt buộc đã được điền hay chưa"],
+        ["Hệ thống", "Thông báo sự kiện đã được tạo mới thành công"]
+        ]
+        child_flow:
+        alter_flow: [
+        ["4a", "Hệ thống", "Thông báo lỗi: cần nhập đầy đủ các trường còn thiếu"]
+        ]
