@@ -1,34 +1,131 @@
 header:
     ID: UC009
-    name: Đăng xuất
+    name: Chơi game
     actor: Người dùng
     important_level: Quan trọng
-    description: Mô tả các chức năng đăng xuất giành cho người dùng
-    trigger: người dùng chọn chức năng \textit{Đăng xuất} trong giao diện chính
-    association: Admin
-    include:
-    extend: Các use case con mô tả phía dưới
-    generalization:
+    description: Sau khi người dùng ấn nút chơi game, giao diện hiện thị danh sách các phòng game, đây là một chức năng với luồng sử dụng phức tạp, để hiểu rõ hãy xem biểu đồ hoạt động tương ứng, dưới đây chỉ mô tả usecase con mà không nói trình tự diễn ra của tác vụ
+    trigger: Người dùng chọn chức năng chơi game
+
 
 sub_uc1:
-    uc_name: Xem danh sách sự kiện
+    uc_name: Vào phòng
     normal_flow: [
-        ['Admin', 'Từ giao diện quản lý sự kiện, chọn \textit{xem các danh sách sự kiện}'],
-        ['Hệ thống', 'Hiển thị giao diện các danh sách sự kiện']
+        ['Người dùng', 'Ấn tham gia một phòng trong danh sách các phòng hiển thị'],
+        ['Hệ thống', 'Kiểm tra trạng thái của phòng'],
+        ['Hệ thống', 'Kiểm tra level của người dùng có đủ điều kiện tham gia'],
+        ['Hệ thống', 'Cập nhật thông tin của phòng và hiển thị giao diện phòng game mới vào'],
+    ]
+    child_flow:
+    alter_flow: [
+        ['3a', 'Hệ thống', 'Thông báo phòng đã bắt đầu trận'],
+        ['4a', 'Hệ thống', 'Thông báo không đủ level để tham gia'],
+    ]
+
+sub_uc2:
+    uc_name: Tạo phòng
+    normal_flow: [
+        ['Người dùng', 'Ấn nút tạo phòng trên giao diện'],
+        ['Hệ thống', 'Hiện thì giao diện tạo phòng gồm các trường: map, level tối thiểu'],
+        ['Người dùng', 'Chọn map và level tối thiểu'],
+        ['Người dùng', 'Ấn tạo phòng'],
+        ['Hệ thống', 'Hiển thị giao diện phòng game mới tạo'],
+    ]
+    child_flow:
+    alter_flow: [
+        ['3a', 'Người dùng', 'Hủy bỏ tạo phòng'],
+        ['4a', 'Người dùng', 'Hủy bỏ tạo phòng'],
+    ]
+
+sub_uc3:
+    uc_name: Rời phòng
+    normal_flow: [
+        ['Người dùng', 'Ấn nút rời phòng trên giao diện phòng game'],
+        ['Hệ thống', 'Hiện thị thông báo xác nhận rời phòng'],
+        ['Người dùng', 'Xác nhận'],
+        ['Hệ thống', 'Hiển thị giao diện sau khi ấn chơi game và cập nhật lại thông tin phòng game'],
+    ]
+    child_flow: [
+        ['4.1', 'Hệ thống', 'Nếu người chơi không là chủ  phòng, hiển thị giao diện sau khi ấn chơi game, cập nhật lại thông tin phòng game'],
+        ['4.2', 'Hệ thống', 'Nếu người chơi là chủ  phòng, hiển thị giao diện sau khi ấn chơi game, cập nhật lại thông tin phòng game và chuyển chức chủ phòng cho người vào sớm nhất'],
+    ]
+    alter_flow: [
+        ['3a', 'Người dùng', 'Hủy rời phòng'],
+    ]
+
+sub_uc4:
+    uc_name: Bắt đầu game
+    normal_flow: [
+        ['Người dùng', 'Ấn nút bắt đầu game trên giao diện phòng game (người chơi phải là chủ phòng)'],
+        ['Hệ thống', 'Kiểm tra số lượng người chơi có hợp lệ'],
+        ['Hệ thống', 'Hiển thị giao diện đếm ngược từ 5 -> 1'],
+        ['Hệ thống', 'Hiển thị giao diện chọn nhân vật'],
+    ]
+    child_flow:
+    alter_flow: [
+        ['3a', 'Hệ thống', 'Thông báo số người chơi không hợp lệ'],
+    ]
+
+sub_uc5:
+    uc_name: Chọn tướng
+    normal_flow: [
+        ['Người dùng', 'Chọn một tướng trên giao diện chọn tướng'],
+        ['Hệ thống', 'Hiển thị thông tin chi tiết của nhân vật được chọn'],
     ]
     child_flow:
     alter_flow:
 
-sub_uc2:
-        uc_name: Tạo sự kiện
-        normal_flow: [
-        ["Admin", "Từ giao diện quản lý sự kiện, chọn \textit{tạo mới sự kiện}"],
-        ["Hệ thống", "Hiển thị giao diện tạo mới sự kiện"],
-        ["Admin", "Cung cấp các thông tin cần thiết để tạo mới sự kiện"],
-        ["Hệ thống", "Kiểm tra các trường thông tin bắt buộc đã được điền hay chưa"],
-        ["Hệ thống", "Thông báo sự kiện đã được tạo mới thành công"]
-        ]
-        child_flow:
-        alter_flow: [
-        ["4a", "Hệ thống", "Thông báo lỗi: cần nhập đầy đủ các trường còn thiếu"]
-        ]
+
+sub_uc6:
+    uc_name: Mời
+    normal_flow: [
+        ['Người dùng', 'Chọn nút mời trên giao diện phòng game (người dùng phải là chủ phòng)'],
+        ['Hệ thống', 'Thị danh sách các người dùng khác đang ở trạng thái có thể tham gia'],
+        ['Người dùng', 'Ấn chọn một số người chơi trong danh sách'],
+        ['Người dùng', 'Ấn gửi'],
+        ['Hệ thống', 'Gửi thông báo đến các người chơi được mời'],
+    ]
+    child_flow:
+    alter_flow: [
+        ['4a', 'Người dùng', 'Hủy gửi lời mời'],
+    ]
+
+sub_uc7:
+    uc_name: Nhận lời mời
+    normal_flow: [
+        ['Người dùng', 'Ấn nút chấp nhận lời mời trên giao diện'],
+        ['Hệ thống', 'Cập nhật thông tin phòng game và hiển thị giao diện phòng game mới vào'],
+    ]
+    child_flow:
+    alter_flow:
+
+sub_uc8:
+    uc_name: Trục xuất
+    normal_flow: [
+        ['Người dùng', 'Click chuột phải vào một người chơi trong phòng từ giao diện phòng game (người dùng phải là chủ phòng)'],
+        ['Hệ thống', 'Hiển thị các thao tác có thể thực hiện với vai trò chủ phòng: Trục xuất, nhường'],
+        ['Người dùng', 'Chọn trục xuất'],
+        ['Hệ thống', 'Cập nhật lại thông tin phòng, hiển thị giao diện sau khi đã cập nhật sau khi trục xuất'],
+    ]
+    child_flow:
+    alter_flow: [
+        ['3a', 'Người dùng', 'Hủy trục xuất'],
+    ]
+
+sub_uc9:
+    uc_name: Thay đổi level và map
+    normal_flow: [
+        ['Thực hiện bởi', 'Hành động'],
+        ['Người dùng', 'Chọn chức năng thay đổi map và level trong giao diện phòng game (người chơi phải  là chủ phòng)'],
+        ['Hệ thống', 'Hiển thị giao diện thay đổi map và level'],
+        ['Người dùng', 'Chọn lại map và level'],
+        ['Người dùng', 'Ấn thay đổi'],
+        ['Hệ thống', 'Hiển thị thông báo xác nhận thay đổi map và level'],
+        ['Người dùng', 'Xác nhận'],
+        ['Hệ thống', 'Cập nhật thông tin phòng game và hiển thị lại giao diện phòng sau khi thay đổi'],
+    ]
+    child_flow:
+    alter_flow: [
+        ['4a', 'Người dùng', 'Hủy thay đổi'],
+        ['7a', 'Hệ thống', 'Thông báo level mới quá cao so với một số người chơi trong phòng'],
+    ]
+

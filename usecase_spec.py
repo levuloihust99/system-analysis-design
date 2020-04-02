@@ -21,11 +21,6 @@ actor = header['actor']
 important_level = header['important_level']
 description = header['description']
 trigger = header['trigger']
-association = header['association']
-include = header['include']
-extend = header['extend']
-generalization = header['generalization']
-
 
 children = []
 
@@ -39,84 +34,6 @@ for key in table.keys():
     )
     children.append(sub_uc)
 
-
-###############################################################################
-
-# ID = "UC009"
-# name = "Đăng xuất"
-# actor = "Người dùng"
-# important_level = "Quan trọng"
-# description = "Mô tả các chức năng đăng xuất giành cho người dùng"
-# trigger = "người dùng chọn chức năng \\textit{Đăng xuất} trong giao diện chính"
-# association = "Admin"
-# include = None
-# extend = "Các use case con mô tả phía dưới"
-# generalization = None
-
-# children = []
-
-# ################################################################################
-# name_child = "Xem danh sách sự kiện"
-# normal_flow = [
-#     ("Admin", "Từ giao diện quản lý sự kiện, chọn \\textit{xem các danh sách sự kiện}"),
-#     ("Hệ thống", "Hiển thị giao diện các danh sách sự kiện"),
-# ]
-# sub_flow = None
-# alter_flow = None
-# children.append((name_child, normal_flow, sub_flow, alter_flow))
-
-# ##################################################################################
-# name_child = "Tạo sự kiện"
-# normal_flow = [
-#     ("Admin", "Từ giao diện quản lý sự kiện, chọn \\textit{tạo mới sự kiện}"),
-#     ("Hệ thống", "Hiển thị giao diện tạo mới sự kiện"),
-#     ("Admin", "Cung cấp các thông tin cần thiết để tạo mới sự kiện"),
-#     ("Hệ thống", "Kiểm tra các trường thông tin bắt buộc đã được điền hay chưa"),
-#     ("Hệ thống", "Thông báo sự kiện đã được tạo mới thành công")
-# ]
-# sub_flow = None
-# alter_flow = [
-#     ("4a", "Hệ thống", "Thông báo lỗi: cần nhập đầy đủ các trường còn thiếu")
-# ]
-# children.append((name_child, normal_flow, sub_flow, alter_flow))
-
-# ################################################################################
-# name_child = "Xem lịch sử giao dịch người dùng"
-# normal_flow = [
-#     ("Admin", "Chọn người dùng muốn xem lịch sử giao dịch"),
-#     ("Admin", "Chọn xem lịch sử giao dịch người dùng"),
-#     ("Hệ thống", "Hiển thị danh sách các giao dịch trong quá khứ mà người dùng đã thực hiện")
-# ]
-# sub_flow = None
-# alter_flow = None
-# children.append((name_child, normal_flow, sub_flow, alter_flow))
-
-# ################################################################################
-# name_child = "Xóa tài khoản người dùng"
-# normal_flow = (
-#     ("Admin", "Chọn người dùng"),
-#     ("Admin", "Chọn xem thời gian tài khoản không được sử dụng"),
-#     ("Hệ thống", "Gọi tới Use case \\textit{Xác định khoảng thời gian liên tục tài khoản không được sử dụng}"),
-#     ("Admin", "[\\textit{Xem luồng sự kiện con}]")
-# )
-# sub_flow = (
-#     ("4.1-1", "Admin", "Xóa tài khoản người dùng nếu thời gian không sử dụng lớn hơn 1 năm"),
-#     ("4.1-2", "Hệ thống", "Thông báo xóa thành công"),
-#     ("4.2", "Admin", "Hủy bỏ thao tác xóa người dùng"),
-# )
-# alter_flow = None
-# children.append((name_child, normal_flow, sub_flow, alter_flow))
-# ################################################################################
-# name_child = "Tìm kiếm người dùng"
-# normal_flow = (
-#     ("Admin", "Nhập tên người dùng muốn tìm kiếm vào thanh tìm kiếm"),
-#     ("Hệ thống", "Hiển thị danh sách người chơi (tối đa 100, có thể hiển thị thêm) có tên giống nhất"),
-# )
-# sub_flow = None
-# alter_flow = None
-# children.append((name_child, normal_flow, sub_flow, alter_flow))
-
-################################################################################
 
 def value(x):
     if x is None:
@@ -167,26 +84,15 @@ storage = (
     "\\multicolumn{{7}}{{L{{{1:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{2}}}\\\\\\hline\n"
 ).format(portion[0:2].sum(), portion[2:].sum(), trigger)
 result = "{0}{1}".format(result, storage)
-# print(result)
 
-# Row relationship
+# Row 5
 storage = (
-    "%Row relationship\n"
-    "\\multicolumn{{2}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\cellcolor{{blue!20}}}} &\n"
-    "\\multicolumn{{3}}{{M{{{1:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\textbf{{Association}}}} &\n"
-    "\\multicolumn{{4}}{{M{{{2:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{3}}} \\\\ \\cline{{3-9}}\n"
-    "\\multicolumn{{2}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\cellcolor{{blue!20}}}} &\n"
-    "\\multicolumn{{3}}{{M{{{1:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\textbf{{Include}}}} &\n"
-    "\\multicolumn{{4}}{{M{{{2:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{4}}} \\\\ \\cline{{3-9}}\n"
-    "\\multicolumn{{2}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\cellcolor{{blue!20}}}} &\n"
-    "\\multicolumn{{3}}{{M{{{1:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\textbf{{Extend}}}} &\n"
-    "\\multicolumn{{4}}{{M{{{2:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{5}}} \\\\ \\cline{{3-9}}\n"
-    "\\multicolumn{{2}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\cellcolor{{blue!20}}\\multirow{{-4}}{{*}}{{\\textbf{{Các mỗi quan hệ}}}}}} &\n"
-    "\\multicolumn{{3}}{{M{{{1:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\textbf{{Generalization}}}} &\n"
-    "\\multicolumn{{4}}{{M{{{2:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{6}}} \\\\ \\hline\n"
-).format(portion[0:2].sum(), portion[2:5].sum(), portion[5:].sum(), value(association), value(include), value(extend), value(generalization))
+    "%Row 4\n"
+    "\\multicolumn{{2}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\cellcolor{{blue!20}}\\textbf{{Điều kiện tiên quyết}}}} &\n"
+    "\\multicolumn{{7}}{{L{{{1:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{2}}}\\\\\\hline\n"
+).format(portion[0:2].sum(), portion[2:].sum(), 'Đăng nhập với vai trò người dùng')
 result = "{0}{1}".format(result, storage)
-# print(result)
+
 
 # loop row
 def child_flow(child):
@@ -288,5 +194,5 @@ else:
         result = "{0}{1}{2}".format(result, title, child_flow(child))
 
 result = "{0}\\end{{longtable}}\n".format(result)
-with open('output.txt', "w") as fw:
+with open('latex_code.txt', "w") as fw:
     fw.write(result)
