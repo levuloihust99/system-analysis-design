@@ -1,0 +1,1546 @@
+\documentclass[3p]{elsarticle}
+\usepackage{enumitem}
+\usepackage{amsmath, amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{arev}
+\usepackage[main=vietnamese, english]{babel}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=Sepia,
+}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{array, calc}
+\usepackage[table, dvipsnames]{xcolor}
+\usepackage{pdflscape}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+\renewcommand{\arraystretch}{1.7}
+%
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
+\newenvironment{arev}{\fontfamily{fav}\selectfont}{\par}
+\begin{document}
+\part{Phân tích chức năng}
+\begin{landscape}
+\section{Biểu đổ use case tổng quan}
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[scale=.67]{images/Overview.pdf}
+\end{figure}
+\end{landscape}
+\begin{landscape}
+\section{Biểu đồ use case phân rã cho tác nhân Admin}
+\begin{figure}[!htbp]
+	\hspace*{-.5in}
+	\centering
+	\includegraphics[scale=.8]{images/Admin.pdf}
+\end{figure}
+\end{landscape}
+\section{Biểu đồ use case phân rã cho tác nhân người chơi}
+\section{Quy trình nghiệp vụ}
+\section{Đặc tả Use case}
+Phần này sẽ trình bày đặc tả cho các use case đã trình bày trong các biểu đồ use case tổng quan và phân rã của các phần trước. Các use case có cùng luồng hoạt động sẽ được nhóm lại trong một bản đặc tả để tránh việc mô tả bị trùng lặp.
+\subsection{Nhóm chức năng Admin}
+\subsubsection{Đặc tả Use case UC001 - \textit{Xem danh sách đối tượng}}
+%====================================================================
+\begin{arev}
+	\begin{longtable}{|
+			M{0.19\linewidth-2\tabcolsep-.6pt}|
+			M{0.09\linewidth-2\tabcolsep-.6pt}|
+			M{0.114\linewidth-2\tabcolsep-.6pt}|
+			M{0.038\linewidth-2\tabcolsep-.6pt}|
+			M{0.057\linewidth-2\tabcolsep-.6pt}|
+			M{0.095\linewidth-2\tabcolsep-.6pt}|
+			M{0.043\linewidth-2\tabcolsep-.6pt}|
+			M{0.128\linewidth-2\tabcolsep-.6pt}|
+			M{0.256\linewidth-2\tabcolsep-.6pt}|
+		}
+		%Row 1
+		\hline
+		\cellcolor{blue!20}\textbf{Mã Use case} &
+		\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC001} &
+		\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
+		\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Xem danh sách đối tượng}\\\hline
+		%Row 2
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
+		\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
+		Trung bình\\\hline
+		%Row 3
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Use case này biểu diễn chung cho các use case: \textit{xem danh sách sự kiện}, \textit{xem danh sách Server}, \textit{Xem danh sách bản đồ}, \textit{Xem danh sách vật phẩm}, \textit{Xem danh sách nhân vật}. Đầu ra của use case là một danh sách đối tượng}\\\hline
+		%Row 4
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Admin chọn chức năng \textit{xem danh sách} tương ứng với đối tượng trong giao diện quản lý đối tượng}\\\hline
+		%Normal flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ giao diện quản lý đối tượng, chọn \textit{xem danh sách đối tượng}} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+		2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện danh sách các đối tượng} \\ \hline
+		%
+		%Subflow
+		%Alter flow
+	\end{longtable}
+\end{arev}
+%====================================================================
+\subsubsection{Đặc tả Use case UC002 - Thêm đối tượng}
+\begin{arev}
+	\begin{longtable}{|
+			M{0.19\linewidth-2\tabcolsep-.6pt}|
+			M{0.09\linewidth-2\tabcolsep-.6pt}|
+			M{0.114\linewidth-2\tabcolsep-.6pt}|
+			M{0.038\linewidth-2\tabcolsep-.6pt}|
+			M{0.057\linewidth-2\tabcolsep-.6pt}|
+			M{0.095\linewidth-2\tabcolsep-.6pt}|
+			M{0.043\linewidth-2\tabcolsep-.6pt}|
+			M{0.128\linewidth-2\tabcolsep-.6pt}|
+			M{0.256\linewidth-2\tabcolsep-.6pt}|
+		}
+		%Row 1
+		\hline
+		\cellcolor{blue!20}\textbf{Mã Use case} &
+		\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC002} &
+		\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
+		\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Thêm đối tượng}\\\hline
+		%Row 2
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
+		\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
+		Trung bình\\\hline
+		%Row 3
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Use case này biểu diễn chung cho các use case: \textit{Thêm bản đồ}, \textit{Thêm vật phẩm}, \textit{Thêm kĩ năng}, \textit{Thêm nhân vật}. Use case này mô tả cách admin tạo ra đối tượng tương ứng}\\\hline
+		%Row 4
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Admin chọn chức năng \textit{thêm đối tượng} từ giao diện quản lý đối tượng}\\\hline
+		%Normal flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ giao diện quản lý đối tượng, chọn \textit{Thêm đối tượng}} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị danh sách đối tượng sẵn có để thêm} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		3 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn một đối tượng trong danh sách hiển thị} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		4 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Yêu cầu xác nhận thêm đối tượng} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		5 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Xác nhận thêm đối tượng} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-7}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+		6 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo thêm đối tượng hoàn tất} \\ \hline
+		%
+		%Subflow
+		%Alter flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-2}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
+		5a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy bỏ thao tác thêm đối tượng} \\ \hline
+		%
+	\end{longtable}
+	
+\end{arev}
+%====================================================================
+\subsubsection{Đặc tả Use case UC003 - Xóa đối tượng}
+\begin{arev}
+	\begin{longtable}{|
+			M{0.19\linewidth-2\tabcolsep-.6pt}|
+			M{0.09\linewidth-2\tabcolsep-.6pt}|
+			M{0.114\linewidth-2\tabcolsep-.6pt}|
+			M{0.038\linewidth-2\tabcolsep-.6pt}|
+			M{0.057\linewidth-2\tabcolsep-.6pt}|
+			M{0.095\linewidth-2\tabcolsep-.6pt}|
+			M{0.043\linewidth-2\tabcolsep-.6pt}|
+			M{0.128\linewidth-2\tabcolsep-.6pt}|
+			M{0.256\linewidth-2\tabcolsep-.6pt}|
+		}
+		%Row 1
+		\hline
+		\cellcolor{blue!20}\textbf{Mã Use case} &
+		\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC003} &
+		\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
+		\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Xóa đối tượng}\\\hline
+		%Row 2
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
+		\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
+		Trung bình\\\hline
+		%Row 3
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Use case này biểu diễn chung cho các use case: \textit{Xóa sự kiện}, \textit{Xóa bản đồ}, \textit{Xóa vật phẩm}, \textit{Xóa nhân vật}, \textit{Xóa kĩ năng}}\\\hline
+		%Row 4
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Admin chọn chức năng \textit{xóa đối tượng} từ danh sách đối tượng}\\
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-2}{*}{\textbf{Sự kiện kích hoạt}}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{\textbf{Lưu ý:} chức năng \textit{xóa kĩ năng} được admin kích hoạt từ cửa sổ hiển thị thông tin nhân vật}\\\hline
+		%
+		%Normal flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ giao diện quản lý đối tượng, chọn \textit{xóa đối tượng}} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+		2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{\textit{xem luồng sự kiện con}} \\ \hline
+		%
+		%Subflow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-2}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện con}}}} &
+		2.1-1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị cửa sổ chọn thời điểm xóa, yêu cầu admin nhập thời điểm xóa đối tượng nếu đối tượng là \textit{nhân vật game}, \textit{kĩ năng}, \textit{bản đồ} hoặc \textit{vật phẩm}} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2.1-2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn thời điểm xóa đối tượng} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2.1-3 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị form yêu cầu admin nhập thông báo đến người dùng} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2.1-4 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập thông báo vào form} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2.1-5 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn chọn \textit{xóa đối tượng}} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2.1-6 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo hoàn tất xóa đối tượng} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2.1-7 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thêm nội dung thông báo của admin vào mục \textit{Thông báo} của website game, đồng thời hiển thị thông báo trong giao diện chơi game của toàn bộ người dùng} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2.2-1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị thông báo yêu cầu xác nhận xóa nếu đối tượng là sự kiện} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2.2-2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Xác nhận xóa đối tượng} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2.2-3 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo hoàn tất xóa đối tượng} \\ \hline
+		%
+		%Alter flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2.1-3a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: thời điểm xóa phải sau ít nhất 24h} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2.1-5a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy bỏ thao tác xóa đối tượng} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2.1-6a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: không được để trống trường thông báo} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-5}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
+		2.2-2a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy bỏ thao tác xóa đối tượng} \\ \hline
+		%
+	\end{longtable}
+	
+\end{arev}
+%====================================================================
+\subsubsection{Đặc tả Use case UC004 - Quản lý người dùng}
+Tất cả chức năng quản lý đều có chung luồng sự kiện chính:
+\begin{itemize}
+	\item Từ giao diện màn hình tương ứng có chứa chức năng quản lý, admin ấn chọn chức năng quản lý.
+	\item Hệ thống hiển thị giao diện quản lý tương ứng với chức năng quản lý được chọn 
+\end{itemize}
+Các phần đặc tả dành cho nhóm chức năng quản lý sẽ không trình bày các luồng sự kiện. Thay vào đó, các chức năng cụ thể được cung cấp bởi mỗi nhóm chức năng quản lý sẽ được trình bày.
+\begin{arev}
+	\begin{longtable}{|
+			M{0.19\linewidth-2\tabcolsep-.6pt}|
+			M{0.09\linewidth-2\tabcolsep-.6pt}|
+			M{0.114\linewidth-2\tabcolsep-.6pt}|
+			M{0.038\linewidth-2\tabcolsep-.6pt}|
+			M{0.057\linewidth-2\tabcolsep-.6pt}|
+			M{0.095\linewidth-2\tabcolsep-.6pt}|
+			M{0.043\linewidth-2\tabcolsep-.6pt}|
+			M{0.128\linewidth-2\tabcolsep-.6pt}|
+			M{0.256\linewidth-2\tabcolsep-.6pt}|
+		}
+		%Row 1
+		\hline
+		\cellcolor{blue!20}\textbf{Mã Use case} &
+		\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC004} &
+		\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
+		\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Quản lý người dùng}\\\hline
+		%Row 2
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
+		\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
+		Quan trọng\\\hline
+		%Row 3
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Mô tả các chức năng quản lý người dùng dành cho Admin}\\\hline
+		%Row 4
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Admin chọn chức năng \textit{quản lý người dùng} trong giao diện trang quản lý}\\\hline
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#1: Xem danh sách người dùng}} \\ \hline
+		%Normal flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ giao diện quản lý người dùng, chọn \textit{danh sách người dùng}} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị tùy chọn xem danh sách người dùng theo Server hoặc liên Server} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-6}{*}{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+		3 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn một trong hai tùy chọn} \\ \hline
+		%Subflow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		3.1-1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn xem danh sách người dùng theo Server} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		3.1-2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị danh sách Server} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		3.1-3 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn một Server trong danh sách hiển thị} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		3.1-4 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị danh sách người dùng của Server} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-5}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện con}}}} &
+		3.2-1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn xem danh sách người dùng liên Server} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		3.2-2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị danh sách người dùng liên Server} \\ \hline
+		%
+		%Alter flow
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#2: Xem thông tin người dùng trong game}} \\ \hline
+		%Normal flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ danh sách người dùng, chọn người dùng muốn xem thông tin} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị các tùy chọn quản lý người dùng} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		3 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn chức năng \textit{xem thông tin nhân vật game}} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-8}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+		4 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Mở cửa sổ hiển thị thông tin nhân vật game của người dùng} \\ \hline
+		%
+		%Alter flow
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#3: Xem profile người dùng}} \\ \hline
+		%Normal flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ danh sách người dùng, chọn người dùng muốn xem profile} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị các tùy chọn quản lý người dùng} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		3 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn chức năng \textit{Xem profile người dùng}} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-5}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+		4 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị thông tin profile của người dùng} \\ \hline
+		%
+		%Subflow
+		%Alter flow
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#4: Xem lịch sử giao dịch người dùng}} \\ \hline
+		%Normal flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ danh sách người dùng, chọn người dùng muốn xem lịch sử giao dịch} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị các tùy chọn quản lý người dùng} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		3 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn xem lịch sử giao dịch người dùng} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-5}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+		4 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị danh sách các giao dịch trong quá khứ mà người dùng đã thực hiện} \\ \hline
+		%
+		%Subflow
+		%Alter flow
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#5: Xóa tài khoản người dùng}} \\ \hline
+		%Normal flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ danh sách người dùng, chọn người dùng muốn xóa tài khoản} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị các tùy chọn quản lý người dùng} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		3 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn chọn xem lần truy cập cuối} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		4 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn xóa tài khoản người dùng} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		5 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị thông báo yêu cầu admin xác nhận việc xóa} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		6 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Xác nhận xóa người dùng} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-8}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+		7 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo xóa thành công} \\ \hline
+		%Alter flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Luồng sự kiện thay thế/ngoại lệ}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		7a-1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: chỉ được phép xóa tài khoản nếu lần truy cập cuối cách đây hơn 1 năm} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		7a-2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy bỏ thao tác xóa người dùng} \\ \cline{3-9}
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#6: Tìm kiếm người dùng}} \\ \hline
+		%Normal flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập tên người dùng muốn tìm kiếm vào thanh tìm kiếm} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập tên người dùng muốn tìm kiếm vào thanh tìm kiếm} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+		2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị danh sách người chơi (tối đa 100, có thể hiển thị thêm) có tên giống nhất} \\ \hline
+		%
+		%Subflow
+		%Alter flow
+	\end{longtable}
+	
+\end{arev}
+%===================================================================
+\subsubsection{Đặc tả Use case UC005 - Quản lý sự kiện}
+\begin{arev}
+	\begin{longtable}{|
+			M{0.19\linewidth-2\tabcolsep-.6pt}|
+			M{0.09\linewidth-2\tabcolsep-.6pt}|
+			M{0.114\linewidth-2\tabcolsep-.6pt}|
+			M{0.038\linewidth-2\tabcolsep-.6pt}|
+			M{0.057\linewidth-2\tabcolsep-.6pt}|
+			M{0.095\linewidth-2\tabcolsep-.6pt}|
+			M{0.043\linewidth-2\tabcolsep-.6pt}|
+			M{0.128\linewidth-2\tabcolsep-.6pt}|
+			M{0.256\linewidth-2\tabcolsep-.6pt}|
+		}
+		%Row 1
+		\hline
+		\cellcolor{blue!20}\textbf{Mã Use case} &
+		\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC005} &
+		\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
+		\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Quản lý sự kiện}\\\hline
+		%Row 2
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
+		\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
+		Trung bình\\\hline
+		%Row 3
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Mô tả chức năng quản lý sự kiện dành cho admin}\\\hline
+		%Row 4
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Admin chọn chức năng \textit{quản lý sự kiện} từ giao diện trang quản lý}\\\hline
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#1: Tạo sự kiện}} \\ \hline
+		%Normal flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Luồng sự kiện chính}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ giao diện quản lý sự kiện, chọn \textit{tạo sự kiện}} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện tạo sự kiện} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		3 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn background cho trang sự kiện} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		4 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị tùy chọn nhập URL hình ảnh hoặc upload từ máy tính} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		5 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn một trong hai tùy chọn} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		6 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn nhận chọn \textit{tạo background}} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		7 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị background vừa được chọn} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		8 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập nội dung sự kiện vào phần \textit{content} (hệ thống hỗ trợ định dạng font chữ, cỡ chữ, chèn ảnh, video và một số tùy chọn khác)} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		9 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn chọn \textit{Tạo nội dung}} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		10 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị nội dung vừa được tạo} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		11 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Xác nhận tạo sự kiện} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		12 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Yêu cầu chọn thời điểm đăng sự kiện} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		13 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn thời điểm đăng sự kiện} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		14 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo hoàn tất tạo sự kiện} \\ \hline
+		%
+		%Subflow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Luồng sự kiện con}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		5.1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập URL hình ảnh} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		5.2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Upload ảnh từ máy tính} \\ \hline
+		%
+		%Alter flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		7a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: URL hình ảnh không tồn tại nếu admin nhập URL hình ảnh} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		7b &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: file upload phải có định dạng ảnh bitmap} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		11a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn thay đổi background} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		11b &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn chỉnh sửa nội dung sự kiện} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-6}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
+		11c &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy bỏ thao tác tạo sự kiện} \\ \hline
+		%
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#2: Xem danh sách sự kiện}: xem use case UC001} \\ \hline
+		%Normal flow
+		%Subflow
+		%Alter flow
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#3: Xóa sách sự kiện}: xem use case UC003} \\ \hline
+		%Normal flow
+		%Subflow
+		%Alter flow
+	\end{longtable}
+	
+\end{arev}
+%=================================================================
+\subsubsection{Đặc tả Use case UC006 - Quản lý Server}
+\begin{arev}
+	\begin{longtable}{|
+			M{0.19\linewidth-2\tabcolsep-.6pt}|
+			M{0.09\linewidth-2\tabcolsep-.6pt}|
+			M{0.114\linewidth-2\tabcolsep-.6pt}|
+			M{0.038\linewidth-2\tabcolsep-.6pt}|
+			M{0.057\linewidth-2\tabcolsep-.6pt}|
+			M{0.095\linewidth-2\tabcolsep-.6pt}|
+			M{0.043\linewidth-2\tabcolsep-.6pt}|
+			M{0.128\linewidth-2\tabcolsep-.6pt}|
+			M{0.256\linewidth-2\tabcolsep-.6pt}|
+		}
+		%Row 1
+		\hline
+		\cellcolor{blue!20}\textbf{Mã Use case} &
+		\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC006} &
+		\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
+		\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Quản lý Server}\\\hline
+		%Row 2
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
+		\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
+		Trung bình\\\hline
+		%Row 3
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Mô tả chức năng quản lý Server cho admin}\\\hline
+		%Row 4
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Admin chọn chức năng \textit{quản lý Server} từ giao diện trang quản lý}\\\hline
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#1: Xem danh sách Server}: xem use case UC001} \\ \hline
+		%Normal flow
+		%Subflow
+		%Alter flow
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#2: Thêm server}} \\ \hline
+		%Normal flow
+		%Normal flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Luồng sự kiện chính}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ giao diện quản lý Server, chọn \textit{thêm server}} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị form yêu cầu nhập tên của server mới} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		3 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập tên cho server mới} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		4 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị form yêu cầu nhập thông báo đến người dùng} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		5 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập thông báo vào form} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		6 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị yêu cầu lựa chọn thời điểm tạo mới server trên hệ thống game} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		7 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Lựa chọn thời điểm tạo server} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		8 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị yêu cầu xác nhận tạo server mới} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		9 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Xác nhận tạo server mới} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		10 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo tạo mới hoàn tất} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		11 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thêm thông báo về server mới lên website của hệ thống} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-13}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+		12 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị thông báo về server mới trong giao diện chơi game của toàn bộ người dùng} \\ \hline
+		%
+		%Subflow
+		%Alter flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Luồng sự kiện chính}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		4a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: tên server mới không được để trốnge} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		6a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: không được để trống trường thông báo} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		8a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: thời điểm tạo mới phải sau ít nhất 24h} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		9a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy bỏ thao tác tạo server mới} \\ \cline{3-9}
+		%
+	\end{longtable}
+\end{arev}
+%=================================================================
+\subsubsection{Đặc tả Use case UC007 - Quản lý bản đồ}
+\begin{arev}
+	\begin{longtable}{|
+			M{0.19\linewidth-2\tabcolsep-.6pt}|
+			M{0.09\linewidth-2\tabcolsep-.6pt}|
+			M{0.114\linewidth-2\tabcolsep-.6pt}|
+			M{0.038\linewidth-2\tabcolsep-.6pt}|
+			M{0.057\linewidth-2\tabcolsep-.6pt}|
+			M{0.095\linewidth-2\tabcolsep-.6pt}|
+			M{0.043\linewidth-2\tabcolsep-.6pt}|
+			M{0.128\linewidth-2\tabcolsep-.6pt}|
+			M{0.256\linewidth-2\tabcolsep-.6pt}|
+		}
+		%Row 1
+		\hline
+		\cellcolor{blue!20}\textbf{Mã Use case} &
+		\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC007} &
+		\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
+		\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Quản lý bản đồ}\\\hline
+		%Row 2
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
+		\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
+		Trung bình\\\hline
+		%Row 3
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Mô tả chức năng quản lý bản đồ cho admin}\\\hline
+		%Row 4
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Admin chọn chức năng \textit{quản lý bản đồ} từ giao diện trang quản lý}\\\hline
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#1: Xem danh sách bản đồ}: xem use case UC001} \\ \hline
+		%Normal flow
+		%Subflow
+		%Alter flow
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#2: Thêm bản đồ}: xem use case UC002} \\ \hline
+		%Normal flow
+		%Subflow
+		%Alter flow
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#3: Xóa bản đồ}: xem use case UC003} \\ \hline
+		%Normal flow
+		%Subflow
+		%Alter flow
+	\end{longtable}
+	
+\end{arev}
+%======================================================================
+\subsubsection{Đặc tả Use case UC008 - Quản lý shop}
+\begin{arev}
+	\begin{longtable}{|
+			M{0.19\linewidth-2\tabcolsep-.6pt}|
+			M{0.09\linewidth-2\tabcolsep-.6pt}|
+			M{0.114\linewidth-2\tabcolsep-.6pt}|
+			M{0.038\linewidth-2\tabcolsep-.6pt}|
+			M{0.057\linewidth-2\tabcolsep-.6pt}|
+			M{0.095\linewidth-2\tabcolsep-.6pt}|
+			M{0.043\linewidth-2\tabcolsep-.6pt}|
+			M{0.128\linewidth-2\tabcolsep-.6pt}|
+			M{0.256\linewidth-2\tabcolsep-.6pt}|
+		}
+		%Row 1
+		\hline
+		\cellcolor{blue!20}\textbf{Mã Use case} &
+		\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC008} &
+		\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
+		\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Quản lý shop}\\\hline
+		%Row 2
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
+		\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
+		Trung bình\\\hline
+		%Row 3
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Mô tả chức năng quản lý shop cho admin}\\\hline
+		%Row 4
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Admin chọn chức năng \textit{quản lý shop} từ giao diện trang quản lý}\\\hline
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#1: Xem danh sách vật phẩm}: xem use case UC001} \\ \hline
+		%Normal flow
+		%Subflow
+		%Alter flow
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#2: Thêm vật phẩm}: xem use case UC002} \\ \hline
+		%Normal flow
+		%Subflow
+		%Alter flow
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#3: Xóa vật phẩm}: xem use case UC003} \\ \hline
+		%Normal flow
+		%Subflow
+		%Alter flow
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#4: Cập nhật giá vật phẩm}} \\ \hline
+		%Normal flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn vật phẩm từ danh sách vật phẩm} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị thông tin vật phẩm} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		3 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn cập nhật giá vật phẩm} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		4 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị cửa sổ cập nhật giá vật phẩm} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		5 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập giá mới cho vật phẩm} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		6 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Xác nhận thực hiện cập nhật} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-8}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+		7 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo cập nhật giá thành công cho vật phẩm} \\ \hline
+		%
+		%Subflow
+		%Alter flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-2}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
+		6a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy bỏ thao tác cập nhật giá vật phẩm} \\ \hline
+		%
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#5: Xem thống kê lịch sử giao dịch}} \\ \hline
+		%Normal flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Luồng sự kiện chính}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ giao diện \textit{quản lý shop}, chọn chức năng \textit{xem thống kê lịch sử giao dịch}} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị thống kê lịch sử giao dịch} \\ \hline
+		%
+		%Subflow
+		%Alter flow
+	\end{longtable}
+	
+\end{arev}
+%===============================================================
+\subsubsection{Đặc tả Use case UC009 - Quản lý nhân vật}
+\begin{arev}
+	\begin{longtable}{|
+			M{0.19\linewidth-2\tabcolsep-.6pt}|
+			M{0.09\linewidth-2\tabcolsep-.6pt}|
+			M{0.114\linewidth-2\tabcolsep-.6pt}|
+			M{0.038\linewidth-2\tabcolsep-.6pt}|
+			M{0.057\linewidth-2\tabcolsep-.6pt}|
+			M{0.095\linewidth-2\tabcolsep-.6pt}|
+			M{0.043\linewidth-2\tabcolsep-.6pt}|
+			M{0.128\linewidth-2\tabcolsep-.6pt}|
+			M{0.256\linewidth-2\tabcolsep-.6pt}|
+		}
+		%Row 1
+		\hline
+		\cellcolor{blue!20}\textbf{Mã Use case} &
+		\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC009} &
+		\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
+		\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Quản lý nhân vật}\\\hline
+		%Row 2
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
+		\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
+		Trung bình\\\hline
+		%Row 3
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Mô tả chức năng quản lý nhân vật cho admin}\\\hline
+		%Row 4
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Admin chọn chức năng \textit{quản lý nhân vật} từ giao diện trang quản lý}\\\hline
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#1: Xem danh sách nhân vật}: xem use case UC001} \\ \hline
+		%Normal flow
+		%Subflow
+		%Alter flow
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#2: Thêm nhân vật}: xem use case UC002} \\ \hline
+		%Normal flow
+		%Subflow
+		%Alter flow
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#4: Thêm kĩ năng}: xem use case UC001} \\ \hline
+		%Normal flow
+		%Subflow
+		%Alter flow
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#5: Xóa kĩ năng}: xem use case UC002} \\ \hline
+		%Normal flow
+		%Subflow
+		%Alter flow
+		%Child title
+		\multicolumn{9}{|L{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{\#6: Xem thông tin nhân vật}} \\ \hline
+		%Normal flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Luồng sự kiện chính}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Admin} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ danh sách nhân vật, chọn nhân vật muốn xem thông tin} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị cửa sổ thông tin nhân vật} \\ \cline{3-9}
+		%
+		%Subflow
+		%Alter flow
+	\end{longtable}
+	
+\end{arev}
+%===============================================================
+\subsection{Nhóm chức năng cho khách}
+\subsubsection{Đặc tả Use case UC010 - Đăng nhập}
+\begin{arev}
+	\begin{longtable}{|
+			M{0.19\linewidth-2\tabcolsep-.6pt}|
+			M{0.09\linewidth-2\tabcolsep-.6pt}|
+			M{0.114\linewidth-2\tabcolsep-.6pt}|
+			M{0.038\linewidth-2\tabcolsep-.6pt}|
+			M{0.057\linewidth-2\tabcolsep-.6pt}|
+			M{0.095\linewidth-2\tabcolsep-.6pt}|
+			M{0.043\linewidth-2\tabcolsep-.6pt}|
+			M{0.128\linewidth-2\tabcolsep-.6pt}|
+			M{0.256\linewidth-2\tabcolsep-.6pt}|
+		}
+		%Row 1
+		\hline
+		\cellcolor{blue!20}\textbf{Mã Use case} &
+		\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC010} &
+		\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
+		\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Đăng nhập}\\\hline
+		%Row 2
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
+		\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+		\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
+		Trung bình\\\hline
+		%Row 3
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Ca sử dụng này mô tả cách người dùng đăng nhập vào hệ thống}\\\hline
+		%Row 4
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Người dùng truy cập vào hệ thống vào chọn đăng nhập}\\\hline
+		%Normal flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn chức năng đăng nhập} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiện thị giao diện đăng nhập} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		3 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập tài khoản và mật khẩu} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		4 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra xem khách đã nhập các trường bắt buộc hay chưa} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		5 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra xem tài khoản và mật khẩu của khách đã chính xác hay chưa} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-7}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+		6 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện Người chơi} \\ \hline
+		%
+		%Subflow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		1.1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn đăng nhập thông thường} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện con}}}} &
+		1.2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn đăng nhập bằng Facebook} \\ \hline
+		%
+		%Alter flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		4a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: Cần nhập các trường bắt buộc nếu khách nhập thiếu} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-4}{*}[0em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
+		5a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: Tài khoản hoặc mật khẩu không chính xác nếu không tìm thấy tài khoản hoặc mật khẩu trong cơ sở dữ liệu} \\ \hline
+		%
+	\end{longtable}
+\end{arev}
+%===============================================================
+\subsubsection{Đặc tả Use case UC011 - Đăng ký tài khoản}
+\begin{arev}
+	\begin{longtable}{|
+			M{0.19\linewidth-2\tabcolsep-.6pt}|
+			M{0.09\linewidth-2\tabcolsep-.6pt}|
+			M{0.114\linewidth-2\tabcolsep-.6pt}|
+			M{0.038\linewidth-2\tabcolsep-.6pt}|
+			M{0.057\linewidth-2\tabcolsep-.6pt}|
+			M{0.095\linewidth-2\tabcolsep-.6pt}|
+			M{0.043\linewidth-2\tabcolsep-.6pt}|
+			M{0.128\linewidth-2\tabcolsep-.6pt}|
+			M{0.256\linewidth-2\tabcolsep-.6pt}|
+		}
+		%Row 1
+		\hline
+		\cellcolor{blue!20}\textbf{Mã Use case} &
+		\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC011} &
+		\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
+		\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Tạo tài khoản}\\\hline
+		%Row 2
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
+		\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+		\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
+		Quan trọng\\\hline
+		%Row 3
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Mô tả quá trình tạo tài khoản người chơi}\\\hline
+		%Row 4
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Khách truy cập vào hệ thống và chọn chức năng tạo tài khoản}\\\hline
+		%Normal flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Luồng sự kiện chính}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn chức năng tạo tài khoản} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện tạo tài khoản} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		3 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Điền các trường thông tin cần thiết} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		4 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn đăng ký tài khoản} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		5 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra xem khách đã nhập các trường bắt buộc chưa} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		6 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra tên đăng nhập đã tồn tại hay chưa} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		7 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra xem mật khẩu đã hợp lệ hay chưa} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		8 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra xem trường \textit{xác nhận mật khẩu} có khớp với trường \textit{mật khẩu}} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		9 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra mã xác thực đã chính xác hay chưa} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		10 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Lưu thông tin tài khoản và thông báo đã đăng ký thành công} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		11 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Gọi Use case \textit{Chọn Server}} \\ \hline
+		%
+		%
+		%Alter flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		5a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: Cần nhập đầy đủ các trường bắt buộc} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		6a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: Tên đăng nhập đã tồn tại} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		7a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: Mật khẩu chứa kí tự không hợp lệ} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		8a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: Mật khẩu xác nhận không đúng} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-7}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
+		9a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: Mã xác thực không đúng} \\ \hline
+		%
+	\end{longtable}
+\end{arev}
+%===============================================================
+\subsubsection{Đặc tả Use case UC012 - Chọn server}
+\begin{arev}
+	\begin{longtable}{|
+		M{0.19\linewidth-2\tabcolsep-.6pt}|
+		M{0.09\linewidth-2\tabcolsep-.6pt}|
+		M{0.114\linewidth-2\tabcolsep-.6pt}|
+		M{0.038\linewidth-2\tabcolsep-.6pt}|
+		M{0.057\linewidth-2\tabcolsep-.6pt}|
+		M{0.095\linewidth-2\tabcolsep-.6pt}|
+		M{0.043\linewidth-2\tabcolsep-.6pt}|
+		M{0.128\linewidth-2\tabcolsep-.6pt}|
+		M{0.256\linewidth-2\tabcolsep-.6pt}|
+	}
+	%Row 1
+	\hline
+	\cellcolor{blue!20}\textbf{Mã Use case} &
+	\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC012} &
+	\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
+	\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Chọn server}\\\hline
+	%Row 2
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
+	\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+	\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
+	Quan trọng\\\hline
+	%Row 3
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
+	\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Mô tả quá trình tạo tài khoản người chơi}\\\hline
+	%Row 4
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
+	\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Khách tạo tài khoản thành công}\\\hline
+	%Row normal flow
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Luồng sự kiện chính}} &
+	\cellcolor{orange!40}\textbf{STT} &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+	\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	1 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị danh sách Server} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	2 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn một Server trong danh sách} \\ \cline{3-9}
+	%
+	\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+	3 &
+	\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+	\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện Người chơi} \\\hline
+\end{longtable}
+\end{arev}
+%===============================================================
+\subsubsection{Đặc tả Use case UC013 - Trợ giúp}
+\begin{arev}
+	\begin{longtable}{|
+			M{0.19\linewidth-2\tabcolsep-.6pt}|
+			M{0.09\linewidth-2\tabcolsep-.6pt}|
+			M{0.114\linewidth-2\tabcolsep-.6pt}|
+			M{0.038\linewidth-2\tabcolsep-.6pt}|
+			M{0.057\linewidth-2\tabcolsep-.6pt}|
+			M{0.095\linewidth-2\tabcolsep-.6pt}|
+			M{0.043\linewidth-2\tabcolsep-.6pt}|
+			M{0.128\linewidth-2\tabcolsep-.6pt}|
+			M{0.256\linewidth-2\tabcolsep-.6pt}|
+		}
+		%Row 1
+		\hline
+		\cellcolor{blue!20}\textbf{Mã Use case} &
+		\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC013} &
+		\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
+		\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Trợ giúp}\\\hline
+		%Row 2
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
+		\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+		\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
+		Ít quan trọng\\\hline
+		%Row 3
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Đưa ra trợ giúp cho khách khi tạo tài khoản}\\\hline
+		%Row 4
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Khách chọn chức năng \textit{Trợ giúp} khi đang đăng ký tài khoản}\\\hline
+		%Normal flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Luồng sự kiện chính}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Từ trang đăng ký tài khoản, chọn chức năng trợ giúp} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện trợ giúp} \\ \hline
+		%
+		%Subflow
+		%Alter flow
+	\end{longtable}
+	
+\end{arev}
+%===============================================================
+\subsubsection{Đặc tả Use case UC014 - Quên mật khẩu}
+\begin{arev}
+	\begin{longtable}{|
+			M{0.19\linewidth-2\tabcolsep-.6pt}|
+			M{0.09\linewidth-2\tabcolsep-.6pt}|
+			M{0.114\linewidth-2\tabcolsep-.6pt}|
+			M{0.038\linewidth-2\tabcolsep-.6pt}|
+			M{0.057\linewidth-2\tabcolsep-.6pt}|
+			M{0.095\linewidth-2\tabcolsep-.6pt}|
+			M{0.043\linewidth-2\tabcolsep-.6pt}|
+			M{0.128\linewidth-2\tabcolsep-.6pt}|
+			M{0.256\linewidth-2\tabcolsep-.6pt}|
+		}
+		%Row 1
+		\hline
+		\cellcolor{blue!20}\textbf{Mã Use case} &
+		\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC014} &
+		\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
+		\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Quên mật khẩu}\\\hline
+		%Row 2
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
+		\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+		\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
+		Trung bình\\\hline
+		%Row 3
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Người chơi cần khôi phục lại mật khẩu vì quên mật khẩu hiện tại}\\\hline
+		%Row 4
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
+		\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Khách chọn chức năng \textit{quên mật khẩu}}\\\hline
+		%Row relationship
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Association}} &
+		\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{Khách} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Include}} &
+		\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Extend}} &
+		\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-4}{*}{\textbf{Các mỗi quan hệ}}} &
+		\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{\textbf{Generalization}} &
+		\multicolumn{4}{M{0.522\linewidth-2\tabcolsep-.6pt}|}{} \\ \hline
+		%Normal flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		1 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn chức năng \textit{Quên mật khẩu}} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		2 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Yêu cầu khách nhập số điện thoại} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		3 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập số điện thoại} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		4 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Gửi mã xác minh đến số điện thoại do khách nhập, yêu cầu khách nhập mã} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		5 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập mã xác minh} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		6 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Yêu cầu khách nhập mật khẩu mới} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		7 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập mật khẩu mới} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		8 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Yêu cầu khách xác nhận mật khẩu} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		9 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập lại mật khẩu} \\ \cline{3-9}
+		%
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-11}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+		10 &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện người chơi} \\ \hline
+		%
+		%Subflow
+		%Alter flow
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		\cellcolor{orange!40}\textbf{STT} &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+		\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+		\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		5a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Khách} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Yêu cầu gửi lại mã xác minh} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+		7a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: mật khẩu không hợp lệ} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-4}{*}[0em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
+		9a &
+		\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+		\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi: mật khẩu xác nhận không khớp} \\ \hline
+		%
+	\end{longtable}
+	
+\end{arev}
+%===============================================================
+\subsection{Nhóm chức năng người chơi}
+\end{document}
