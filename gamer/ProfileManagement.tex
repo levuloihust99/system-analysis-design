@@ -1,0 +1,322 @@
+\documentclass[3p]{elsarticle}
+\usepackage{enumitem}
+\usepackage{amsmath, amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{arev}
+\usepackage[main=vietnamese, english]{babel}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=Sepia,
+}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{array, calc}
+\usepackage[table, dvipsnames]{xcolor}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+\renewcommand{\arraystretch}{1.7}
+%
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
+\newenvironment{arev}{\fontfamily{fav}\selectfont}{\par}
+\begin{document}
+\section{Đặc tả Use case UC008 - Chơi game}
+Chức năng \textbf{Đăng xuất}
+\begin{arev}
+\begin{longtable}{|
+	M{0.19\linewidth-2\tabcolsep-.6pt}|
+	M{0.09\linewidth-2\tabcolsep-.6pt}|
+	M{0.114\linewidth-2\tabcolsep-.6pt}|
+	M{0.038\linewidth-2\tabcolsep-.6pt}|
+	M{0.057\linewidth-2\tabcolsep-.6pt}|
+	M{0.095\linewidth-2\tabcolsep-.6pt}|
+	M{0.043\linewidth-2\tabcolsep-.6pt}|
+	M{0.128\linewidth-2\tabcolsep-.6pt}|
+	M{0.256\linewidth-2\tabcolsep-.6pt}|
+	}
+%Row 1
+\hline
+\cellcolor{blue!20}\textbf{Mã Use case} &
+\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC009} &
+\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
+\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Quản lý Profile}\\\hline
+%Row 2
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
+\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
+Quan trọng\\\hline
+%Row 3
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Sau khi người dùng ấn vào nút quản lý profile, sẽ hiện ra một giao diện hiển thị thông tin cá nhân của người dùng, kèm theo đó là 4 options đổi mật khẩu, cập nhật ảnh đại diện, cập nhật số điện thoại, thiết lập bảo mật hai lớp}\\\hline
+%Row 4
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Người dùng chọn chức năng quản lý profile trên giao diện chính}\\\hline
+%Row 4
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Điều kiện tiên quyết}} &
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Đăng nhập với vai trò người dùng}\\\hline
+%Child title
+\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#1: Đổi mật khẩu}} \\ \hline
+%Normal flow
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+\cellcolor{orange!40}\textbf{STT} &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+1 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn chức năng đổi mật khẩu} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+2 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện đổi mật khẩu} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+3 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập mật khẩu cũ, mật khẩu mới và nhập lại mật khẩu mới} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+4 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn nút đổi mật khẩu} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+5 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra mật khẩu cũ có chính xác không} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+6 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra mật khẩu mới có valid} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+7 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra mật khẩu nhập lại có trung với mật khẩu mới trước đó} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-9}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+8 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo đổi mật khẩu thành công} \\ \hline
+%
+%Subflow
+%Alter flow
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+\cellcolor{orange!40}\textbf{STT} &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+4a &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo mật khẩu cũ không chính xác} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+5a &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo mật khẩu mới không valid} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-4}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
+6a &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo mật khẩu nhập lại không khớp} \\ \hline
+%
+%Child title
+\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#2: Cập nhật ảnh đại diện}} \\ \hline
+%Normal flow
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+\cellcolor{orange!40}\textbf{STT} &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+1 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn chức năng cập nhật ảnh đại diện} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+2 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện cho phép người dùng upload ảnh} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+3 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Upload một ảnh} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+4 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn nút xác nhận đổi ảnh đại diện} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+5 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra dung lượng ảnh} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+6 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo cập nhật ảnh đại diện thành công} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-8}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+7 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Cập nhật lại ảnh profile của người dùng} \\ \hline
+%
+%Subflow
+%Alter flow
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+\cellcolor{orange!40}\textbf{STT} &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-2}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
+5a &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo ảnh quá lớn} \\ \hline
+%
+%Child title
+\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#3: Cập nhật số điện thoại}} \\ \hline
+%Normal flow
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+\cellcolor{orange!40}\textbf{STT} &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+1 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn chức năng cập nhật số điện thoại} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+2 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện để người dùng nhập số điện thoại} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+3 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập số điện thoại} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+4 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn nút gửi} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+5 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Gửi một mã 6 chữ số đến số điện thoại trên} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+6 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện nhập mã} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+7 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập mã} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+8 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn nút gửi} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+9 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra mã có chính xác} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+10 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo đổi số điện thoại thành công} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-12}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+11 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Cập nhật lại số điện thoại của người dùng} \\ \hline
+%
+%Subflow
+%Alter flow
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+\cellcolor{orange!40}\textbf{STT} &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+7a &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn nút chưa nhận được mã trên màn hình} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+7b &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Dừng tác vụ} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-4}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
+10a &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo mã nhập chưa chính xác} \\ \hline
+%
+%Child title
+\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#4: Thiết lập bảo mật hai lớp}} \\ \hline
+%Normal flow
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+\cellcolor{orange!40}\textbf{STT} &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+1 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn chức năng thiết lập bảo mật hai lớp} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+2 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra xem tài khoản đã cập nhật số điện thoại chưa} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+3 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị thông báo yêu cầu xác nhận đăng ký bảo mật hai lớp} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+4 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Xác nhận} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-6}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+5 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo đã bật bảo mật hai lớp thành công} \\ \hline
+%
+%Subflow
+%Alter flow
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+\cellcolor{orange!40}\textbf{STT} &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+3a &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Yêu cầu người dùng cập nhật số điện thoại} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
+4a &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy bỏ thao tác} \\ \hline
+%
+\end{longtable}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{arev}
+\end{document}

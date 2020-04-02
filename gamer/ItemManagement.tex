@@ -1,0 +1,360 @@
+\documentclass[3p]{elsarticle}
+\usepackage{enumitem}
+\usepackage{amsmath, amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{arev}
+\usepackage[main=vietnamese, english]{babel}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=Sepia,
+}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{array, calc}
+\usepackage[table, dvipsnames]{xcolor}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+\renewcommand{\arraystretch}{1.7}
+%
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
+\newenvironment{arev}{\fontfamily{fav}\selectfont}{\par}
+\begin{document}
+\section{Đặc tả Use case UC008 - Chơi game}
+Chức năng \textbf{Đăng xuất}
+\begin{arev}
+\begin{longtable}{|
+	M{0.19\linewidth-2\tabcolsep-.6pt}|
+	M{0.09\linewidth-2\tabcolsep-.6pt}|
+	M{0.114\linewidth-2\tabcolsep-.6pt}|
+	M{0.038\linewidth-2\tabcolsep-.6pt}|
+	M{0.057\linewidth-2\tabcolsep-.6pt}|
+	M{0.095\linewidth-2\tabcolsep-.6pt}|
+	M{0.043\linewidth-2\tabcolsep-.6pt}|
+	M{0.128\linewidth-2\tabcolsep-.6pt}|
+	M{0.256\linewidth-2\tabcolsep-.6pt}|
+	}
+%Row 1
+\hline
+\cellcolor{blue!20}\textbf{Mã Use case} &
+\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC009} &
+\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
+\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Quản lý kho trang bị}\\\hline
+%Row 2
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
+\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
+Quan trọng\\\hline
+%Row 3
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Sau khi người dùng ấn nút quản lý kho trang bị, giao diện hiện thị danh sách các trang bị trong kho và nút mở rộng kho}\\\hline
+%Row 4
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Người dùng chọn chức năng quản lý kho trang bị}\\\hline
+%Row 4
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Điều kiện tiên quyết}} &
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Đăng nhập với vai trò người dùng}\\\hline
+%Child title
+\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#1: Xem chi tiết trang bị}} \\ \hline
+%Normal flow
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+\cellcolor{orange!40}\textbf{STT} &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+1 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn một trang bị trong danh sách trang bị hiển thị trên giao diện} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+2 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị thông tin chi tiết về trang bị kèm theo các options: bán, hủy, cường hóa} \\ \hline
+%
+%Subflow
+%Alter flow
+%Child title
+\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#2: Cường hóa trang bị}} \\ \hline
+%Normal flow
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+\cellcolor{orange!40}\textbf{STT} &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+1 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn nút cường hóa trang bị trên giao diện hiển thị chi tiết} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+2 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiện thị giao diện cường hóa} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+3 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển tất cả các loại ngọc tương ứng với trang bị đó và số lượng trong kho của người chơi} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+4 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn một số lượng ngọc từ giao diện} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+5 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn búa cường hóa} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+6 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm trao số lượng ngọc có đủ} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+7 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo cường hóa thành công} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-9}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+8 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Cập nhật lại kho trang bị của người chơi} \\ \hline
+%
+%Subflow
+%Alter flow
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+\cellcolor{orange!40}\textbf{STT} &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+5a &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy bỏ thao tác cường hóa} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
+7a &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo cường hóa thất bại do không đủ số lượng ngọc} \\ \hline
+%
+%Child title
+\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#3: Hủy trang bị}} \\ \hline
+%Normal flow
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+\cellcolor{orange!40}\textbf{STT} &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+1 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn nút hủy trên giao diện hiển thị chi tiết} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+2 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiện thị giao diện hủy trang bị} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+3 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn búa hủy trang bị} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+4 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị thông báo xác nhận hủy trang bị} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+5 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Xác nhận} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+6 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra trang bị có được được trang bị cho nhân vật game nào không} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+7 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra trang bị có đang được rao bán} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+8 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo hủy trang bị thành công} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-10}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+9 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Cập nhật lại kho trang bị của người chơi} \\ \hline
+%
+%Subflow
+%Alter flow
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+\cellcolor{orange!40}\textbf{STT} &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+5a &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Dừng hủy trang bị} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+7a &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi do dồ được được sử dụng} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-4}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
+8a &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo lỗi do trang bị đang được rao bán} \\ \hline
+%
+%Child title
+\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#4: Bán trang bị}} \\ \hline
+%Normal flow
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+\cellcolor{orange!40}\textbf{STT} &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+1 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn nút bán trên giao diện hiển thị chi tiết} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+2 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện bán trang bị} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+3 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập giá bán cho trang bị} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+4 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn nút bán trang bị} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+5 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra giá tiền > 0} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+6 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị thông báo xác nhận bán trang bị} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+7 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Xác nhận} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+8 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo đăng bán thành công} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-10}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+9 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Cập nhật kho trang bị của người dùng} \\ \hline
+%
+%Subflow
+%Alter flow
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+\cellcolor{orange!40}\textbf{STT} &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+6a &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo giá tiền không hợp lệ} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
+7a &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy bán trang bị} \\ \hline
+%
+%Child title
+\multicolumn{9}{|M{1.011\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{yellow!35}\textbf{Use case con \#5: Mở rộng kho trang bị}} \\ \hline
+%Normal flow
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+\cellcolor{orange!40}\textbf{STT} &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+1 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn chức năng mở rộng kho trang bị từ giao diện màn hình} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+2 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị thông tin về kho trang bị hiện tại} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+3 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện mua ô mới} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+4 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Nhập số ô muốn mua} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+5 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Ấn nút mua} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+6 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Kiểm tra số dư trong tài khoản} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+7 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiển thị thông báo xác nhận mua} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+8 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Xác nhận mua} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+9 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo mua thành công} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-11}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+10 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Cập nhật lại kho đồ của người dùng} \\ \hline
+%
+%Subflow
+%Alter flow
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+\cellcolor{orange!40}\textbf{STT} &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+7a &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Thông báo không đủ số dư trong tài khoản} \\ \cline{3-9}\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
+8a &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy bỏ mua} \\ \hline
+%
+\end{longtable}
+
+
+
+
+
+
+
+\end{arev}
+\end{document}
