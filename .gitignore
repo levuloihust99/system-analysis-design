@@ -4,6 +4,8 @@
 *.spl
 *.synctex.gz
 *.toc
+Week3/*
+!Week3/report/
 Week2/*
 !Week2/usecase/
 !Week2/activity/
