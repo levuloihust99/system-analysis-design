@@ -18,9 +18,12 @@ header = table['header']
 ID = header['ID']
 name = header['name']
 actor = header['actor']
-important_level = header['important_level']
+# important_level = header['important_level']
 description = header['description']
 trigger = header['trigger']
+precondition = header['precondition']
+extensions = header['extensions']
+
 
 children = []
 
@@ -61,10 +64,8 @@ result = "{0}{1}".format(begin_tabular, storage)
 storage = (
     "%Row 2\n"
     "\\multicolumn{{2}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\cellcolor{{blue!20}}\\textbf{{Tác nhân chính}}}} &\n"
-    "\\multicolumn{{3}}{{M{{{1:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{2}}} &\n"
-    "\\multicolumn{{3}}{{M{{{3:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\cellcolor{{blue!20}}\\textbf{{Mức độ quan trọng}}}} &\n"
-    "{4}\\\\\\hline\n"
-).format(portion[0:2].sum(), portion[2:5].sum(), actor, portion[5:8].sum(), important_level)
+    "\\multicolumn{{7}}{{L{{{1:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{2}}} \\\\\\hline\n"
+).format(portion[0:2].sum(), portion[2:].sum(), actor)
 result = "{0}{1}".format(result, storage)
 # print(result)
 
@@ -87,12 +88,19 @@ result = "{0}{1}".format(result, storage)
 
 # Row 5
 storage = (
-    "%Row 4\n"
+    "%Row 5\n"
     "\\multicolumn{{2}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\cellcolor{{blue!20}}\\textbf{{Điều kiện tiên quyết}}}} &\n"
     "\\multicolumn{{7}}{{L{{{1:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{2}}}\\\\\\hline\n"
-).format(portion[0:2].sum(), portion[2:].sum(), 'Đăng nhập với vai trò người dùng')
+).format(portion[0:2].sum(), portion[2:].sum(), precondition)
 result = "{0}{1}".format(result, storage)
 
+# Row 6
+storage = (
+    "%Row 6\n"
+    "\\multicolumn{{2}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\cellcolor{{blue!20}}\\textbf{{Điểm mở rộng}}}} &\n"
+    "\\multicolumn{{7}}{{L{{{1:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{2}}}\\\\\\hline\n"
+).format(portion[0:2].sum(), portion[2:].sum(), extensions)
+result = "{0}{1}".format(result, storage)
 
 # loop row
 def child_flow(child):
@@ -147,7 +155,7 @@ def child_flow(child):
 
         item = sub_flow[len(sub_flow) - 1]
         last_line = (
-            "\\multicolumn{{2}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\cellcolor{{blue!20}}\\multirow{{-{6}}}{{*}}[1em]{{\\parbox{{{0:.3f}\\textwidth-2\\tabcolsep-.6pt}}{{\\centering\\textbf{{Luồng sự kiện con}}}}}}}} &\n"
+            "\\multicolumn{{2}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\cellcolor{{blue!20}}\\multirow{{-{6}}}{{*}}[1em]{{\\parbox{{{0:.3f}\\textwidth-2\\tabcolsep-.6pt}}{{\\centering\\textbf{{Luồng sự kiện rẽ nhánh}}}}}}}} &\n"
             "{1} &\n"
             "\\multicolumn{{3}}{{M{{{2:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{3}}} &\n"
             "\\multicolumn{{3}}{{L{{{4:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{5}}} \\\\ \\hline\n%\n"
@@ -170,7 +178,7 @@ def child_flow(child):
 
         alter_last = alter_flow[len(alter_flow) - 1]
         last_line = (
-            "\\multicolumn{{2}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\cellcolor{{blue!20}}\\multirow{{-{6}}}{{*}}[1em]{{\\parbox{{{0:.3f}\\textwidth-2\\tabcolsep-.6pt}}{{\\centering\\textbf{{Luồng sự kiện thay thế/ngoại lệ}}}}}}}} &\n"
+            "\\multicolumn{{2}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\cellcolor{{blue!20}}\\multirow{{-{6}}}{{*}}[1em]{{\\parbox{{{0:.3f}\\textwidth-2\\tabcolsep-.6pt}}{{\\centering\\textbf{{Luồng sự kiện ngoại lệ}}}}}}}} &\n"
             "{1} &\n"
             "\\multicolumn{{3}}{{M{{{2:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{3}}} &\n"
             "\\multicolumn{{3}}{{L{{{4:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{5}}} \\\\ \\hline\n%\n"

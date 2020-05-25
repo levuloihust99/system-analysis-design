@@ -17,18 +17,19 @@
 \multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Xem sự kiện đang diễn ra}\\\hline
 %Row 2
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
-\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Khách, người dùng} &
-\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
-Quan trọng\\\hline
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Khách, người dùng} \\\hline
 %Row 3
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
 \multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Mô tả chức năng xem sự kiện đang diễn ra dành cho khách và người dùng}\\\hline
 %Row 4
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
 \multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Khách/người dùng ấn chọn xem sự kiện đang diễn ra}\\\hline
-%Row 4
+%Row 5
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Điều kiện tiên quyết}} &
-\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Đăng nhập với vai trò người dùng}\\\hline
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Khách đăng nhập thành công với tư cách người dùng}\\\hline
+%Row 6
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Điểm mở rộng}} &
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{UC0017}\\\hline
 %Normal flow
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 \cellcolor{orange!40}\textbf{STT} &

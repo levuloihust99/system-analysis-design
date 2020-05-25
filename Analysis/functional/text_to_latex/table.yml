@@ -2,10 +2,10 @@ header:
     ID: UC006
     name: Xem sự kiện đang diễn ra
     actor: Khách, người dùng
-    important_level: Quan trọng
     description: Mô tả chức năng xem sự kiện đang diễn ra dành cho khách và người dùng
     trigger: Khách/người dùng ấn chọn xem sự kiện đang diễn ra
-
+    precondition: Khách đăng nhập thành công với tư cách người dùng
+    extensions: UC0017
 
 sub_uc1:
     uc_name: Vào phòng
