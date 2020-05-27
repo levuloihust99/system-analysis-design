@@ -1,0 +1,17 @@
+header:
+    ID: UC006
+    name: Xem sự kiện đang diễn ra
+    actor: Khách, người dùng
+    important_level: Quan trọng
+    description: Mô tả chức năng xem sự kiện đang diễn ra dành cho khách và người dùng
+    trigger: Khách/người dùng ấn chọn xem sự kiện đang diễn ra
+
+
+sub_uc1:
+    uc_name: Vào phòng
+    normal_flow: [
+        ['Khách/người dùng', 'Ấn chọn xem sự kiện đang diễn ra'],
+        ['Hệ thống', 'Điều hướng đến trang sự kiện']
+    ]
+    child_flow:
+    alter_flow:
