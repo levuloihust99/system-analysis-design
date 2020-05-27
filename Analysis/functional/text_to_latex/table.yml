@@ -1,17 +1,22 @@
 header:
-    ID: UC006
-    name: Xem sự kiện đang diễn ra
-    actor: Khách, người dùng
-    description: Mô tả chức năng xem sự kiện đang diễn ra dành cho khách và người dùng
-    trigger: Khách/người dùng ấn chọn xem sự kiện đang diễn ra
-    precondition: Khách đăng nhập thành công với tư cách người dùng
-    extensions: UC0017
+    ID: UC038
+    name: Xóa tài khoản người dùng
+    actor: Admin
+    description: Mô tả chức năng \textit{Xóa tài khoản người dùng} trong giao diện \textit{Xem chi tiết người dùng} của Admin
+    precondition: Khách đăng nhập thành công với tư cách Admin và đang ở giao diện \textit{Xem chi tiết người dùng}
+    trigger: Admin chọn chức năng \textit{Xóa tài khoản} từ giao diện \textit{Xem chi tiết người dùng}
+    extensions: Không có
 
 sub_uc1:
-    uc_name: Vào phòng
+    uc_name: 
     normal_flow: [
-        ['Khách/người dùng', 'Ấn chọn xem sự kiện đang diễn ra'],
-        ['Hệ thống', 'Điều hướng đến trang sự kiện']
+        ['Admin', 'Ấn chọn \textit{Xóa tài khoản} từ giao diện \textit{Xem chi tiết người dùng}'],
+        ['Hệ thống', 'Hiển thị cửa sổ yêu cầu xác nhận xóa'],
+        ['Admin', 'Ấn \textit{Xác nhận}'],
+        ['Hệ thống', 'Xóa thông tin tài khoản khỏi cơ sở dữ liệu và thông báo xóa thành công']
     ]
-    child_flow:
-    alter_flow:
+    child_flow: 
+    alter_flow: [
+        ['2a', 'Hệ thống', 'Thông báo: chỉ được phép xóa các tài khoản đã không hoạt động trong vòng một năm'],
+        ['3a', 'Admin', 'Ấn \textit{Hủy bỏ} để hủy bỏ thao tác xóa tài khoản người dùng'],
+    ]

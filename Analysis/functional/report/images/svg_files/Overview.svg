@@ -69,10 +69,10 @@
       ><path d="M0 0 L0 40 L110 40 L110 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath22"
-      ><path d="M-7 -7 L181 -7 L181 65 L-7 65 L-7 -7 Z"
+      ><path d="M-7 -7 L151 -7 L151 54 L-7 54 L-7 -7 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath23"
-      ><path d="M0 0 L0 54 L170 54 L170 0 Z"
+      ><path d="M0 0 L0 43 L140 43 L140 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath24"
       ><path d="M-7 -7 L115 -7 L115 51 L-7 51 L-7 -7 Z"
@@ -192,22 +192,22 @@
       ><path d="M0 0 L0 110 L309 110 L309 100 L232 100 L232 86 L309 86 L309 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath63"
-      ><path d="M0 0 L325 0 L325 223 L0 223 L0 0 Z"
+      ><path d="M0 0 L325 0 L325 219 L0 219 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath64"
-      ><path d="M0 0 L0 223 L325 223 L325 83 L247 83 L247 69 L325 69 L325 0 Z"
+      ><path d="M0 0 L0 219 L325 219 L325 83 L247 83 L247 69 L325 69 L325 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath65"
-      ><path d="M0 0 L380 0 L380 292 L0 292 L0 0 Z"
+      ><path d="M0 0 L380 0 L380 282 L0 282 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath66"
-      ><path d="M0 0 L0 292 L380 292 L380 83 L302 83 L302 69 L380 69 L380 0 Z"
+      ><path d="M0 0 L0 282 L380 282 L380 73 L302 73 L302 59 L380 59 L380 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath67"
-      ><path d="M0 0 L231 0 L231 245 L0 245 L0 0 Z"
+      ><path d="M0 0 L257 0 L257 261 L0 261 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath68"
-      ><path d="M0 0 L0 245 L231 245 L231 48 L179 48 L179 34 L231 34 L231 0 Z"
+      ><path d="M0 0 L0 261 L257 261 L257 64 L179 64 L179 50 L257 50 L257 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath69"
       ><path d="M0 0 L217 0 L217 299 L0 299 L0 0 Z"
@@ -393,17 +393,15 @@
     ><text x="5" xml:space="preserve" y="24" clip-path="url(#clipPath15)" stroke="none"
       >Quản lý profile</text
     ></g
-    ><g font-size="11px" transform="translate(472,337)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="rgb(122,207,245)" stroke-opacity="1"
-    ><ellipse rx="85" ry="27" clip-path="url(#clipPath22)" cx="85" cy="27" stroke="none"
+    ><g font-size="11px" transform="translate(502,337)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="rgb(122,207,245)" stroke-opacity="1"
+    ><ellipse rx="70" ry="21.5" clip-path="url(#clipPath22)" cx="70" cy="21.5" stroke="none"
     /></g
-    ><g stroke-linecap="butt" font-size="11px" transform="translate(472,337)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1" stroke-miterlimit="0"
-    ><ellipse rx="85" fill="none" ry="27" clip-path="url(#clipPath22)" cx="85" cy="27"
+    ><g stroke-linecap="butt" font-size="11px" transform="translate(502,337)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1" stroke-miterlimit="0"
+    ><ellipse rx="70" fill="none" ry="21.5" clip-path="url(#clipPath22)" cx="70" cy="21.5"
     /></g
-    ><g font-size="11px" transform="translate(472,337)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
-    ><text x="9" xml:space="preserve" y="24" clip-path="url(#clipPath23)" stroke="none"
-      >Xem bảng xếp hạng Server</text
-      ><text x="46" xml:space="preserve" y="38" clip-path="url(#clipPath23)" stroke="none"
-      >và liên Server</text
+    ><g font-size="11px" transform="translate(502,337)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><text x="13" xml:space="preserve" y="25" clip-path="url(#clipPath23)" stroke="none"
+      >Xem bảng xếp hạng</text
     ></g
     ><g font-size="11px" transform="translate(686,453)" fill-opacity="1" fill="rgb(122,207,245)" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="rgb(122,207,245)" stroke-opacity="1"
     ><ellipse rx="52" ry="20" clip-path="url(#clipPath24)" cx="52" cy="20" stroke="none"
@@ -539,13 +537,13 @@
     ><line y2="50" fill="none" x1="50" clip-path="url(#clipPath62)" x2="255" y1="56"
     /></g
     ><g stroke-linecap="butt" font-size="11px" transform="translate(592,189)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1"
-    ><line y2="50" fill="none" x1="50" clip-path="url(#clipPath64)" x2="271" y1="169"
+    ><line y2="50" fill="none" x1="50" clip-path="url(#clipPath64)" x2="271" y1="165"
     /></g
-    ><g stroke-linecap="butt" font-size="11px" transform="translate(537,189)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1"
-    ><line y2="50" fill="none" x1="50" clip-path="url(#clipPath66)" x2="326" y1="238"
+    ><g stroke-linecap="butt" font-size="11px" transform="translate(537,199)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1"
+    ><line y2="50" fill="none" x1="50" clip-path="url(#clipPath66)" x2="326" y1="228"
     /></g
-    ><g stroke-linecap="butt" font-size="11px" transform="translate(660,224)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1"
-    ><line y2="50" fill="none" x1="50" clip-path="url(#clipPath68)" x2="177" y1="191"
+    ><g stroke-linecap="butt" font-size="11px" transform="translate(660,208)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1"
+    ><line y2="50" fill="none" x1="50" clip-path="url(#clipPath68)" x2="203" y1="207"
     /></g
     ><g stroke-linecap="butt" font-size="11px" transform="translate(715,208)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1"
     ><line y2="50" fill="none" x1="50" clip-path="url(#clipPath70)" x2="163" y1="245"
@@ -565,7 +563,17 @@
       >&lt;&lt;Extend&gt;&gt;</text
     ></g
     ><g font-size="10px" fill-opacity="1" fill="rgb(120,120,120)" text-rendering="geometricPrecision" image-rendering="optimizeQuality" stroke="rgb(120,120,120)" stroke-opacity="1"
-    ></g
+    ><text x="654" xml:space="preserve" y="494" stroke="none"
+      >Powered ByVisual Paradigm Community Edition</text
+      ><image font-size="12px" x="902" y="482" fill="white" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABJ0lEQVR4XmNgwAPO
+GBs3nzYx6UIXJwoANdcA8X8obkaXxwvQNIPxWSOjFnR1WAGa5mVAL6wg2iVomlcD
+MettFRV2IL2OoCHImoHOPfCfgYEJJrcqNJQZJIYk3wKUZ0TWnItkAwg/OW1q6oIk
+bwPED9DUVMANAJqoCcSn0BS8B2LHk2ZmwlA2stwFoHo9uAEgAAwsB6DESTSFb4HY
+DYgrkcTOAtW6omgGCuoC8Qsg7gbivWiGvDkD8UItEB8G2twJpF+eMjU1hRtwVVub
+DSjYDNXQgcWQz0ANBkA6H8rvBsUOkhsgAGh6PVRBO5ohx4FyfTA5dH0oAOi/BqhC
+kEsOA/EJULQB6X8ENcMAkiFtQNwI1dyBrg4vQPIO2CB0eaIA1AU96OLIAAAk1QNN
+F+NelwAAAABJRU5ErkJggg==" height="16" stroke="white" preserveAspectRatio="none"
+    /></g
   ></g
 ></svg
 >

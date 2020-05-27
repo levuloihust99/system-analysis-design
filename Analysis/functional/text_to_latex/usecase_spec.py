@@ -81,17 +81,17 @@ result = "{0}{1}".format(result, storage)
 # Row 4
 storage = (
     "%Row 4\n"
-    "\\multicolumn{{2}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\cellcolor{{blue!20}}\\textbf{{Sự kiện kích hoạt}}}} &\n"
+    "\\multicolumn{{2}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\cellcolor{{blue!20}}\\textbf{{Điều kiện tiên quyết}}}} &\n"
     "\\multicolumn{{7}}{{L{{{1:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{2}}}\\\\\\hline\n"
-).format(portion[0:2].sum(), portion[2:].sum(), trigger)
+).format(portion[0:2].sum(), portion[2:].sum(), precondition)
 result = "{0}{1}".format(result, storage)
 
 # Row 5
 storage = (
     "%Row 5\n"
-    "\\multicolumn{{2}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\cellcolor{{blue!20}}\\textbf{{Điều kiện tiên quyết}}}} &\n"
+    "\\multicolumn{{2}}{{|M{{{0:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{\\cellcolor{{blue!20}}\\textbf{{Sự kiện kích hoạt}}}} &\n"
     "\\multicolumn{{7}}{{L{{{1:.3f}\\linewidth-2\\tabcolsep-.6pt}}|}}{{{2}}}\\\\\\hline\n"
-).format(portion[0:2].sum(), portion[2:].sum(), precondition)
+).format(portion[0:2].sum(), portion[2:].sum(), trigger)
 result = "{0}{1}".format(result, storage)
 
 # Row 6
