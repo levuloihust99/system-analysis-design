@@ -28,8 +28,6 @@
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
 \newenvironment{arev}{\fontfamily{fav}\selectfont}{\par}
 \begin{document}
-\section{Đặc tả Use case UC008 - Chơi game}
-Chức năng \textbf{Đăng xuất}
 \begin{arev}
 \begin{longtable}{|
 	M{0.19\linewidth-2\tabcolsep-.6pt}|
@@ -45,23 +43,24 @@ Chức năng \textbf{Đăng xuất}
 %Row 1
 \hline
 \cellcolor{blue!20}\textbf{Mã Use case} &
-\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC009} &
+\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC038} &
 \multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
 \multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Đăng xuất}\\\hline
 %Row 2
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
-\multicolumn{3}{M{0.209\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{M{0.266\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mức độ quan trọng}} &
-Quan trọng\\\hline
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Người dùng} \\\hline
 %Row 3
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
-\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Mô tả chức năng đăng xuất của người dùng}\\\hline
-%Row 4
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
-\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Người dùng chọn chức năng đăng xuất trên giao diện chính}\\\hline
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Đặc tả chức năng đăng xuất của người dùng}\\\hline
 %Row 4
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Điều kiện tiên quyết}} &
-\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Đăng nhập với vai trò người dùng}\\\hline
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Đang ở giao diện người chơi}\\\hline
+%Row 5
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Người dùng chọn chức năng đăng xuất trên giao diện}\\\hline
+%Row 6
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Điểm mở rộng}} &
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Không có}\\\hline
 %Normal flow
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 \cellcolor{orange!40}\textbf{STT} &
@@ -70,7 +69,7 @@ Quan trọng\\\hline
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 1 &
 \multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
-\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn chức năng đăng xuất từ giao diện chính} \\ \cline{3-9}
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn chức năng đăng xuất từ giao diện người chơi} \\ \cline{3-9}
 %
 \multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
 2 &
@@ -98,17 +97,12 @@ Quan trọng\\\hline
 \cellcolor{orange!40}\textbf{STT} &
 \multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
 \multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
-\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-2}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện thay thế/ngoại lệ}}}} &
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-2}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện ngoại lệ}}}} &
 4a &
 \multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
 \multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hủy bỏ thao tác} \\ \hline
 %
 \end{longtable}
-
-
-
-
-
 
 \end{arev}
 \end{document}

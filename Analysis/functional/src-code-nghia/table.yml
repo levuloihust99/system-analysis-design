@@ -1,0 +1,24 @@
+header:
+    ID: UC038
+    name: Nạp tiền
+    actor: Người dùng
+    description: Đặc tả chức năng nạp tiền trên giao diện quản lý giao dịch
+    precondition: Đang ở giao diện quản lý giao dịch
+    trigger: Người dùng chọn chức năng nạp tiền
+    extensions: Không có
+
+sub_uc1:
+    uc_name: 
+    normal_flow: [
+['Người dùng', 'Chọn chức năng nạp tiền'],
+['Hệ thống', 'Hiển thị giao diện nạp tiền'],
+['Người dùng', 'Chọn loại thẻ nạp'],
+['Người dùng', 'Nhập mã thẻ và series của thẻ'],
+['Hệ thống', 'Kiểm tra mã và series người dùng vừa nhập'],
+['Hệ thống', 'Thông báo nạp thẻ thành công'],
+['Hệ thống', 'Cập nhật số dư trong tài khoản người dùng'],
+]
+    child_flow:
+    alter_flow: [
+['6a', 'Hệ thống', 'Thông bão mã thẻ hoặc series không hợp lệ'],
+    ]

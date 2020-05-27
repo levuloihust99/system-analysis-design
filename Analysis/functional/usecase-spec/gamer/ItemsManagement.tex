@@ -1,0 +1,84 @@
+\documentclass[3p]{elsarticle}
+\usepackage{enumitem}
+\usepackage{amsmath, amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{arev}
+\usepackage[main=vietnamese, english]{babel}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=Sepia,
+}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{array, calc}
+\usepackage[table, dvipsnames]{xcolor}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+\renewcommand{\arraystretch}{1.7}
+%
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
+\newenvironment{arev}{\fontfamily{fav}\selectfont}{\par}
+\begin{document}
+\begin{arev}
+\begin{longtable}{|
+	M{0.19\linewidth-2\tabcolsep-.6pt}|
+	M{0.09\linewidth-2\tabcolsep-.6pt}|
+	M{0.114\linewidth-2\tabcolsep-.6pt}|
+	M{0.038\linewidth-2\tabcolsep-.6pt}|
+	M{0.057\linewidth-2\tabcolsep-.6pt}|
+	M{0.095\linewidth-2\tabcolsep-.6pt}|
+	M{0.043\linewidth-2\tabcolsep-.6pt}|
+	M{0.128\linewidth-2\tabcolsep-.6pt}|
+	M{0.256\linewidth-2\tabcolsep-.6pt}|
+	}
+%Row 1
+\hline
+\cellcolor{blue!20}\textbf{Mã Use case} &
+\multicolumn{3}{M{0.242\linewidth-2\tabcolsep-.6pt}|}{UC038} &
+\multicolumn{3}{M{0.195\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tên Use case}} &
+\multicolumn{2}{M{0.384\linewidth-2\tabcolsep-.6pt}|}{Quản lý kho trang bị}\\\hline
+%Row 2
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Tác nhân chính}} &
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Người dùng} \\\hline
+%Row 3
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Mô tả ngắn gọn}} &
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Đặc tả chức năng quản lý kho trang bị của người dùng}\\\hline
+%Row 4
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Điều kiện tiên quyết}} &
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Đang ở giao diện người chơi}\\\hline
+%Row 5
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Sự kiện kích hoạt}} &
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{Người dùng chọn chức năng quản lý kho trang bị trên giao diện}\\\hline
+%Row 6
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\textbf{Điểm mở rộng}} &
+\multicolumn{7}{L{0.731\linewidth-2\tabcolsep-.6pt}|}{1 UC}\\\hline
+%Normal flow
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+\cellcolor{orange!40}\textbf{STT} &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Thực hiện bởi}} &
+\multicolumn{3}{M{0.427\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{orange!40}\textbf{Hành động}} \\ \cline{3-9}
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}} &
+1 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Người dùng} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Chọn chức năng quản lý kho trang bị trên giao diện người chơi} \\ \cline{3-9}
+%
+\multicolumn{2}{|M{0.280\linewidth-2\tabcolsep-.6pt}|}{\cellcolor{blue!20}\multirow{-3}{*}[1em]{\parbox{0.280\textwidth-2\tabcolsep-.6pt}{\centering\textbf{Luồng sự kiện chính}}}} &
+2 &
+\multicolumn{3}{M{0.190\linewidth-2\tabcolsep-.6pt}|}{Hệ thống} &
+\multicolumn{3}{L{0.427\linewidth-2\tabcolsep-.6pt}|}{Hiện thị danh sách các trang bị trong kho} \\ \hline
+%
+%Subflow
+%Alter flow
+\end{longtable}
+
+\end{arev}
+\end{document}
