@@ -30,22 +30,22 @@
       ><path d="M-59 -14 L118 -14 L118 28 L-59 28 L-59 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath9"
-      ><path d="M-142 -14 L284 -14 L284 28 L-142 28 L-142 -14 Z"
+      ><path d="M-138 -14 L276 -14 L276 28 L-138 28 L-138 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath10"
-      ><path d="M-76 -14 L152 -14 L152 28 L-76 28 L-76 -14 Z"
+      ><path d="M-72 -14 L144 -14 L144 28 L-72 28 L-72 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath11"
       ><path d="M-89 -28 L178 -28 L178 56 L-89 56 L-89 -28 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath12"
-      ><path d="M-93 -14 L186 -14 L186 28 L-93 28 L-93 -14 Z"
+      ><path d="M-89 -14 L178 -14 L178 28 L-89 28 L-89 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath13"
       ><path d="M0 0 L268 0 L268 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath14"
-      ><path d="M184 32 L184 46 L78 46 L78 32 ZM0 0 L0 104 L268 104 L268 7 L147 7 L147 0 L76 0 L76 7 L17 7 L17 0 Z"
+      ><path d="M184 32 L184 46 L78 46 L78 32 ZM0 0 L0 104 L268 104 L268 7 L149 7 L149 0 L76 0 L76 7 L17 7 L17 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath15"
       ><path d="M0 0 L423 0 L423 104 L0 104 L0 0 Z"
@@ -66,7 +66,7 @@
       ><path d="M0 0 L269 0 L269 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath21"
-      ><path d="M215 31 L215 45 L52 45 L52 31 ZM0 0 L0 104 L269 104 L269 82 L220 82 L220 68 L269 68 L269 0 Z"
+      ><path d="M215 31 L215 45 L52 45 L52 31 ZM0 0 L0 104 L269 104 L269 82 L222 82 L222 68 L269 68 L269 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath22"
       ><path d="M-163 -14 L326 -14 L326 28 L-163 28 L-163 -14 Z"
@@ -152,13 +152,13 @@
     ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath8)" stroke="none"
       >:Admin</text
     ></g
-    ><g font-size="11px" transform="translate(133,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(135,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath9)" stroke="none"
-      >: GD-QLTinhNangGame</text
+      >: GDQLTinhNangGame</text
     ></g
-    ><g font-size="11px" transform="translate(493,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(495,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath10)" stroke="none"
-      >: QL-BanDo</text
+      >: QLBanDo</text
     ></g
     ><g font-size="11px" transform="translate(662,101)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath11)" stroke="none"
@@ -166,9 +166,9 @@
       ><text x="22" xml:space="preserve" y="25" clip-path="url(#clipPath11)" stroke="none"
       >: BanDo</text
     ></g
-    ><g font-size="11px" transform="translate(378,220)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(380,220)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath12)" stroke="none"
-      >: GD-QLBanDo</text
+      >: GDQLBanDo</text
     ></g
     ><g stroke-linecap="butt" font-size="11px" transform="translate(-14,44)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1"
     ><line y2="50" fill="none" x1="50" clip-path="url(#clipPath14)" x2="214" y1="50"

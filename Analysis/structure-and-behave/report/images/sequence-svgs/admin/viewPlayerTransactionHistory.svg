@@ -33,7 +33,7 @@
       ><path d="M-143 -14 L286 -14 L286 28 L-143 28 L-143 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath10"
-      ><path d="M-89 -14 L178 -14 L178 28 L-89 28 L-89 -14 Z"
+      ><path d="M-85 -14 L170 -14 L170 28 L-85 28 L-85 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath11"
       ><path d="M-81 -28 L162 -28 L162 56 L-81 56 L-81 -28 Z"
@@ -156,9 +156,9 @@
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath9)" stroke="none"
       >: CSThongTinNguoiChoi</text
     ></g
-    ><g font-size="11px" transform="translate(437,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(439,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath10)" stroke="none"
-      >: QL-GiaoDich</text
+      >: QLGiaoDich</text
     ></g
     ><g font-size="11px" transform="translate(576,103)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath11)" stroke="none"

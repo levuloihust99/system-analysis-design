@@ -42,10 +42,10 @@
       ><path d="M-59 -14 L118 -14 L118 28 L-59 28 L-59 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath13"
-      ><path d="M-93 -14 L186 -14 L186 28 L-93 28 L-93 -14 Z"
+      ><path d="M-89 -14 L178 -14 L178 28 L-89 28 L-89 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath14"
-      ><path d="M-76 -14 L152 -14 L152 28 L-76 28 L-76 -14 Z"
+      ><path d="M-72 -14 L144 -14 L144 28 L-72 28 L-72 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath15"
       ><path d="M-89 -28 L178 -28 L178 56 L-89 56 L-89 -28 Z"
@@ -60,13 +60,13 @@
       ><path d="M0 0 L230 0 L230 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath19"
-      ><path d="M159 34 L159 48 L65 48 L65 34 ZM0 0 L0 104 L230 104 L230 0 L227 0 L227 13 L134 13 L134 0 L76 0 L76 13 L17 13 L17 0 Z"
+      ><path d="M159 34 L159 48 L65 48 L65 34 ZM0 0 L0 104 L230 104 L230 0 L225 0 L225 13 L136 13 L136 0 L76 0 L76 13 L17 13 L17 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath20"
       ><path d="M0 0 L508 0 L508 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath21"
-      ><path d="M320 33 L320 47 L184 47 L184 33 ZM306 71 L306 85 L195 85 L195 71 ZM93 0 L93 1 L0 1 L0 22 L25 22 L25 36 L0 36 L0 104 L508 104 L508 0 L496 0 L496 1 L420 1 L420 0 Z"
+      ><path d="M320 33 L320 47 L184 47 L184 33 ZM306 71 L306 85 L195 85 L195 71 ZM0 0 L0 22 L25 22 L25 36 L0 36 L0 104 L508 104 L508 0 L494 0 L494 1 L422 1 L422 0 L91 0 L91 1 L2 1 L2 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath22"
       ><path d="M0 0 L162 0 L162 104 L0 104 L0 0 Z"
@@ -229,13 +229,13 @@
     ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath12)" stroke="none"
       >:Admin</text
     ></g
-    ><g font-size="11px" transform="translate(120,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(122,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath13)" stroke="none"
-      >: GD-QLBanDo</text
+      >: GDQLBanDo</text
     ></g
-    ><g font-size="11px" transform="translate(540,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(542,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath14)" stroke="none"
-      >: QL-BanDo</text
+      >: QLBanDo</text
     ></g
     ><g font-size="11px" transform="translate(640,95)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath15)" stroke="none"

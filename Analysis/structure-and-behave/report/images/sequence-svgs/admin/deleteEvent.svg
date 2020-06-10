@@ -33,25 +33,25 @@
       ><path d="M-50 -14 L100 -14 L100 28 L-50 28 L-50 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath10"
-      ><path d="M-95 -14 L190 -14 L190 28 L-95 28 L-95 -14 Z"
+      ><path d="M-91 -14 L182 -14 L182 28 L-91 28 L-91 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath11"
       ><path d="M-85 -14 L170 -14 L170 28 L-85 28 L-85 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath12"
-      ><path d="M-77 -14 L154 -14 L154 28 L-77 28 L-77 -14 Z"
+      ><path d="M-73 -14 L146 -14 L146 28 L-73 28 L-73 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath13"
       ><path d="M0 0 L267 0 L267 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath14"
-      ><path d="M71 4 L71 18 L21 18 L21 4 ZM265 4 L265 18 L170 18 L170 4 ZM195 33 L195 47 L60 47 L60 33 ZM0 0 L0 104 L267 104 L267 0 Z"
+      ><path d="M71 4 L71 18 L21 18 L21 4 ZM263 4 L263 18 L172 18 L172 4 ZM195 33 L195 47 L60 47 L60 33 ZM0 0 L0 104 L267 104 L267 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath15"
       ><path d="M0 0 L214 0 L214 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath16"
-      ><path d="M94 0 L94 9 L0 9 L0 24 L24 24 L24 38 L0 38 L0 95 L45 95 L45 104 L214 104 L214 75 L176 75 L176 61 L214 61 L214 0 Z"
+      ><path d="M0 0 L0 24 L24 24 L24 38 L0 38 L0 95 L45 95 L45 104 L214 104 L214 75 L176 75 L176 61 L214 61 L214 0 L92 0 L92 9 L1 9 L1 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath17"
       ><path d="M0 0 L439 0 L439 104 L0 104 L0 0 Z"
@@ -76,6 +76,9 @@
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath24"
       ><path d="M-135 -14 L270 -14 L270 28 L-135 28 L-135 -14 Z"
+      /></clipPath
+      ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath25"
+      ><path d="M-77 -14 L154 -14 L154 28 L-77 28 L-77 -14 Z"
       /></clipPath
     ></defs
     ><g fill="white" text-rendering="geometricPrecision" fill-opacity="1" stroke-opacity="1" stroke="white"
@@ -150,17 +153,17 @@
     ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath9)" stroke="none"
       >Actor</text
     ></g
-    ><g font-size="11px" transform="translate(156,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(158,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath10)" stroke="none"
-      >: GD-DSSuKien</text
+      >: GDDSSuKien</text
     ></g
     ><g font-size="11px" transform="translate(333,103)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath11)" stroke="none"
       >: CSXacNhan</text
     ></g
-    ><g font-size="11px" transform="translate(498,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(500,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath12)" stroke="none"
-      >: QL-SuKien</text
+      >: QLSuKien</text
     ></g
     ><g stroke-linecap="butt" font-size="11px" transform="translate(-14,33)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1"
     ><line y2="50" fill="none" x1="50" clip-path="url(#clipPath14)" x2="213" y1="50"
@@ -198,8 +201,8 @@
       >xoaSuKien(suKienID)</text
     ></g
     ><g font-size="11px" transform="translate(125,137)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="white" stroke-opacity="1"
-    ><rect x="0" width="77" height="14" y="0" clip-path="url(#clipPath12)" stroke="none"
-      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath12)" stroke="none"
+    ><rect x="0" width="77" height="14" y="0" clip-path="url(#clipPath25)" stroke="none"
+      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath25)" stroke="none"
       >xacNhan()</text
     ></g
     ><g font-size="11px" transform="translate(46,66)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="white" stroke-opacity="1"

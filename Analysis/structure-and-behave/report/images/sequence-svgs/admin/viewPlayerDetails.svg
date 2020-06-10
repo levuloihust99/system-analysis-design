@@ -30,10 +30,10 @@
       ><path d="M-59 -14 L118 -14 L118 28 L-59 28 L-59 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath9"
-      ><path d="M-114 -14 L228 -14 L228 28 L-114 28 L-114 -14 Z"
+      ><path d="M-110 -14 L220 -14 L220 28 L-110 28 L-110 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath10"
-      ><path d="M-96 -14 L192 -14 L192 28 L-96 28 L-96 -14 Z"
+      ><path d="M-92 -14 L184 -14 L184 28 L-92 28 L-92 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath11"
       ><path d="M-77 -14 L154 -14 L154 28 L-77 28 L-77 -14 Z"
@@ -45,7 +45,7 @@
       ><path d="M0 0 L272 0 L272 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath14"
-      ><path d="M213 29 L213 43 L54 43 L54 29 ZM0 0 L0 104 L272 104 L272 5 L165 5 L165 0 L76 0 L76 5 L17 5 L17 0 Z"
+      ><path d="M213 29 L213 43 L54 43 L54 29 ZM0 0 L0 104 L272 104 L272 5 L167 5 L167 0 L76 0 L76 5 L17 5 L17 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath15"
       ><path d="M0 0 L368 0 L368 104 L0 104 L0 0 Z"
@@ -147,13 +147,13 @@
     ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath8)" stroke="none"
       >:Admin</text
     ></g
-    ><g font-size="11px" transform="translate(151,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(153,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath9)" stroke="none"
-      >: GD-DSNguoiChoi</text
+      >: GDDSNguoiChoi</text
     ></g
-    ><g font-size="11px" transform="translate(432,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(434,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath10)" stroke="none"
-      >: QL-NguoiChoi</text
+      >: QLNguoiChoi</text
     ></g
     ><g font-size="11px" transform="translate(585,142)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath11)" stroke="none"

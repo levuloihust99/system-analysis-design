@@ -54,7 +54,7 @@
       ><path d="M-59 -14 L118 -14 L118 28 L-59 28 L-59 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath17"
-      ><path d="M-93 -14 L186 -14 L186 28 L-93 28 L-93 -14 Z"
+      ><path d="M-89 -14 L178 -14 L178 28 L-89 28 L-89 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath18"
       ><path d="M-130 -14 L260 -14 L260 28 L-130 28 L-130 -14 Z"
@@ -66,7 +66,7 @@
       ><path d="M-85 -14 L170 -14 L170 28 L-85 28 L-85 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath21"
-      ><path d="M-95 -14 L190 -14 L190 28 L-95 28 L-95 -14 Z"
+      ><path d="M-91 -14 L182 -14 L182 28 L-91 28 L-91 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath22"
       ><path d="M-110 -28 L220 -28 L220 56 L-110 56 L-110 -28 Z"
@@ -75,7 +75,7 @@
       ><path d="M0 0 L253 0 L253 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath24"
-      ><path d="M76 3 L76 17 L17 17 L17 3 ZM250 3 L250 17 L157 17 L157 3 ZM186 34 L186 48 L53 48 L53 34 ZM0 0 L0 104 L253 104 L253 0 Z"
+      ><path d="M76 3 L76 17 L17 17 L17 3 ZM248 3 L248 17 L159 17 L159 3 ZM186 34 L186 48 L53 48 L53 34 ZM0 0 L0 104 L253 104 L253 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath25"
       ><path d="M0 0 L195 0 L195 104 L0 104 L0 0 Z"
@@ -305,9 +305,9 @@
     ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath16)" stroke="none"
       >:Admin</text
     ></g
-    ><g font-size="11px" transform="translate(143,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(145,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath17)" stroke="none"
-      >: GD-QLBanDo</text
+      >: GDQLBanDo</text
     ></g
     ><g font-size="11px" transform="translate(278,121)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath18)" stroke="none"
@@ -321,15 +321,15 @@
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath20)" stroke="none"
       >: CSXacNhan</text
     ></g
-    ><g font-size="11px" transform="translate(577,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(579,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath21)" stroke="none"
-      >: QL-ThongBao</text
+      >: QLThongBao</text
     ></g
     ><g font-size="11px" transform="translate(727,2)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="9" xml:space="preserve" y="11" clip-path="url(#clipPath22)" stroke="none"
       >&lt;&lt;boundary&gt;&gt;</text
-      ><text x="11" xml:space="preserve" y="25" clip-path="url(#clipPath22)" stroke="none"
-      >: GD-NguoiChoi</text
+      ><text x="13" xml:space="preserve" y="25" clip-path="url(#clipPath22)" stroke="none"
+      >: GDNguoiChoi</text
     ></g
     ><g stroke-linecap="butt" font-size="11px" transform="translate(-14,34)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1"
     ><line y2="50" fill="none" x1="50" clip-path="url(#clipPath24)" x2="199" y1="50"

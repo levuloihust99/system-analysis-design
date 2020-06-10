@@ -75,28 +75,28 @@
       ><path d="M-58 -14 L116 -14 L116 28 L-58 28 L-58 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath24"
-      ><path d="M-73 -14 L146 -14 L146 28 L-73 28 L-73 -14 Z"
+      ><path d="M-69 -14 L138 -14 L138 28 L-69 28 L-69 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath25"
       ><path d="M-100 -14 L200 -14 L200 28 L-100 28 L-100 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath26"
-      ><path d="M-88 -14 L176 -14 L176 28 L-88 28 L-88 -14 Z"
+      ><path d="M-84 -14 L168 -14 L168 28 L-84 28 L-84 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath27"
       ><path d="M-97 -14 L194 -14 L194 28 L-97 28 L-97 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath28"
-      ><path d="M-96 -14 L192 -14 L192 28 L-96 28 L-96 -14 Z"
+      ><path d="M-92 -14 L184 -14 L184 28 L-92 28 L-92 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath29"
-      ><path d="M-98 -14 L196 -14 L196 28 L-98 28 L-98 -14 Z"
+      ><path d="M-94 -14 L188 -14 L188 28 L-94 28 L-94 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath30"
       ><path d="M0 0 L226 0 L226 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath31"
-      ><path d="M75 4 L75 18 L17 18 L17 4 ZM213 4 L213 18 L140 18 L140 4 ZM158 34 L158 48 L53 48 L53 34 ZM0 0 L0 104 L226 104 L226 0 Z"
+      ><path d="M75 4 L75 18 L17 18 L17 4 ZM211 4 L211 18 L142 18 L142 4 ZM158 34 L158 48 L53 48 L53 34 ZM0 0 L0 104 L226 104 L226 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath32"
       ><path d="M0 0 L187 0 L187 104 L0 104 L0 0 Z"
@@ -144,13 +144,13 @@
       ><path d="M211 29 L211 43 L68 43 L68 29 ZM0 0 L0 104 L123 104 L123 101 L168 101 L168 104 L291 104 L291 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath47"
-      ><path d="M168 32 L168 46 L123 46 L123 32 ZM217 80 L217 94 L58 94 L58 80 ZM0 0 L0 104 L291 104 L291 0 Z"
+      ><path d="M168 32 L168 46 L123 46 L123 32 ZM274 81 L274 95 L64 95 L64 81 ZM0 0 L0 104 L291 104 L291 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath48"
       ><path d="M0 0 L425 0 L425 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath49"
-      ><path d="M217 32 L217 46 L58 46 L58 32 ZM0 0 L0 104 L425 104 L425 0 Z"
+      ><path d="M274 33 L274 47 L64 47 L64 33 ZM0 0 L0 104 L425 104 L425 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath50"
       ><path d="M145 34 L145 48 L96 48 L96 34 ZM148 72 L148 86 L83 86 L83 72 ZM0 0 L0 104 L291 104 L291 0 Z"
@@ -162,7 +162,7 @@
       ><path d="M0 0 L173 0 L173 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath53"
-      ><path d="M0 0 L0 104 L173 104 L173 82 L122 82 L122 68 L173 68 L173 0 Z"
+      ><path d="M0 0 L0 104 L173 104 L173 82 L124 82 L124 68 L173 68 L173 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath54"
       ><path d="M-65 -14 L130 -14 L130 28 L-65 28 L-65 -14 Z"
@@ -171,7 +171,7 @@
       ><path d="M-49 -14 L98 -14 L98 28 L-49 28 L-49 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath56"
-      ><path d="M-159 -14 L318 -14 L318 28 L-159 28 L-159 -14 Z"
+      ><path d="M-210 -14 L420 -14 L420 28 L-210 28 L-210 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath57"
       ><path d="M-45 -14 L90 -14 L90 28 L-45 28 L-45 -14 Z"
@@ -186,15 +186,12 @@
       ><path d="M-131 -14 L262 -14 L262 28 L-131 28 L-131 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath61"
-      ><path d="M-84 -14 L168 -14 L168 28 L-84 28 L-84 -14 Z"
-      /></clipPath
-      ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath62"
       ><path d="M-162 -22 L324 -22 L324 44 L-162 44 L-162 -22 Z"
       /></clipPath
-      ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath63"
+      ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath62"
       ><path d="M-137 -14 L274 -14 L274 28 L-137 28 L-137 -14 Z"
       /></clipPath
-      ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath64"
+      ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath63"
       ><path d="M-105 -14 L210 -14 L210 28 L-105 28 L-105 -14 Z"
       /></clipPath
     ></defs
@@ -340,29 +337,29 @@
     ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath23)" stroke="none"
       >:Khach</text
     ></g
-    ><g font-size="11px" transform="translate(126,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(128,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath24)" stroke="none"
-      >: GD-Chinh</text
+      >: GDChinh</text
     ></g
     ><g font-size="11px" transform="translate(254,144)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath25)" stroke="none"
       >: FormNhapSDT</text
     ></g
-    ><g font-size="11px" transform="translate(598,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(600,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath26)" stroke="none"
-      >: QL-MatKhau</text
+      >: QLMatKhau</text
     ></g
     ><g font-size="11px" transform="translate(399,365)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath27)" stroke="none"
       >: FormMatKhau</text
     ></g
-    ><g font-size="11px" transform="translate(728,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(730,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath28)" stroke="none"
-      >: QL-NguoiChoi</text
+      >: QLNguoiChoi</text
     ></g
-    ><g font-size="11px" transform="translate(523,664)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(525,664)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath29)" stroke="none"
-      >: GD-NguoiChoi</text
+      >: GDNguoiChoi</text
     ></g
     ><g stroke-linecap="butt" font-size="11px" transform="translate(-14,33)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1"
     ><line y2="50" fill="none" x1="50" clip-path="url(#clipPath31)" x2="172" y1="50"
@@ -448,10 +445,10 @@
       /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath55)" stroke="none"
       >False</text
     ></g
-    ><g font-size="11px" transform="translate(459,580)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="white" stroke-opacity="1"
-    ><rect x="0" width="159" height="14" y="0" clip-path="url(#clipPath56)" stroke="none"
-      /><text fill="black" x="9" xml:space="preserve" y="11" clip-path="url(#clipPath56)" stroke="none"
-      >capNhatMK(nguoiChoiID)</text
+    ><g font-size="11px" transform="translate(465,581)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="white" stroke-opacity="1"
+    ><rect x="0" width="210" height="14" y="0" clip-path="url(#clipPath56)" stroke="none"
+      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath56)" stroke="none"
+      >doiMatKhau(nguoiChoiID, pwdMoi)</text
     ></g
     ><g font-size="11px" transform="translate(524,532)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="white" stroke-opacity="1"
     ><rect x="0" width="45" height="14" y="0" clip-path="url(#clipPath57)" stroke="none"
@@ -474,23 +471,23 @@
       >guiMaXacMinh(SDT)</text
     ></g
     ><g font-size="11px" transform="translate(433,194)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="white" stroke-opacity="1"
-    ><rect x="0" width="84" height="14" y="0" clip-path="url(#clipPath61)" stroke="none"
-      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath61)" stroke="none"
+    ><rect x="0" width="84" height="14" y="0" clip-path="url(#clipPath26)" stroke="none"
+      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath26)" stroke="none"
       >guiMa(SDT)</text
     ></g
     ><g font-size="11px" transform="translate(339,244)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="white" stroke-opacity="1"
-    ><rect x="0" width="162" height="22" y="0" clip-path="url(#clipPath62)" stroke="none"
-      /><text fill="black" x="13" xml:space="preserve" y="15" clip-path="url(#clipPath62)" stroke="none"
+    ><rect x="0" width="162" height="22" y="0" clip-path="url(#clipPath61)" stroke="none"
+      /><text fill="black" x="13" xml:space="preserve" y="15" clip-path="url(#clipPath61)" stroke="none"
       >hienThiTruongNhapMa()</text
     ></g
     ><g font-size="11px" transform="translate(97,281)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="white" stroke-opacity="1"
-    ><rect x="0" width="137" height="14" y="0" clip-path="url(#clipPath63)" stroke="none"
-      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath63)" stroke="none"
+    ><rect x="0" width="137" height="14" y="0" clip-path="url(#clipPath62)" stroke="none"
+      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath62)" stroke="none"
       >nhapMa(maXacMinh)</text
     ></g
     ><g font-size="11px" transform="translate(39,67)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="white" stroke-opacity="1"
-    ><rect x="0" width="105" height="14" y="0" clip-path="url(#clipPath64)" stroke="none"
-      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath64)" stroke="none"
+    ><rect x="0" width="105" height="14" y="0" clip-path="url(#clipPath63)" stroke="none"
+      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath63)" stroke="none"
       >quenMatKhau()</text
     ></g
     ><g font-size="10px" fill-opacity="1" fill="rgb(120,120,120)" text-rendering="geometricPrecision" image-rendering="optimizeQuality" stroke="rgb(120,120,120)" stroke-opacity="1"

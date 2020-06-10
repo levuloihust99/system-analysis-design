@@ -72,10 +72,10 @@
       ><path d="M-59 -14 L118 -14 L118 28 L-59 28 L-59 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath23"
-      ><path d="M-94 -14 L188 -14 L188 28 L-94 28 L-94 -14 Z"
+      ><path d="M-90 -14 L180 -14 L180 28 L-90 28 L-90 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath24"
-      ><path d="M-89 -14 L178 -14 L178 28 L-89 28 L-89 -14 Z"
+      ><path d="M-85 -14 L170 -14 L170 28 L-85 28 L-85 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath25"
       ><path d="M-83 -14 L166 -14 L166 28 L-83 28 L-83 -14 Z"
@@ -84,19 +84,19 @@
       ><path d="M-130 -14 L260 -14 L260 28 L-130 28 L-130 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath27"
-      ><path d="M-77 -14 L154 -14 L154 28 L-77 28 L-77 -14 Z"
+      ><path d="M-73 -14 L146 -14 L146 28 L-73 28 L-73 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath28"
       ><path d="M0 0 L247 0 L247 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath29"
-      ><path d="M76 3 L76 17 L17 17 L17 3 ZM244 3 L244 17 L150 17 L150 3 ZM162 34 L162 48 L77 48 L77 34 ZM0 0 L0 104 L247 104 L247 0 Z"
+      ><path d="M76 3 L76 17 L17 17 L17 3 ZM242 3 L242 17 L152 17 L152 3 ZM162 34 L162 48 L77 48 L77 34 ZM0 0 L0 104 L247 104 L247 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath30"
       ><path d="M0 0 L206 0 L206 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath31"
-      ><path d="M0 0 L0 17 L11 17 L11 31 L0 31 L0 104 L206 104 L206 82 L158 82 L158 68 L206 68 L206 0 Z"
+      ><path d="M0 0 L0 17 L11 17 L11 31 L0 31 L0 104 L206 104 L206 82 L160 82 L160 68 L206 68 L206 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath32"
       ><path d="M0 0 L403 0 L403 104 L0 104 L0 0 Z"
@@ -186,21 +186,18 @@
       ><path d="M-158 -14 L316 -14 L316 28 L-158 28 L-158 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath61"
-      ><path d="M-85 -14 L170 -14 L170 28 L-85 28 L-85 -14 Z"
-      /></clipPath
-      ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath62"
       ><path d="M-140 -14 L280 -14 L280 28 L-140 28 L-140 -14 Z"
       /></clipPath
-      ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath63"
+      ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath62"
       ><path d="M-114 -14 L228 -14 L228 28 L-114 28 L-114 -14 Z"
       /></clipPath
-      ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath64"
+      ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath63"
       ><path d="M-116 -14 L232 -14 L232 28 L-116 28 L-116 -14 Z"
       /></clipPath
-      ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath65"
+      ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath64"
       ><path d="M-131 -14 L262 -14 L262 28 L-131 28 L-131 -14 Z"
       /></clipPath
-      ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath66"
+      ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath65"
       ><path d="M-123 -14 L246 -14 L246 28 L-123 28 L-123 -14 Z"
       /></clipPath
     ></defs
@@ -344,13 +341,13 @@
     ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath22)" stroke="none"
       >:Admin</text
     ></g
-    ><g font-size="11px" transform="translate(136,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(138,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath23)" stroke="none"
-      >: GD-QLSuKien</text
+      >: GDQLSuKien</text
     ></g
-    ><g font-size="11px" transform="translate(295,119)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(297,119)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="4" xml:space="preserve" y="11" clip-path="url(#clipPath24)" stroke="none"
-      >GD-TaoSuKien</text
+      >GDTaoSuKien</text
     ></g
     ><g font-size="11px" transform="translate(458,402)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath25)" stroke="none"
@@ -360,9 +357,9 @@
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath26)" stroke="none"
       >: FormChonThoiDiem</text
     ></g
-    ><g font-size="11px" transform="translate(686,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(688,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath27)" stroke="none"
-      >: QL-SuKien</text
+      >: QLSuKien</text
     ></g
     ><g font-size="11px" transform="translate(820,907)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath22)" stroke="none"
@@ -479,43 +476,43 @@
       >chonThoiDiem(thoiDiem)</text
     ></g
     ><g font-size="11px" transform="translate(137,642)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="white" stroke-opacity="1"
-    ><rect x="0" width="85" height="14" y="0" clip-path="url(#clipPath61)" stroke="none"
-      /><text fill="black" x="9" xml:space="preserve" y="11" clip-path="url(#clipPath61)" stroke="none"
+    ><rect x="0" width="85" height="14" y="0" clip-path="url(#clipPath24)" stroke="none"
+      /><text fill="black" x="9" xml:space="preserve" y="11" clip-path="url(#clipPath24)" stroke="none"
       >taoSuKien()</text
     ></g
     ><g font-size="11px" transform="translate(115,602)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="white" stroke-opacity="1"
-    ><rect x="0" width="140" height="14" y="0" clip-path="url(#clipPath62)" stroke="none"
-      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath62)" stroke="none"
+    ><rect x="0" width="140" height="14" y="0" clip-path="url(#clipPath61)" stroke="none"
+      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath61)" stroke="none"
       >taoNoiDung(noiDung)</text
     ></g
     ><g font-size="11px" transform="translate(123,559)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="white" stroke-opacity="1"
-    ><rect x="0" width="114" height="14" y="0" clip-path="url(#clipPath63)" stroke="none"
-      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath63)" stroke="none"
+    ><rect x="0" width="114" height="14" y="0" clip-path="url(#clipPath62)" stroke="none"
+      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath62)" stroke="none"
       >taoBackGround()</text
     ></g
     ><g font-size="11px" transform="translate(207,440)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="white" stroke-opacity="1"
-    ><rect x="0" width="116" height="14" y="0" clip-path="url(#clipPath64)" stroke="none"
-      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath64)" stroke="none"
+    ><rect x="0" width="116" height="14" y="0" clip-path="url(#clipPath63)" stroke="none"
+      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath63)" stroke="none"
       >chonFile(filePath)</text
     ></g
     ><g font-size="11px" transform="translate(192,341)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="white" stroke-opacity="1"
-    ><rect x="0" width="85" height="14" y="0" clip-path="url(#clipPath61)" stroke="none"
-      /><text fill="black" x="9" xml:space="preserve" y="11" clip-path="url(#clipPath61)" stroke="none"
+    ><rect x="0" width="85" height="14" y="0" clip-path="url(#clipPath24)" stroke="none"
+      /><text fill="black" x="9" xml:space="preserve" y="11" clip-path="url(#clipPath24)" stroke="none"
       >taiAnhLen()</text
     ></g
     ><g font-size="11px" transform="translate(135,272)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="white" stroke-opacity="1"
-    ><rect x="0" width="131" height="14" y="0" clip-path="url(#clipPath65)" stroke="none"
-      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath65)" stroke="none"
+    ><rect x="0" width="131" height="14" y="0" clip-path="url(#clipPath64)" stroke="none"
+      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath64)" stroke="none"
       >layAnhBangURL(url)</text
     ></g
     ><g font-size="11px" transform="translate(124,192)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="white" stroke-opacity="1"
-    ><rect x="0" width="123" height="14" y="0" clip-path="url(#clipPath66)" stroke="none"
-      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath66)" stroke="none"
+    ><rect x="0" width="123" height="14" y="0" clip-path="url(#clipPath65)" stroke="none"
+      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath65)" stroke="none"
       >chonBackGround()</text
     ></g
     ><g font-size="11px" transform="translate(63,68)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="white" stroke-opacity="1"
-    ><rect x="0" width="85" height="14" y="0" clip-path="url(#clipPath61)" stroke="none"
-      /><text fill="black" x="9" xml:space="preserve" y="11" clip-path="url(#clipPath61)" stroke="none"
+    ><rect x="0" width="85" height="14" y="0" clip-path="url(#clipPath24)" stroke="none"
+      /><text fill="black" x="9" xml:space="preserve" y="11" clip-path="url(#clipPath24)" stroke="none"
       >taoSuKien()</text
     ></g
     ><g font-size="10px" fill-opacity="1" fill="rgb(120,120,120)" text-rendering="geometricPrecision" image-rendering="optimizeQuality" stroke="rgb(120,120,120)" stroke-opacity="1"

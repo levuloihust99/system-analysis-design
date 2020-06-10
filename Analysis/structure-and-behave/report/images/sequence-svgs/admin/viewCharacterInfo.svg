@@ -30,10 +30,10 @@
       ><path d="M-59 -14 L118 -14 L118 28 L-59 28 L-59 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath9"
-      ><path d="M-105 -14 L210 -14 L210 28 L-105 28 L-105 -14 Z"
+      ><path d="M-101 -14 L202 -14 L202 28 L-101 28 L-101 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath10"
-      ><path d="M-87 -14 L174 -14 L174 28 L-87 28 L-87 -14 Z"
+      ><path d="M-83 -14 L166 -14 L166 28 L-83 28 L-83 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath11"
       ><path d="M-68 -14 L136 -14 L136 28 L-68 28 L-68 -14 Z"
@@ -45,7 +45,7 @@
       ><path d="M0 0 L281 0 L281 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath14"
-      ><path d="M213 34 L213 48 L51 48 L51 34 ZM0 0 L0 104 L281 104 L281 8 L179 8 L179 0 L76 0 L76 8 L17 8 L17 0 Z"
+      ><path d="M213 34 L213 48 L51 48 L51 34 ZM0 0 L0 104 L281 104 L281 8 L181 8 L181 0 L76 0 L76 8 L17 8 L17 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath15"
       ><path d="M0 0 L354 0 L354 104 L0 104 L0 0 Z"
@@ -147,13 +147,13 @@
     ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath8)" stroke="none"
       >:Admin</text
     ></g
-    ><g font-size="11px" transform="translate(165,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(167,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath9)" stroke="none"
-      >: GD-DSNhanVat</text
+      >: GDDSNhanVat</text
     ></g
-    ><g font-size="11px" transform="translate(432,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(434,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath10)" stroke="none"
-      >: QL-NhanVat</text
+      >: QLNhanVat</text
     ></g
     ><g font-size="11px" transform="translate(561,136)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath11)" stroke="none"

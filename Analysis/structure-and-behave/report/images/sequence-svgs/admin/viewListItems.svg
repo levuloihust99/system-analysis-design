@@ -30,22 +30,22 @@
       ><path d="M-59 -14 L118 -14 L118 28 L-59 28 L-59 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath9"
-      ><path d="M-84 -14 L168 -14 L168 28 L-84 28 L-84 -14 Z"
+      ><path d="M-80 -14 L160 -14 L160 28 L-80 28 L-80 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath10"
-      ><path d="M-89 -14 L178 -14 L178 28 L-89 28 L-89 -14 Z"
+      ><path d="M-85 -14 L170 -14 L170 28 L-85 28 L-85 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath11"
       ><path d="M-89 -28 L178 -28 L178 56 L-89 56 L-89 -28 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath12"
-      ><path d="M-107 -14 L214 -14 L214 28 L-107 28 L-107 -14 Z"
+      ><path d="M-103 -14 L206 -14 L206 28 L-103 28 L-103 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath13"
       ><path d="M0 0 L239 0 L239 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath14"
-      ><path d="M76 3 L76 17 L17 17 L17 3 ZM231 3 L231 17 L147 17 L147 3 ZM165 33 L165 47 L56 47 L56 33 ZM0 0 L0 104 L239 104 L239 0 Z"
+      ><path d="M76 3 L76 17 L17 17 L17 3 ZM229 3 L229 17 L149 17 L149 3 ZM165 33 L165 47 L56 47 L56 33 ZM0 0 L0 104 L239 104 L239 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath15"
       ><path d="M0 0 L176 0 L176 104 L0 104 L0 0 Z"
@@ -57,13 +57,13 @@
       ><path d="M0 0 L244 0 L244 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath18"
-      ><path d="M186 15 L186 43 L53 43 L53 15 ZM0 0 L0 104 L244 104 L244 61 L172 61 L172 47 L244 47 L244 0 Z"
+      ><path d="M186 15 L186 43 L53 43 L53 15 ZM0 0 L0 104 L244 104 L244 61 L174 61 L174 47 L244 47 L244 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath19"
       ><path d="M0 0 L365 0 L365 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath20"
-      ><path d="M251 34 L251 48 L106 48 L106 34 ZM0 0 L0 21 L22 21 L22 35 L0 35 L0 104 L117 104 L117 100 L242 100 L242 104 L365 104 L365 0 L360 0 L360 5 L271 5 L271 0 L88 0 L88 5 L4 5 L4 0 Z"
+      ><path d="M251 34 L251 48 L106 48 L106 34 ZM0 0 L0 21 L22 21 L22 35 L0 35 L0 104 L117 104 L117 100 L242 100 L242 104 L365 104 L365 0 L358 0 L358 5 L273 5 L273 0 L86 0 L86 5 L6 5 L6 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath21"
       ><path d="M242 33 L242 47 L117 47 L117 33 ZM0 0 L0 104 L53 104 L53 82 L186 82 L186 104 L365 104 L365 0 Z"
@@ -152,13 +152,13 @@
     ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath8)" stroke="none"
       >:Admin</text
     ></g
-    ><g font-size="11px" transform="translate(133,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(135,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath9)" stroke="none"
-      >: GD-QLShop</text
+      >: GDQLShop</text
     ></g
-    ><g font-size="11px" transform="translate(400,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(402,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath10)" stroke="none"
-      >: QL-VatPham</text
+      >: QLVatPham</text
     ></g
     ><g font-size="11px" transform="translate(520,95)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath11)" stroke="none"
@@ -166,9 +166,9 @@
       ><text x="15" xml:space="preserve" y="25" clip-path="url(#clipPath11)" stroke="none"
       >: VatPham</text
     ></g
-    ><g font-size="11px" transform="translate(301,227)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(303,227)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath12)" stroke="none"
-      >: GD-DSVatPham</text
+      >: GDDSVatPham</text
     ></g
     ><g stroke-linecap="butt" font-size="11px" transform="translate(-14,34)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1"
     ><line y2="50" fill="none" x1="50" clip-path="url(#clipPath14)" x2="185" y1="50"

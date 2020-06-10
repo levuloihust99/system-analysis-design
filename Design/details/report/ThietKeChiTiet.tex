@@ -1,0 +1,755 @@
+\documentclass[3p]{elsarticle}
+\usepackage{enumitem}
+\usepackage{amsmath, amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{arev}
+\usepackage[main=vietnamese, english]{babel}
+\usepackage[bitstream-charter]{mathdesign}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=Sepia,
+}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{xurl, seqsplit, array, calc}
+\usepackage[table, dvipsnames]{xcolor}
+\usepackage{pdflscape}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+\renewcommand{\arraystretch}{1.7}
+%
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}m{#1}}
+\newenvironment{arev}{\fontfamily{fav}\selectfont}{\par}
+\begin{document}
+\tableofcontents
+\newpage
+\section{Thiết kế chi tiết lớp}
+\subsection{Các lớp giao diện}
+\subsubsection{GDChinh}
+\begin{arev}
+{\fontsize{7pt}{\baselineskip}\selectfont
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		
+		\hline
+		\textbf{Tên lớp} & \multicolumn{ 5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{GDChinh}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{ 5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Cung cấp các chức năng cho khách truy cập website} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \multicolumn{ 1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên thuộc tính}} & \multicolumn{ 2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{ 1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{ 1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} &  & \multicolumn{ 2}{L{.317\linewidth-2\tabcolsep-.6pt}|}{} &  &  \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Phương thức}} & \multicolumn{ 1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên phương thức}} & \multicolumn{ 1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{ 1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{ 1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{ 1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & dangNhap & public &  & void & hiển thị Form đăng nhập \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & dangKy & public &  & void & hiển thị giao diện đăng ký \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & xemSuKien & public &  & void & hiển thị trang sự kiện chứa sự kiện đang diễn ra \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & quenMatKhau & public &  & void & gọi thủ tục lấy lại mật khẩu cho khách \\ \hline
+	\end{longtable}
+}
+\end{arev}
+%====================================================================
+\subsubsection{GDQuanLy}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		
+		\hline
+		\textbf{Tên lớp} & \multicolumn{ 5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{GDQuanLy}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{ 5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Cung cấp các chức năng quản lý dành cho Admin} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \multicolumn{ 1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên thuộc tính}} & \multicolumn{ 2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{ 1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{ 1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} &  & \multicolumn{ 2}{L{.317\linewidth-2\tabcolsep-.6pt}|}{} &  &  \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Phương thức}} & \multicolumn{ 1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên phương thức}} & \multicolumn{ 1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{ 1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{ 1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{ 1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & quanLySuKien & public &  & void & hiển thị giao diện quản lý sự kiện \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \seqsplit{quanLyTinhNangGame} & public &  & void & hiển thị giao diện quản lý tính năng game \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & quanLyServer & public &  & void & hiển thị giao diện quản lý Server \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \seqsplit{quanLyNguoiChoi} & public &  & void & hiển thị giao diện quản lý người chơi \\ \hline
+	\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{GDNguoiChoi}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		
+		\hline
+		\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{GDNguoiChoi}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Cung cấp màn hình hiển thị sau khi khách đăng nhập thành công với tư cách người chơi} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên thuộc tính}} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & nguoiChoiID & \multicolumn{2}{l|}{private} & int & lưu ID của người chơi đang sử dụng hệ thống \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Phương thức}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên phương thức}} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & choiGame & public &  & void & hiển thị giao diện chơi game dành cho người chơi \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \seqsplit{quanLyNhanVatGame} & public &  & void & hiển thị giao diện quản lý nhân vật game cho người chơi \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & quanLyMuaSam & public &  & void & hiển thị giao diện cửa hàng trong game cùng các chức năng mở rộng cho nguời chơi \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \seqsplit{quanLyVatPhamGame} & public &  & void & hiển thị giao diện quản lý kho đồ sở hữu bởi người chơi \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & quanLyBanBe & public &  & void & hiển thị giao diện quản lý bạn bè của người chơi \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & quanLyProfile & public &  & void & hiển thị giao diện quản lý profile dành cho người chơi \\ \hline
+	\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{FormDangNhap}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		
+		\hline
+		\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{FormDangNhap}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Cung cấp Form đăng nhập với 2 trường dữ liệu tên đăng nhập và mật khẩu} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên thuộc tính}} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & tenDangNhap & \multicolumn{2}{l|}{private} & String & lưu tên đăng nhập của khách đăng nhập \\ \hline
+		\textbf{} & matKhau & \multicolumn{2}{l|}{private} & String & lưu mật khẩu của khách đăng nhập \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Phương thức}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên phương thức}} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & dangNhap & public & user: String, pwd: String & void & gửi thông tin đăng nhập đến lớp điều khiển quản lý đăng nhập \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & baoLoiThieu & public &  & void & hiển thị thông báo lỗi nếu khách nhập thiếu các trường bắt buộc khi đăng nhập \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & baoLoiSai & public &  & void & hiển thị thông báo lỗi nếu khách nhập sai tên đăng nhập hoặc mật khẩu \\ \hline
+	\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{GDDangKy}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		
+		\hline
+		\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{GDDangKy}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Cung cấp giao diện đăng ký cho khách muốn đăng ký tài khoản trên hệ thống} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên thuộc tính}} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & hoTen & \multicolumn{2}{l|}{private} & String & lưu họ và tên đầy đủ của khách đăng ký tài khoản \\ \hline
+		\textbf{} & tenDangNhap & \multicolumn{2}{l|}{private} & String & lưu tên đăng nhập của khách đăng ký tài khoản \\ \hline
+		\textbf{} & matKhau & \multicolumn{2}{l|}{private} & String & lưu mật khẩu của khách đăng ký tài khoản \\ \hline
+		\textbf{} & \seqsplit{xacNhanMatKhau} & \multicolumn{2}{l|}{private} & String & lưu giá trị trường xác nhận mật khẩu trong giao diện đăng ký của khách đăng ký tài khoản \\ \hline
+		\textbf{} & soDienThoai & \multicolumn{2}{l|}{private} & String & lưu số điện thoại của khách đăng ký tài khoản \\ \hline
+		\textbf{} & maXacThuc & \multicolumn{2}{l|}{private} & String & lưu giá trị trường mã xác thực trong giao diện đăng ký của khách đăng ký tài khoản \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Phương thức}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên phương thức}} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & dangKy & public & hoTen: String, user: String, pwd: String, pwdXN: String, SDT: String, maXacThuc: String & void & gửi thông tin đăng ký đến lớp điều khiển quản lý đăng ký \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & baoLoi & public & status: int & void & hiển thị thông báo lỗi theo giá trị mã lỗi: 1 - nhập thiếu các trường bắt buộc, 2 - tên đăng nhập đã tồn tại, 3 - mật khẩu chứa kí tự không hợp lệ, 4 - mật khẩu và mật khẩu xác nhận không khớp, 5 - mã xác thực không chính xác \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \seqsplit{thongBaoThanhCong} & public &  & void & hiển thị thông báo đăng ký tài khoản thành công đến khách đăng ký tài khoản \\ \hline
+	\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{FormNhapSDT}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		
+		\hline
+		\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{FormNhapSDT}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Cung cấp Form nhập số điện thoại và mã xác minh gửi đến số điện thoại cho khách muốn lấy lại mật khẩu} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên thuộc tính}} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & soDienThoai & \multicolumn{2}{l|}{private} & String & lưu số điện thoại do khách nhập vào Form \\ \cline{2-6}
+		\textbf{} & maXacMinh & \multicolumn{2}{l|}{private} & String & lưu mã xác minh do khách nhập vào Form \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Phương thức}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên phương thức}} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & guiMaXacMinh & public & SDT:String & void & chuyển tiếp yêu cầu gửi mã xác minh 6 chữ số đến số điện thoại mà khách nhập cho lớp quản lý mật khẩu \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \seqsplit{hienThiTruongNhapMa} & public &  & void & hiển thị trường nhập mã xác minh sau khi khách nhập số điện thoại \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & nhapThongTin & public & maXacMinh: String & void & lấy mã xác minh do người dùng nhập vào \\ \hline
+	\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{FormMatKhau}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+		\begin{longtable}{
+				|M{.133\linewidth-2\tabcolsep-.6pt}
+				|L{.133\linewidth-2\tabcolsep-.6pt}
+				|L{.067\linewidth-2\tabcolsep-.6pt}
+				|L{.25\linewidth-2\tabcolsep-.6pt}
+				|L{.15\linewidth-2\tabcolsep-.6pt}
+				|L{.267\linewidth-2\tabcolsep-.6pt}|
+			}
+			
+			\hline
+			\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{FormMatKhau}} \\ \hline
+			\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Cung cấp Form nhập mật khẩu mới và mật khẩu xác nhận cho khách muốn lấy lại mật khẩu} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên thuộc tính}} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+			\multicolumn{1}{|c|}{} & matKhau & \multicolumn{2}{l|}{private} & String & lưu giá trị trường mật khẩu do khách nhập vào Form \\ \cline{2-6}
+			\textbf{} & \seqsplit{matKhauXacNhan} & \multicolumn{2}{l|}{private} & String & lưu giá trị trường mật khẩu xác nhận do khách nhập vào Form \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Phương thức}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên phương thức}} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+			\multicolumn{1}{|c|}{} & nhapThongTin & public & pwd: String, Xnpwd: String & void & lấy thông tin mật khẩu và mật khẩu xác nhận do khách nhập vào Form \\ \cline{ 2- 6}
+			\multicolumn{1}{|c|}{} & baoLoi & public &  & void & thông báo lỗi khi giá trị trường khẩu và xác nhận mật khẩu không khớp nhau \\ \hline
+		\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{GDTrangSuKien}
+{\fontsize{7pt}{\baselineskip}\selectfont
+	\begin{arev}
+	\end{arev}
+}
+%====================================================================
+\subsubsection{GDQLSuKien}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		\hline
+		\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{GDQLSuKien}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Cung cấp giao diện quản lý sự kiện cho Admin} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \textbf{Tên thuộc tính} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{} & \multicolumn{2}{l|}{} &  &  \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Phương thức}} & \textbf{Tên phương thức} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{taoSuKien} & public &  & void & điều hướng Admin đến giao diện tạo sự kiện \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{xemDanhSach} & public &  & void & điều hướng Admin đến giao diện xem danh sách sự kiện \\ \hline
+	\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{GDTaoSuKien}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		
+		\hline
+		\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{GDTaoSuKien}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Cung cấp giao diện giúp Admin tạo sự kiện mới} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên thuộc tính}} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} &  & \multicolumn{2}{l|}{} &  &  \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Phương thức}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên phương thức}} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \seqsplit{chonBackGround} & public &  & void & hiển thị tùy chọn tải ảnh lên từ máy tính hoặc nhập URL hình ảnh \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & taoBackGround & public &  & void & thay đổi background cho sự kiện sắp được tạo mới \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & taoNoiDung & public & noiDung: String & void & tạo nội dung cho sự kiện sắp được tạo mới \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & taoSuKien & public &  & void & gọi tới khi hoàn tất việc tạo background và tạo nội dung cho sự kiện để xác nhận tạo mới một sự kiện có nội dung và background như đã chọn \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \seqsplit{thongBaoThanhCong} & public &  & void & thông báo sự kiện được tạo mới thành công \\ \hline
+	\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{CSChonFile}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		\hline
+		\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{CSChonFile}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Hiển thị cửa sổ để Admin có thể tùy chọn chọn một file ảnh trong máy tính cá nhân} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \textbf{Tên thuộc tính} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{} & \multicolumn{2}{l|}{} &  &  \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Phương thức}} & \textbf{Tên phương thức} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{chonFile} & public & filePath: String & void & chọn một file trong máy tính cá nhân để tải lên \\ \hline
+	\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{FormChonThoiDiem}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		
+		\hline
+		\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{FormChonThoiDiem}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Hiển thị Form để người dùng chọn thời điểm} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên thuộc tính}} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & ngay & \multicolumn{2}{l|}{private} & int & lưu giá trị ngày được người dùng lựa chọn \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & thang & \multicolumn{2}{l|}{private} & int & lưu giá trị tháng được người dùng lựa chọn \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & nam & \multicolumn{2}{l|}{private} & int & lưu giá trị năm được người dùng lựa chọn \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & thoiDiem & \multicolumn{2}{l|}{private} & Time & lưu giá trị giờ, phút, giây được người dùng lựa chọn \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Phương thức}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên phương thức}} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & chonThoiDiem & public & thoiDiem: DateTime & void & lấy thông tin thời gian do người dùng nhập vào Form \\ \hline
+	\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{GDDSSuKien}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		\hline
+		\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{GDDSSuKien}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện danh sách các sự kiện Admin đã tạo cho đến thời điểm hiện tại } \\ \hline
+		\multicolumn{1}{|M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Thuộc tính}} & \textbf{Tên thuộc tính} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|M{.133\linewidth-2\tabcolsep-.6pt}|}{} & \multicolumn{1}{L{.133\linewidth-2\tabcolsep-.6pt}|}{\seqsplit{danhSachSuKien}} & \multicolumn{2}{L{.317\linewidth-2\tabcolsep-.6pt}|}{private} & List<SuKien> & lưu danh sách các sự kiện Admin đã tạo cho đến thời điểm hiện tại \\ \hline
+		\multicolumn{1}{|M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phương thức}} & \textbf{Tên phương thức} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|M{.133\linewidth-2\tabcolsep-.6pt}|}{} & \multicolumn{1}{L{.133\linewidth-2\tabcolsep-.6pt}|}{xoaSuKien} & public & suKienID: int & void & xóa một sự kiện đã tạo trong quá khứ biết ID của sự kiện đó \\ \hline
+		\textbf{} & \multicolumn{1}{L{.133\linewidth-2\tabcolsep-.6pt}|}{\seqsplit{thongBaoXoaThanhCong}} & public &  & void & thông báo việc xóa một sự kiện đã được hoàn tất \\ \hline
+	\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{GDQLTinhNangGame}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		
+		\hline
+		\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{GDQLTinhNangGame}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện quản lý các tính năng liên quan trực tiếp đến nội dung Game dành cho Admin} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên thuộc tính}} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & gdQLBanDo & \multicolumn{2}{l|}{private} & GDQLBanDo & lưu một tham chiếu đến giao diện quản lý bản đồ dành cho Admin \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & gdQLNhanVat & \multicolumn{2}{l|}{private} & GDQLNhanVat & lưu một tham chiếu đến giao diện quản lý nhân vật dành cho Admin \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & gdQLShop & \multicolumn{2}{l|}{private} & GDQLShop & lưu một tham chiếu đến giao diện quản lý shop dành cho Admin \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Phương thức}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên phương thức}} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & quanLyBanDo & public &  & void & chuyển đến giao diện quản lý bản đồ \\ \hline
+		\textbf{} & quanLyNhanVat & public &  & void & chuyển đến giao diện quản lý nhân vật \\ \hline
+		\textbf{} & quanLyShop & public &  & void & chuyển đến giao diện quản lý shop \\ \hline
+	\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{GDQLBanDo}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+		\begin{longtable}{
+				|M{.133\linewidth-2\tabcolsep-.6pt}
+				|L{.133\linewidth-2\tabcolsep-.6pt}
+				|L{.067\linewidth-2\tabcolsep-.6pt}
+				|L{.25\linewidth-2\tabcolsep-.6pt}
+				|L{.15\linewidth-2\tabcolsep-.6pt}
+				|L{.267\linewidth-2\tabcolsep-.6pt}|
+			}
+			
+			\hline
+			\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{GDQLBanDo}} \\ \hline
+			\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện quản lý bản đồ và các chức năng khác liên quan đến quản lý bản đồ} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên thuộc tính}} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+			\multicolumn{1}{|c|}{} & \seqsplit{danhSachBanDo} & \multicolumn{2}{l|}{private} & List<BanDo> & lưu danh sách các bản đồ trong game để hiển thị khi Admin chọn chức năng quản lý bản đồ \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Phương thức}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên phương thức}} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+			\multicolumn{1}{|c|}{} & themBanDo & public &  & void & thêm mới một bản đồ vào game \\ \hline
+			\textbf{} & xoaBanDo & public & banDoID: int & void & xóa một bản đồ đã tồn tại trong game \\ \hline
+			\textbf{} & \seqsplit{thongBaoThemThanhCong} & public &  & void & thông báo thêm mới bản đồ hoàn tất khi Admin tạo một bản đồ mới \\ \hline
+		\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{CSDSBanDo}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+		\begin{longtable}{
+				|M{.133\linewidth-2\tabcolsep-.6pt}
+				|L{.133\linewidth-2\tabcolsep-.6pt}
+				|L{.067\linewidth-2\tabcolsep-.6pt}
+				|L{.25\linewidth-2\tabcolsep-.6pt}
+				|L{.15\linewidth-2\tabcolsep-.6pt}
+				|L{.267\linewidth-2\tabcolsep-.6pt}|
+			}
+			\hline
+			\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{CSDSBanDo}} \\ \hline
+			\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Hiển thị cửa sổ danh sách các bản đồ sẵn có để thêm vào game} \\ \hline
+			\multicolumn{1}{|M{0.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Thuộc tính}} & \textbf{Tên thuộc tính} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+			\multicolumn{1}{|M{0.133\linewidth-2\tabcolsep-.6pt}|}{} & \multicolumn{1}{L{0.133\linewidth-2\tabcolsep-.6pt}|}{\seqsplit{danhSachBanDo}} & \multicolumn{2}{l|}{private} & List<BanDo> & lưu danh sách các bản đồ sẵn có có thể thêm vào trong game \\ \hline
+			\multicolumn{1}{|M{0.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phương thức}} & \textbf{Tên phương thức} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+			\multicolumn{1}{|M{0.133\linewidth-2\tabcolsep-.6pt}|}{} & \multicolumn{1}{L{0.133\linewidth-2\tabcolsep-.6pt}|}{chonBanDo} & public & banDoID: int & void & chuyển tiếp yêu cầu thêm bản đồ mà Admin click chọn \\ \cline{ 2- 6}
+			\multicolumn{1}{|M{0.133\linewidth-2\tabcolsep-.6pt}|}{} & \multicolumn{1}{L{0.133\linewidth-2\tabcolsep-.6pt}|}{\seqsplit{thongBaoThemThanhCong}} & public &  & void & thông báo thêm bản đồ thành công \\ \hline
+		\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{CSXacNhan}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+		\begin{longtable}{
+				|M{.133\linewidth-2\tabcolsep-.6pt}
+				|L{.133\linewidth-2\tabcolsep-.6pt}
+				|L{.067\linewidth-2\tabcolsep-.6pt}
+				|L{.25\linewidth-2\tabcolsep-.6pt}
+				|L{.15\linewidth-2\tabcolsep-.6pt}
+				|L{.267\linewidth-2\tabcolsep-.6pt}|
+			}
+			\hline
+			\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{CSXacNhan}} \\ \hline
+			\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Hiển thị cửa sổ yêu cầu người chơi có muốn tiếp tục thực hiện hành động} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \textbf{Tên thuộc tính} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+			\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{} & \multicolumn{2}{l|}{} &  &  \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Phương thức}} & \textbf{Tên phương thức} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+			\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{xacNhan} & public &  & void & đồng ý tiếp tục thực hiện hành động đang thực hiện \\ \cline{ 2- 6}
+			\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{huyBo} & public &  & void & hủy bỏ thực hiện hành động đang thực hiện \\ \hline
+		\end{longtable}
+
+\end{arev}	
+}
+%====================================================================
+\subsubsection{FormNhapDuLieu}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		
+		\hline
+		\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{FormNhapDuLieu}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Hiển thị Form để người dùng có thể nhập giá trị gửi đến server} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên thuộc tính}} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & noiDung & \multicolumn{2}{l|}{private} & String & lưu thông tin dạng chuỗi kí tự được người dùng nhập vào Form \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & noiDungSo & \multicolumn{2}{l|}{private}  & int & lưu thông tin dạng số nguyên được người dùng nhập vào Forrm \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Phương thức}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên phương thức}} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & nhap & public & noiDung: String & void & lấy thông tin chuỗi kí tự được người dùng nhập vào Form \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & nhapSo & public & noiDung: int & void & lấy thông tin giá trị số được người dùng nhập vào Form \\ \hline
+	\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{GDQLNhanVat}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		
+		\hline
+		\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{GDQLNhanVat}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Hiển thị giao diện quản lý nhân vật dành cho Admin} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \textbf{Tên thuộc tính} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{} & \multicolumn{2}{l|}{} &  &  \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Phương thức}} & \textbf{Tên phương thức} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{themNhanVat} & public &  & void & thêm một nhân vật vào hệ thống các nhân vật sẵn có của game \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{layDanhSach} & public &  & List<NhanVat> & chuyển tiếp yêu cầu lấy về danh sách nhân vật sẵn có của game \\ \hline
+	\end{longtable}
+
+\end{arev}
+}
+%====================================================================
+\subsubsection{CSDSNhanVat}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		
+		\hline
+		\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{ CSDSNhanVat}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Hiển thị cửa sổ danh sách nhân vật sẵn có có thể thêm} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \textbf{Tên thuộc tính} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{danhSachNhanVat} & \multicolumn{2}{l|}{private} & List<NhanVat> & lưu danh sách nhân vật sẵn có có thể thêm vào game \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Phương thức}} & \textbf{Tên phương thức} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{chonNhanVat} & public & nhanVatID: int & void & chọn một nhân vật trong danh sách nhân vật sẵn có để thêm vào game \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{layThongTin} & public & nhanVatID: int & NhanVat & lấy thông tin của nhân vật của ID được chỉ định \\ \hline
+	\end{longtable}
+
+\end{arev}
+}
+%====================================================================
+\subsubsection{GDDSNhanVat}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		
+		\hline
+		\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{ CSDSNhanVat}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Hiển thị cửa sổ danh sách nhân vật sẵn có có thể thêm} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \textbf{Tên thuộc tính} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{danhSachNhanVat} & \multicolumn{2}{l|}{private} & List<NhanVat> & lưu danh sách nhân vật sẵn có có thể thêm vào game \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Phương thức}} & \textbf{Tên phương thức} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{chonNhanVat} & public & nhanVatID: int & void & chọn một nhân vật trong danh sách nhân vật sẵn có để thêm vào game \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{layThongTin} & public & nhanVatID: int & NhanVat & lấy thông tin của nhân vật của ID được chỉ định \\ \hline
+	\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{CSThongTinNV}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		
+		\hline
+		\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{ CSDSNhanVat}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Hiển thị cửa sổ danh sách nhân vật sẵn có có thể thêm} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \textbf{Tên thuộc tính} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{danhSachNhanVat} & \multicolumn{2}{l|}{private} & List<NhanVat> & lưu danh sách nhân vật sẵn có có thể thêm vào game \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Phương thức}} & \textbf{Tên phương thức} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{chonNhanVat} & public & nhanVatID: int & void & chọn một nhân vật trong danh sách nhân vật sẵn có để thêm vào game \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{layThongTin} & public & nhanVatID: int & NhanVat & lấy thông tin của nhân vật của ID được chỉ định \\ \hline
+	\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{CSDSKiNang}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		
+		\hline
+		\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{CSDSKiNang}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Hiển thị cửa sổ danh sách các kĩ năng sẵn có có thể thêm cho một nhân vật} \\ \hline
+		\multicolumn{1}{|L{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Thuộc tính}} & \textbf{Tên thuộc tính} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|L{.133\linewidth-2\tabcolsep-.6pt}|}{} & \multicolumn{1}{L{.133\linewidth-2\tabcolsep-.6pt}|}{} & \multicolumn{2}{l|}{} &  &  \\ \hline
+		\multicolumn{1}{|L{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phương thức}} & \textbf{Tên phương thức} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|L{.133\linewidth-2\tabcolsep-.6pt}|}{} & \multicolumn{1}{L{.133\linewidth-2\tabcolsep-.6pt}|}{chonKiNang} & public & kiNangID: int & void & chuyển tiếp yêu cầu thêm kĩ năng được Admin chọn đến lớp điều khiển quản lý kĩ năng \\ \cline{ 2- 6}
+		\multicolumn{1}{|L{.133\linewidth-2\tabcolsep-.6pt}|}{} & \multicolumn{1}{L{.133\linewidth-2\tabcolsep-.6pt}|}{\seqsplit{thongBaoThemThanhCong}} & public &  & void & thông báo kĩ năng mới cho nhân vật hiện tại đã được thêm thành công \\ \hline
+	\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{GDQLShop}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		
+		\hline
+		\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{GDQLShop}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Cung cấp giao diện quản lý shop dành cho Admin} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên thuộc tính}} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} &  & \multicolumn{2}{l|}{} &  &  \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Phương thức}} & \multicolumn{1}{M{.133\linewidth-2\tabcolsep-.6pt}|}{\textbf{Tên phương thức}} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & themVatPham & public &  & void & khởi hoạt cửa sổ danh sách các vật phẩm sẵn có có thể thêm \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & xemDanhSach & public &  & void & chuyển đến giao diện danh sách các vật phẩm đang có trong hệ thống game \\ \hline
+		\textbf{} & xemThongKeGD & public &  & void & chuyến đến giao diện danh sách các giao dịch mà người chơi đã thực hiện trong game \\ \hline
+	\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{CSDSVatPham}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+		\begin{longtable}{
+				|M{.133\linewidth-2\tabcolsep-.6pt}
+				|L{.133\linewidth-2\tabcolsep-.6pt}
+				|L{.067\linewidth-2\tabcolsep-.6pt}
+				|L{.25\linewidth-2\tabcolsep-.6pt}
+				|L{.15\linewidth-2\tabcolsep-.6pt}
+				|L{.267\linewidth-2\tabcolsep-.6pt}|
+			}
+			
+			\hline
+			\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{CSDSVatPham}} \\ \hline
+			\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Cung cấp cửa sổ danh sách các vật phẩm sẵn có có thể thêm vào hệ thống game} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \textbf{Tên thuộc tính} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+			\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{danhSachVatPham} & \multicolumn{2}{l|}{private} & List<VatPham> & lưu danh sách các vật phẩm sẵn có có thể thêm vào hệ thống game  \\ \hline
+			\multicolumn{1}{|c|}{\textbf{Phương thức}} & \textbf{Tên phương thức} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+			\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{chonVatPham} & public & vatPhamID: int & void & chuyển tiếp yêu cầu thêm vật phẩm được chọn đến lớp điều khiển quản lý vật phẩm \\ \cline{ 2- 6}
+			\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{thongBaoThemThanhCong} & public &  & void & thông báo vật phẩm được chọn đã được thêm thành công \\ \hline
+		\end{longtable}
+	
+\end{arev}
+}
+%====================================================================
+\subsubsection{GDDSVatPham}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		
+		\hline
+		\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{GDDSVatPham}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Cung cấp giao diện danh sách các vật phẩm hiện tại của hệ thống game} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \textbf{Tên thuộc tính} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{danhSachVatPham} & \multicolumn{2}{l|}{private} & List<VatPham> & lưu danh sách các vật phẩm hiện tại của hệ thống game \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Phương thức}} & \textbf{Tên phương thức} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{xoaVatPham} & public & vatPhamID: int & void & chuyển tiếp yêu cầu xóa một vật phẩm được chỉ định đến lớp điều khiển quản lý vật phẩm \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{capNhatGia} & public & vatPhamID: int & void & chuyển tiếp yêu cầu cập nhật giá một vật phẩm được chỉ định đến lớp điều khiển quản lý vật phẩm \\ \hline
+	\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{GDDSGiaoDichGame}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		
+		\hline
+		\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{GDDSGiaoDichGame}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Cung cấp giao diện danh sách các giao dịch các người chơi tham gia hệ thống đã thực hiện} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \textbf{Tên thuộc tính} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{danhSachGiaoDichGame} & \multicolumn{2}{l|}{private} & List<GiaoDichGame> & lưu danh sách các giao dịch quá khứ của hệ thống \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Phương thức}} & \textbf{Tên phương thức} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{} &  &  &  &  \\ \hline
+	\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{GDQLServer}
+{\fontsize{7pt}{\baselineskip}\selectfont
+\begin{arev}
+	\begin{longtable}{
+			|M{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.133\linewidth-2\tabcolsep-.6pt}
+			|L{.067\linewidth-2\tabcolsep-.6pt}
+			|L{.25\linewidth-2\tabcolsep-.6pt}
+			|L{.15\linewidth-2\tabcolsep-.6pt}
+			|L{.267\linewidth-2\tabcolsep-.6pt}|
+		}
+		
+		\hline
+		\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{GDQLServer}} \\ \hline
+		\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Cung cấp giao diện quản lý server cho Admin} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \textbf{Tên thuộc tính} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{} & \multicolumn{2}{l|}{} &  &  \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Phương thức}} & \textbf{Tên phương thức} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+		\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{xemDanhSach} & public &  & void & chuyển đến giao diện xem danh sách server hiện tại của hệ thống \\ \hline
+		\textbf{} & \multicolumn{1}{l|}{themServer} & public &  & void & chuyển đến giao diện thêm server mới cho hệ thống \\ \hline
+	\end{longtable}
+\end{arev}
+}
+%====================================================================
+\subsubsection{GDQLNguoiChoi}
+{\fontsize{7pt}{\baselineskip}\selectfont
+	\begin{arev}
+	\end{arev}
+}
+%====================================================================
+\subsubsection{GDDSNguoiChoi}
+{\fontsize{7pt}{\baselineskip}\selectfont
+	\begin{arev}
+	\end{arev}
+}
+%====================================================================
+\subsubsection{CSThongTinNguoiChoi}
+{\fontsize{7pt}{\baselineskip}\selectfont
+	\begin{arev}
+	\end{arev}
+}
+%====================================================================
+\subsubsection{CSThongTinDangKy}
+{\fontsize{7pt}{\baselineskip}\selectfont
+	\begin{arev}
+	\end{arev}
+}
+%====================================================================
+\subsubsection{CSThongTinGame}
+{\fontsize{7pt}{\baselineskip}\selectfont
+	\begin{arev}
+	\end{arev}
+}
+%====================================================================
+\subsubsection{CSDSGiaoDich}
+{\fontsize{7pt}{\baselineskip}\selectfont
+	\begin{arev}
+	\end{arev}
+}
+%====================================================================
+\end{document}

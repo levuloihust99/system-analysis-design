@@ -78,16 +78,16 @@
       ><path d="M-58 -14 L116 -14 L116 28 L-58 28 L-58 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath25"
-      ><path d="M-73 -14 L146 -14 L146 28 L-73 28 L-73 -14 Z"
+      ><path d="M-69 -14 L138 -14 L138 28 L-69 28 L-69 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath26"
       ><path d="M-85 -14 L170 -14 L170 28 L-85 28 L-85 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath27"
-      ><path d="M-82 -14 L164 -14 L164 28 L-82 28 L-82 -14 Z"
+      ><path d="M-78 -14 L156 -14 L156 28 L-78 28 L-78 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath28"
-      ><path d="M-96 -14 L192 -14 L192 28 L-96 28 L-96 -14 Z"
+      ><path d="M-92 -14 L184 -14 L184 28 L-92 28 L-92 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath29"
       ><path d="M-77 -14 L154 -14 L154 28 L-77 28 L-77 -14 Z"
@@ -96,13 +96,13 @@
       ><path d="M0 0 L234 0 L234 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath31"
-      ><path d="M75 7 L75 21 L17 21 L17 7 ZM221 7 L221 21 L148 21 L148 7 ZM148 34 L148 48 L78 48 L78 34 ZM0 0 L0 104 L234 104 L234 0 Z"
+      ><path d="M75 7 L75 21 L17 21 L17 7 ZM219 7 L219 21 L150 21 L150 7 ZM148 34 L148 48 L78 48 L78 34 ZM0 0 L0 104 L234 104 L234 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath32"
       ><path d="M0 0 L208 0 L208 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath33"
-      ><path d="M0 0 L0 21 L10 21 L10 35 L0 35 L0 104 L208 104 L208 82 L157 82 L157 68 L208 68 L208 0 L83 0 L83 8 L10 8 L10 0 Z"
+      ><path d="M0 0 L0 21 L10 21 L10 35 L0 35 L0 104 L208 104 L208 82 L157 82 L157 68 L208 68 L208 0 L81 0 L81 8 L12 8 L12 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath34"
       ><path d="M0 0 L387 0 L387 104 L0 104 L0 0 Z"
@@ -334,21 +334,21 @@
     ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath24)" stroke="none"
       >:Khach</text
     ></g
-    ><g font-size="11px" transform="translate(149,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(151,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath25)" stroke="none"
-      >: GD-Chinh</text
+      >: GDChinh</text
     ></g
     ><g font-size="11px" transform="translate(296,111)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath26)" stroke="none"
       >: GD-DangKy</text
     ></g
-    ><g font-size="11px" transform="translate(455,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(457,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath27)" stroke="none"
-      >: QL-DangKy</text
+      >: QLDangKy</text
     ></g
-    ><g font-size="11px" transform="translate(657,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(659,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath28)" stroke="none"
-      >: QL-NguoiChoi</text
+      >: QLNguoiChoi</text
     ></g
     ><g font-size="11px" transform="translate(763,685)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath29)" stroke="none"

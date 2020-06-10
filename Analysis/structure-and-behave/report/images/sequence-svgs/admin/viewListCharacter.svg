@@ -30,22 +30,22 @@
       ><path d="M-59 -14 L118 -14 L118 28 L-59 28 L-59 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath9"
-      ><path d="M-104 -14 L208 -14 L208 28 L-104 28 L-104 -14 Z"
+      ><path d="M-100 -14 L200 -14 L200 28 L-100 28 L-100 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath10"
-      ><path d="M-87 -14 L174 -14 L174 28 L-87 28 L-87 -14 Z"
+      ><path d="M-83 -14 L166 -14 L166 28 L-83 28 L-83 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath11"
       ><path d="M-89 -28 L178 -28 L178 56 L-89 56 L-89 -28 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath12"
-      ><path d="M-105 -14 L210 -14 L210 28 L-105 28 L-105 -14 Z"
+      ><path d="M-101 -14 L202 -14 L202 28 L-101 28 L-101 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath13"
       ><path d="M0 0 L225 0 L225 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath14"
-      ><path d="M76 3 L76 17 L17 17 L17 3 ZM160 33 L160 47 L51 47 L51 33 ZM0 0 L0 104 L225 104 L225 17 L123 17 L123 3 L225 3 L225 0 Z"
+      ><path d="M76 3 L76 17 L17 17 L17 3 ZM160 33 L160 47 L51 47 L51 33 ZM0 0 L0 104 L225 104 L225 17 L125 17 L125 3 L225 3 L225 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath15"
       ><path d="M0 0 L183 0 L183 104 L0 104 L0 0 Z"
@@ -57,7 +57,7 @@
       ><path d="M0 0 L404 0 L404 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath18"
-      ><path d="M271 34 L271 48 L126 48 L126 34 ZM98 0 L98 5 L0 5 L0 21 L31 21 L31 35 L0 35 L0 104 L138 104 L138 100 L260 100 L260 104 L404 104 L404 0 L398 0 L398 5 L311 5 L311 0 Z"
+      ><path d="M271 34 L271 48 L126 48 L126 34 ZM96 0 L96 5 L0 5 L0 21 L31 21 L31 35 L0 35 L0 104 L138 104 L138 100 L260 100 L260 104 L404 104 L404 0 L396 0 L396 5 L313 5 L313 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath19"
       ><path d="M260 33 L260 47 L138 47 L138 33 ZM0 0 L0 104 L57 104 L57 100 L188 100 L188 104 L404 104 L404 0 Z"
@@ -66,7 +66,7 @@
       ><path d="M0 0 L254 0 L254 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath21"
-      ><path d="M188 21 L188 49 L57 49 L57 21 ZM0 0 L0 104 L254 104 L254 82 L205 82 L205 68 L254 68 L254 0 Z"
+      ><path d="M188 21 L188 49 L57 49 L57 21 ZM0 0 L0 104 L254 104 L254 82 L207 82 L207 68 L254 68 L254 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath22"
       ><path d="M-131 -28 L262 -28 L262 56 L-131 56 L-131 -28 Z"
@@ -152,13 +152,13 @@
     ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath8)" stroke="none"
       >:Admin</text
     ></g
-    ><g font-size="11px" transform="translate(109,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(111,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath9)" stroke="none"
-      >: GD-QLNhanVat</text
+      >: GDQLNhanVat</text
     ></g
-    ><g font-size="11px" transform="translate(426,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(428,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath10)" stroke="none"
-      >: QL-NhanVat</text
+      >: QLNhanVat</text
     ></g
     ><g font-size="11px" transform="translate(552,95)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath11)" stroke="none"
@@ -166,9 +166,9 @@
       ><text x="16" xml:space="preserve" y="25" clip-path="url(#clipPath11)" stroke="none"
       >: NhanVat</text
     ></g
-    ><g font-size="11px" transform="translate(320,260)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(322,260)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath12)" stroke="none"
-      >: GD-DSNhanVat</text
+      >: GDDSNhanVat</text
     ></g
     ><g stroke-linecap="butt" font-size="11px" transform="translate(-14,34)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1"
     ><line y2="50" fill="none" x1="50" clip-path="url(#clipPath14)" x2="171" y1="50"

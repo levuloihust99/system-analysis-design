@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\caption{}
+\begin{longtable}{
+	|M{.133\linewidth-2\tabcolsep-.6pt}
+	|L{.133\linewidth-2\tabcolsep-.6pt}
+	|L{.067\linewidth-2\tabcolsep-.6pt}
+	|L{.25\linewidth-2\tabcolsep-.6pt}
+	|L{.15\linewidth-2\tabcolsep-.6pt}
+	|L{.267\linewidth-2\tabcolsep-.6pt}|
+}
+
+\hline
+\textbf{Tên lớp} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{\textbf{GDQLServer}} \\ \hline
+\textbf{Mục đích sử dụng} & \multicolumn{5}{M{.867\linewidth-2\tabcolsep-.6pt}|}{Cung cấp giao diện quản lý server cho Admin} \\ \hline
+\multicolumn{1}{|c|}{\textbf{Thuộc tính}} & \textbf{Tên thuộc tính} & \multicolumn{2}{M{.317\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{} & \multicolumn{2}{l|}{} &  &  \\ \hline
+\multicolumn{1}{|c|}{\textbf{Phương thức}} & \textbf{Tên phương thức} & \multicolumn{1}{M{.067\linewidth-2\tabcolsep-.6pt}|}{\textbf{Phạm vi}} & \multicolumn{1}{M{.25\linewidth-2\tabcolsep-.6pt}|}{\textbf{Dách sách tham số}} & \multicolumn{1}{M{.15\linewidth-2\tabcolsep-.6pt}|}{\textbf{Kiểu dữ liệu trả về}} & \multicolumn{1}{M{.267\linewidth-2\tabcolsep-.6pt}|}{\textbf{Mục đích sử dụng}} \\ \cline{ 2- 6}
+\multicolumn{1}{|c|}{} & \multicolumn{1}{l|}{xemDanhSach} & public &  & void & chuyển đến giao diện xem danh sách server hiện tại của hệ thống \\ \hline
+\textbf{} & \multicolumn{1}{l|}{themServer} & public &  & void & chuyển đến giao diện thêm server mới cho hệ thống \\ \hline
+\end{longtable}
+\label{}
+\end{table}

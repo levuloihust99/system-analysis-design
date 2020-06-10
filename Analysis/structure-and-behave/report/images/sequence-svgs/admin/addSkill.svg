@@ -45,7 +45,7 @@
       ><path d="M-102 -14 L204 -14 L204 28 L-102 28 L-102 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath14"
-      ><path d="M-79 -14 L158 -14 L158 28 L-79 28 L-79 -14 Z"
+      ><path d="M-75 -14 L150 -14 L150 28 L-75 28 L-75 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath15"
       ><path d="M-89 -28 L178 -28 L178 56 L-89 56 L-89 -28 Z"
@@ -66,7 +66,7 @@
       ><path d="M0 0 L508 0 L508 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath21"
-      ><path d="M349 33 L349 47 L155 47 L155 33 ZM307 71 L307 85 L193 85 L193 71 ZM97 0 L97 1 L0 1 L0 22 L26 22 L26 36 L0 36 L0 104 L508 104 L508 0 L498 0 L498 1 L419 1 L419 0 Z"
+      ><path d="M349 33 L349 47 L155 47 L155 33 ZM307 71 L307 85 L193 85 L193 71 ZM97 0 L97 1 L0 1 L0 22 L26 22 L26 36 L0 36 L0 104 L508 104 L508 0 L496 0 L496 1 L421 1 L421 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath22"
       ><path d="M0 0 L162 0 L162 104 L0 104 L0 0 Z"
@@ -233,9 +233,9 @@
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath13)" stroke="none"
       >: CSThongTinNV</text
     ></g
-    ><g font-size="11px" transform="translate(539,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(541,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath14)" stroke="none"
-      >: QL-KiNang</text
+      >: QLKiNang</text
     ></g
     ><g font-size="11px" transform="translate(640,95)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath15)" stroke="none"

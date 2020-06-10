@@ -30,22 +30,22 @@
       ><path d="M-59 -14 L118 -14 L118 28 L-59 28 L-59 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath9"
-      ><path d="M-84 -14 L168 -14 L168 28 L-84 28 L-84 -14 Z"
+      ><path d="M-80 -14 L160 -14 L160 28 L-80 28 L-80 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath10"
-      ><path d="M-122 -14 L244 -14 L244 28 L-122 28 L-122 -14 Z"
+      ><path d="M-118 -14 L236 -14 L236 28 L-118 28 L-118 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath11"
       ><path d="M-114 -28 L228 -28 L228 56 L-114 56 L-114 -28 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath12"
-      ><path d="M-139 -14 L278 -14 L278 28 L-139 28 L-139 -14 Z"
+      ><path d="M-135 -14 L270 -14 L270 28 L-135 28 L-135 -14 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath13"
       ><path d="M0 0 L245 0 L245 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath14"
-      ><path d="M76 3 L76 17 L17 17 L17 3 ZM237 3 L237 17 L153 17 L153 3 ZM177 35 L177 49 L59 49 L59 35 ZM0 0 L0 104 L245 104 L245 0 Z"
+      ><path d="M76 3 L76 17 L17 17 L17 3 ZM235 3 L235 17 L155 17 L155 3 ZM177 35 L177 49 L59 49 L59 35 ZM0 0 L0 104 L245 104 L245 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath15"
       ><path d="M0 0 L403 0 L403 104 L0 104 L0 0 Z"
@@ -66,7 +66,7 @@
       ><path d="M0 0 L240 0 L240 104 L0 104 L0 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath21"
-      ><path d="M184 16 L184 44 L51 44 L51 16 ZM0 0 L0 104 L240 104 L240 82 L175 82 L175 68 L240 68 L240 0 Z"
+      ><path d="M184 16 L184 44 L51 44 L51 16 ZM0 0 L0 104 L240 104 L240 82 L177 82 L177 68 L240 68 L240 0 Z"
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath22"
       ><path d="M-133 -28 L266 -28 L266 56 L-133 56 L-133 -28 Z"
@@ -76,9 +76,6 @@
       /></clipPath
       ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath24"
       ><path d="M-171 -14 L342 -14 L342 28 L-171 28 L-171 -14 Z"
-      /></clipPath
-      ><clipPath clipPathUnits="userSpaceOnUse" id="clipPath25"
-      ><path d="M-118 -14 L236 -14 L236 28 L-118 28 L-118 -14 Z"
       /></clipPath
     ></defs
     ><g fill="white" text-rendering="geometricPrecision" fill-opacity="1" stroke-opacity="1" stroke="white"
@@ -152,13 +149,13 @@
     ><text x="10" xml:space="preserve" y="11" clip-path="url(#clipPath8)" stroke="none"
       >:Admin</text
     ></g
-    ><g font-size="11px" transform="translate(139,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(141,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath9)" stroke="none"
-      >: GD-QLShop</text
+      >: GDQLShop</text
     ></g
-    ><g font-size="11px" transform="translate(427,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(429,37)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath10)" stroke="none"
-      >: QL-GiaoDichGame</text
+      >: QLGiaoDichGame</text
     ></g
     ><g font-size="11px" transform="translate(583,105)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="22" xml:space="preserve" y="11" clip-path="url(#clipPath11)" stroke="none"
@@ -166,9 +163,9 @@
       ><text x="11" xml:space="preserve" y="25" clip-path="url(#clipPath11)" stroke="none"
       >: GiaoDichGame</text
     ></g
-    ><g font-size="11px" transform="translate(310,226)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
+    ><g font-size="11px" transform="translate(312,226)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="black" stroke-opacity="1"
     ><text x="6" xml:space="preserve" y="11" clip-path="url(#clipPath12)" stroke="none"
-      >: GD-DSGiaoDichGame</text
+      >: GDDSGiaoDichGame</text
     ></g
     ><g stroke-linecap="butt" font-size="11px" transform="translate(-14,34)" fill-opacity="1" fill="black" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke-linejoin="round" stroke="black" stroke-opacity="1"
     ><line y2="50" fill="none" x1="50" clip-path="url(#clipPath14)" x2="191" y1="50"
@@ -213,8 +210,8 @@
       >layDanhSach(soLuong=20)</text
     ></g
     ><g font-size="11px" transform="translate(45,69)" fill-opacity="1" fill="white" text-rendering="geometricPrecision" image-rendering="optimizeQuality" font-family="sans-serif" stroke="white" stroke-opacity="1"
-    ><rect x="0" width="118" height="14" y="0" clip-path="url(#clipPath25)" stroke="none"
-      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath25)" stroke="none"
+    ><rect x="0" width="118" height="14" y="0" clip-path="url(#clipPath10)" stroke="none"
+      /><text fill="black" x="10" xml:space="preserve" y="11" clip-path="url(#clipPath10)" stroke="none"
       >xemThongKeGD()</text
     ></g
     ><g font-size="10px" fill-opacity="1" fill="rgb(120,120,120)" text-rendering="geometricPrecision" image-rendering="optimizeQuality" stroke="rgb(120,120,120)" stroke-opacity="1"
